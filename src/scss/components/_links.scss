@@ -1,0 +1,75 @@
+a,
+.link {
+  $line-width: 100%;
+
+  --line-height: 1px;
+  --line-width: #{$line-width};
+  --link-font-weight: var(--base-font-weight, 400);
+
+  @if $links-have-text-color {
+    --link-color: var(--text-color);
+  } @else {
+    --link-color: #{$link-color};
+  }
+
+  color: var(--link-color);
+  text-decoration: none;
+  position: relative;
+  font-weight: var(--link-font-weight);
+  cursor: pointer;
+
+  // /*********************************************/
+  // /* For navigation links */
+  // /* Set color equal to text color */
+  // /*********************************************/
+  &.nav-link {
+    --link-color: var(--text-color);
+
+    &:not(.link__active) {
+      --line-width: 0%;
+
+      // Allow this to be toggled on or off (default is on)
+      @if $nav-link-underline {
+        &:hover {
+          --line-width: 100%;
+        }
+      }
+    }
+
+    &:focus {
+      outline: none;
+      --line-width: 100%;
+      --line-height: 2px;
+      // --link-font-weight: 700;
+    }
+  }
+
+  &--active {
+    --line-height: 2px;
+    --line-width: 100%;
+  }
+
+  &--no-underline {
+    --line-height: 0px;
+  }
+
+  &--clear {
+    --link-color: var(--text-color);
+  }
+
+  &:not(.link--clear)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--link-color);
+    height: var(--line-height);
+    width: var(--line-width);
+    transition: width 200ms ease-in-out, transform 200ms ease-in-out;
+  }
+
+  :not(.link__active):hover {
+    --line-width: #{calc($line-width + 25%)};
+  }
+}
