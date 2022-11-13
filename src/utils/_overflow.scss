@@ -1,0 +1,5 @@
+@include class-with-responsive-val-only($overflow, overflow, overflow);
+
+@include class-with-responsive-val-only($overflow, overflow-x, overflow-x);
+
+@include class-with-responsive-val-only($overflow, overflow-y, overflow-y);

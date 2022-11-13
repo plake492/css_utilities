@@ -159,9 +159,9 @@ $grey: #292a2b;
 // **************************************************
 
 // /* Bg color vars */
-$bg-primary: $grey;
+$bg-primary: $white;
 $bg-secondary: $black;
-$bg-accent: $blue;
+$bg-accent: $orange;
 $bg-tertiary: $grey;
 $bg-dark: $black;
 
@@ -223,7 +223,7 @@ $border-radius: 4px;
 $border-radius-pill: 40px;
 $border-radius-round: 50%;
 $border-width: 1px;
-$border-color: $grey;
+$border-color: $white;
 
 $border: $border-color $border-width solid;
 
@@ -424,6 +424,26 @@ $above-everyhting: 999999;
 $text-alignment: (start, end, center, right, left);
 
 // **************************************************
+// **************** Opacity *************************
+// **************************************************
+
+$opacities: (
+  0: 0,
+  25: 0.25,
+  33: 0.33,
+  50: 0.5,
+  66: 0.66,
+  75: 0.75,
+  100: 1
+);
+
+// **************************************************
+// **************** Overflow *************************
+// **************************************************
+
+$overflow: (auto, hidden, visible, scroll);
+
+// **************************************************
 // **************** Buttons *************************
 // **************************************************
 
@@ -467,7 +487,7 @@ $underline-bottom: 0px;
 // These settings allow the user to toggle on, off, or between settings
 
 // Headers container margin on top by default, set be $base-text-margin-top
-$headers-with-margin-top: true;
+$headers-with-margin-top: false;
 
 // toggle on or off if headers should lose their margin top and bottom when flex aligned
 $headers-remove-margin-when-aligned: true;

@@ -106,7 +106,7 @@
   @each $key, $val in $map {
     .#{$class}-#{$key} {
       @if $calc-value and $var-name {
-        #{$property}: calc($val - var($var-name));
+        #{$property}: calc($val - var($var-name, 0));
       } @else {
         #{$property}: $val;
       }
@@ -114,7 +114,11 @@
     @each $bp, $px in $breakpoints {
       @include respond-to(#{$px}) {
         .#{$class}-#{$bp}-#{$key} {
-          #{$property}: $val !important;
+          @if $calc-value and $var-name {
+            #{$property}: calc($val - var($var-name, 0)) !important;
+          } @else {
+            #{$property}: $val !important;
+          }
         }
       }
     }

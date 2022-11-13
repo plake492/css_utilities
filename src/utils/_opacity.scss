@@ -1,0 +1,5 @@
+@each $key, $value in $opacities {
+  .opacity-#{$key} {
+    opacity: $value;
+  }
+}

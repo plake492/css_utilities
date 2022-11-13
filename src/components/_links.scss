@@ -22,7 +22,7 @@ a,
   // /* For navigation links */
   // /* Set color equal to text color */
   // /*********************************************/
-  &.nav-link {
+  &--nav {
     --link-color: var(--text-color);
 
     &:not(.link__active) {

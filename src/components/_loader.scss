@@ -20,10 +20,11 @@ $animation-length: 750ms;
 
 @for $i from 1 through $num-of-lines {
   $offset: $i - 1;
-  $delay: ($offset * ($animation-length / $num-of-lines));
+  $delay: calc(($offset * ($animation-length / $num-of-lines)));
 
   .line-#{$i} {
-    transform: translate(-50%, 7.5px) rotate($i * (360deg / $num-of-lines));
+    transform: translate(-50%, 7.5px)
+      rotate(calc($i * (360deg / $num-of-lines)));
     animation: show $animation-length linear $delay infinite normal forwards;
   }
 }

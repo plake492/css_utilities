@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <style>
+      .special-links:hover {
+        transition: all 200ms ease-in-out;
+        color: black;
+        background-color: white;
+        cursor: pointer;
+      }
+      .special-links:active {
+        transition: all 200ms ease-in-out;
+        color: black;
+        background-color: rgb(102, 102, 238);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-black-10 h-max-vh-100 overflow-x-hidden">
+    <!-- HEADER -->
+    <header class="bg-red-30 py-md box-shadow overflow-x-hidden border-bottom">
+      <div class="d-flex justify-content-between align-items-center mx-xxxl">
+        <h1 class="h5 my-none">CSS UTILITIES</h1>
+        <nav>
+          <ul class="no-list-style mb-none d-flex gap-md">
+            <li>
+              <a class="link link--nav" href="#typography">Typography</a>
+            </li>
+            <li>
+              <a class="link link--nav" href="#flex">Flex</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main class="d-flex h-vh-100" style="--vh-offest: 162px">
+      <!-- LEFT BAR -->
+      <aside
+        style="width: 400px"
+        class="h-vh-100 overflow-y-scroll bg-black-40 border-right"
+      >
+        <div class="d-flex flex-wrap p-md gap-md">
+          <a
+            href="#typography"
+            style="height: 55px"
+            class="w-100 border flex-center special-links link--clear"
+          >
+            Typography
+          </a>
+          <a
+            href="#flex"
+            style="height: 55px"
+            class="w-100 border flex-center special-links link--clear"
+          >
+            Flex
+          </a>
+          <div
+            style="height: 55px"
+            class="w-100 border flex-center special-links"
+          >
+            link
+          </div>
+          <div
+            style="height: 55px"
+            class="w-100 border flex-center special-links"
+          >
+            link
+          </div>
+          <div
+            style="height: 55px"
+            class="w-100 border flex-center special-links"
+          >
+            link
+          </div>
+          <div
+            style="height: 55px"
+            class="w-100 border flex-center special-links"
+          >
+            link
+          </div>
+          <div
+            style="height: 55px"
+            class="w-100 border flex-center special-links"
+          >
+            link
+          </div>
+          <div
+            style="height: 55px"
+            class="w-100 border flex-center special-links"
+          >
+            link
+          </div>
+          <div
+            style="height: 55px"
+            class="w-100 border flex-center special-links"
+          >
+            link
+          </div>
+          <div
+            style="height: 55px"
+            class="w-100 border flex-center special-links"
+          >
+            link
+          </div>
+          <div
+            style="height: 55px"
+            class="w-100 border flex-center special-links"
+          >
+            link
+          </div>
+          <div
+            style="height: 55px"
+            class="w-100 border flex-center special-links"
+          >
+            link
+          </div>
+        </div>
+      </aside>
+      <!-- MAIN SECTION (CENTER) -->
+      <section class="h-vh-100 w-100 overflow-scroll">
+        <!-- TYPOGRAPHY -->
+        <section
+          class="px-md px-xl-xl border-bottom bg-black-10"
+          id="typography"
+        >
+          <p class="h1">Typography</p>
+          <div class="mb-md pb-md">
+            <p class="h1">Header 1</p>
+            <p class="h2">Header 2</p>
+            <p class="h3">Header 3</p>
+            <p class="h4">Header 4</p>
+            <p class="h5">Header 5</p>
+            <p class="h6">Header 6</p>
+          </div>
+          <div class="mb-md pb-md">
+            <p class="h3">text-lg</p>
+            <p class="text-lg">
+              There's a lot to do in space. I want to learn more about the
+              greenhouse effect on Venus, about whether there was life on Mars,
+              about the environment in which Earth and the Sun is immersed, the
+              behavior of the Sun. The problem is not scientifically illiterate
+              kids; it is scientifically illiterate adults. Kids are born
+              curious about the natural world. They are always turning over
+              rocks, jumping with two feet into mud puddles and playing with the
+              tablecloth and fine china. I don't care what town you're born in,
+              what city, what country. If you're a child, you are curious about
+              your environment. You're overturning rocks. You're plucking leaves
+              off of trees and petals off of flowers, looking inside, and you're
+              doing things that create disorder in the lives of the adults
+              around you. There is always a place I can take someone's curiosity
+              and land where they end up enlightened when we're done.
+            </p>
+            <p class="h4">text-md</p>
+            <p class="text-md">
+              I claim that space is part of our culture. You've heard complaints
+              that nobody knows the names of the astronauts, that nobody gets
+              excited about launches, that nobody cares anymore except people in
+              the industry. I don't believe that for a minute. What you need,
+              above all else, is a love for your subject, whatever it is. You've
+              got to be so deeply in love with your subject that when curve
+              balls are thrown, when hurdles are put in place, you've got the
+              energy to overcome them. Although I'm not actually embarrassed by
+              this, I tend not to read books that have awesome movies made from
+              them, regardless of how well or badly the movie represented the
+              actual written story. For most of human civilization, the pace of
+              innovation has been so slow that a generation might pass before a
+              discovery would influence your life, culture or the conduct of
+              nations.
+            </p>
+            <p class="h5">text-sm</p>
+            <p class="text-sm">
+              We account for one-sixth of the forces of gravity we see in the
+              universe. There is no known objects accounting for most of the
+              effective gravity in the universe. Something is making stuff move
+              that is not anything we have ever touched. Our galaxy, the Milky
+              Way, is one of 50 or 100 billion other galaxies in the universe.
+              And with every step, every window that modern astrophysics has
+              opened to our mind, the person who wants to feel like they're the
+              center of everything ends up shrinking. If you think of feelings
+              you have when you are awed by something - for example, knowing
+              that elements in your body trace to exploded stars - I call that a
+              spiritual reaction, speaking of awe and majesty, where words fail
+              you. In the animal kingdom, one of the keys to survival is to
+              outwit your enemies. And when you're surrounded by carnivores, one
+              of the best strategies is to fade into the background and
+              disappear.
+            </p>
+            <p class="h6">text-xs</p>
+            <p class="text-xs">
+              Let me tell you something about full moons: kids don't care about
+              full moons. They'll play in a full moon, no worries at all. They
+              only get scared of magic or werewolves from stupid adults and
+              their stupid adult stories. Asteroids have us in our sight. The
+              dinosaurs didn't have a space program, so they're not here to talk
+              about this problem. We are, and we have the power to do something
+              about it. I don't want to be the embarrassment of the galaxy, to
+              have had the power to deflect an asteroid, and then not, and end
+              up going extinct. When an industry matures, it means it's not
+              advancing, and of course the jobs go overseas. That's the
+              obligation of the multi-national corporation: to put the factory
+              where it can make the widget as cheap as possible. Don't get angry
+              when a corporation does that; we've all bought into this concept.
+              We live in a capitalistic society. I always try to get people a
+              different outlook. When you do that, people take ownership of the
+              information. They don't ever have to reference me because, I'd
+              like to believe as an educator, I'm empowering them to have those
+              thoughts themselves.
+            </p>
+          </div>
+          <div class="mb-md pb-md">
+            <div><p class="h4">Lists</p></div>
+            <div class="d-flex gap-xl">
+              <div class="w-33">
+                <p class="text-lg font-weight-600">Unordered List</p>
+                <ul>
+                  <li>
+                    <p>List</p>
+                  </li>
+                  <li>
+                    <p>List</p>
+                  </li>
+                  <li>
+                    <p>List</p>
+                  </li>
+                  <li>
+                    <a href="#">link</a>
+                  </li>
+                  <li class="no-list-style">
+                    <a href="#">link with <i>.no-list-syle</i> on the `li`</a>
+                  </li>
+                  <li class="no-list-style">
+                    <p>List item with <i>.no-list-syle</i> on the `li`</p>
+                  </li>
+                  <li>
+                    <p>List</p>
+                  </li>
+                  <li>
+                    <ul>
+                      <li><p>nested</p></li>
+                      <li><p>nested</p></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-33">
+                <p class="text-lg font-weight-600">
+                  ul with <i>.no-list-style</i> on `ul`
+                </p>
+                <ul class="no-list-style">
+                  <li>
+                    <p>list item</p>
+                  </li>
+                  <li>
+                    <p>list item</p>
+                  </li>
+                  <li>
+                    <p>list item</p>
+                  </li>
+                  <li>
+                    <p>list item</p>
+                  </li>
+                  <li>
+                    <p>list item</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-33">
+                <p class="text-lg font-weight-600">Ordered List</p>
+                <ol>
+                  <li>List</li>
+                  <li>List</li>
+                  <li>List</li>
+                  <li>List</li>
+                  <li>
+                    <ol>
+                      <li>Nested</li>
+                      <li>Nested</li>
+                      <li>Nested</li>
+                      <li>Nested</li>
+                    </ol>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="mb-md pb-md">
+            <p class="h4">Section with blockquote and indent</p>
+            <p class="indent">
+              I claim that space is part of our culture. You've heard complaints
+              that nobody knows the names of the astronauts, that nobody gets
+              excited about launches, that nobody cares anymore except people in
+              the industry. I don't believe that for a minute. What you need,
+              above all else, is a love for your subject, whatever it is. You've
+              got to be so deeply in love with your subject that when curve
+              balls are thrown, when hurdles are put in place, you've got the
+              energy to overcome them. Darwin's theory of evolution is a
+              framework by which we understand the diversity of life on Earth.
+              But there is no equation sitting there in Darwin's 'Origin of
+              Species' that you apply and say,
+            </p>
+            <p class="bg-black">Add <i>.indent</i></p>
+            <p>
+              What is this species going to look like in 100 years or 1,000
+              years?' Biology isn't there yet with that kind of predictive
+              precision. You have people who believe they are scientifically
+              literate but, in fact, are not. And I don't mind if you're not
+              scientifically literate, but just admit that to yourself, so that
+              you'll know, and perhaps you can take a first step to try to
+              eradicate that. Kids should be allowed to break stuff more often.
+              That's a consequence of exploration. Exploration is what you do
+              when you don't know what you're doing. That's what scientists do
+              every day. The universe is large and old, and the ingredients for
+              life as we know it are everywhere, so there's no reason to think
+              that Earth would be unique in that regard. Whether of not the life
+              became intelligent is a different question, and we'll see if we
+              find that.
+            </p>
+            <blockquote class="drop-cap">
+              While I'm not actually embarrassed by this, I tend not to read
+              books that have awesome movies made from them, regardless of how
+              well or badly the movie represented the actual written story. For
+              most of human civilization, the pace of innovation has been so
+              slow that a generation might pass before a discovery would
+              influence your life, culture or the conduct of nations.
+            </blockquote>
+            <p class="bg-black">Add <i>.drop-cap</i></p>
+            <p>
+              When an industry matures, it means it's not advancing, and of
+              course the jobs go overseas. That's the obligation of the
+              multi-national corporation: to put the factory where it can make
+              the widget as cheap as possible. Don't get angry when a
+              corporation does that; we've all bought into this concept. We live
+              in a capitalistic society. I always try to get people a different
+              outlook. When you do that, people take ownership of the
+              information.
+            </p>
+          </div>
+        </section>
+        <!-- FLEX -->
+        <section class="px-md px-xl-xl border-bottom bg-black-30" id="flex">
+          <p class="h1">Flex</p>
+          <!-- JUSTIFY CONTENT ROW -->
+          <div class="py-xl">
+            <p class="h5">Justify Content (Row)</p>
+            <div class="my-md" id="justify-content-start">
+              <p>.justify-content-start</p>
+              <div
+                style="height: 50px"
+                class="py-xs w-100 border border-rounded bg-violet d-flex justify-content-start"
+              >
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  1
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  2
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+            <div class="my-md" id="justify-content-center">
+              <p>.justify-content-center</p>
+              <div
+                style="height: 50px"
+                class="py-xs w-100 border border-rounded bg-violet d-flex justify-content-center"
+              >
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  1
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  2
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+            <div class="my-md" id="justify-content-end">
+              <p>.justify-content-end</p>
+              <div
+                style="height: 50px"
+                class="py-xs w-100 border border-rounded bg-violet d-flex justify-content-end"
+              >
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  1
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  2
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+            <div class="my-md" id="justify-content-between">
+              <p>.justify-content-between</p>
+              <div
+                style="height: 50px"
+                class="py-xs w-100 border border-rounded bg-violet d-flex justify-content-between"
+              >
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  1
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  2
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+            <div class="my-md" id="justify-content-around">
+              <p>.justify-content-around</p>
+              <div
+                style="height: 50px"
+                class="py-xs w-100 border border-rounded bg-violet d-flex justify-content-around"
+              >
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  1
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  2
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+            <div class="my-md" id="justify-content-even">
+              <p>.justify-content-even</p>
+              <div
+                style="height: 50px"
+                class="py-xs w-100 border border-rounded bg-violet d-flex justify-content-even"
+              >
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  1
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  2
+                </div>
+                <div
+                  class="w-25 h-100 flex-center border border-rounded bg-blue-60"
+                >
+                  3
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- JUSTIFY CONTENT COL -->
+          <div class="py-xl">
+            <p class="h5">Justify Content (Col)</p>
+            <div class="d-flex flex-wrap gap-md">
+              <div
+                class="my-md w-100 w-md-50 w-lg-33"
+                id="justify-content-start"
+              >
+                <p>.justify-content-start</p>
+                <div
+                  style="height: 200px"
+                  class="py-xs w-100 border border-rounded bg-violet d-flex flex-col justify-content-start"
+                >
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    1
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    2
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    3
+                  </div>
+                </div>
+              </div>
+              <div
+                class="my-md w-100 w-md-50 w-lg-33"
+                id="justify-content-center"
+              >
+                <p>.justify-content-center</p>
+                <div
+                  style="height: 200px"
+                  class="py-xs w-100 border border-rounded bg-violet d-flex flex-col justify-content-center"
+                >
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    1
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    2
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    3
+                  </div>
+                </div>
+              </div>
+              <div class="my-md w-100 w-md-50 w-lg-33" id="justify-content-end">
+                <p>.justify-content-end</p>
+                <div
+                  style="height: 200px"
+                  class="py-xs w-100 border border-rounded bg-violet d-flex flex-col justify-content-end"
+                >
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    1
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    2
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    3
+                  </div>
+                </div>
+              </div>
+              <div
+                class="my-md w-100 w-md-50 w-lg-33"
+                id="justify-content-between"
+              >
+                <p>.justify-content-between</p>
+                <div
+                  style="height: 200px"
+                  class="py-xs w-100 border border-rounded bg-violet d-flex flex-col justify-content-between"
+                >
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    1
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    2
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    3
+                  </div>
+                </div>
+              </div>
+              <div
+                class="my-md w-100 w-md-50 w-lg-33"
+                id="justify-content-around"
+              >
+                <p>.justify-content-around</p>
+                <div
+                  style="height: 200px"
+                  class="py-xs w-100 border border-rounded bg-violet d-flex flex-col justify-content-around"
+                >
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    1
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    2
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    3
+                  </div>
+                </div>
+              </div>
+              <div
+                class="my-md w-100 w-md-50 w-lg-33"
+                id="justify-content-even"
+              >
+                <p>.justify-content-even</p>
+                <div
+                  style="height: 200px"
+                  class="py-xs w-100 border border-rounded bg-violet d-flex flex-col justify-content-even"
+                >
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    1
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    2
+                  </div>
+                  <div
+                    class="w-100 flex-center border border-rounded bg-blue-60"
+                  >
+                    3
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- RIGHT BAR -->
+      <aside
+        class="h-vh-100 overflow-scroll bg-black-40 border-left"
+        style="width: 200px"
+      >
+        <div class="d-flex flex-col gap-row-md p-md">
+          <div style="height: 120px" class="w-100 border"></div>
+          <div style="height: 120px" class="w-100 border"></div>
+          <div style="height: 120px" class="w-100 border"></div>
+          <div style="height: 120px" class="w-100 border"></div>
+          <div style="height: 120px" class="w-100 border"></div>
+          <div style="height: 120px" class="w-100 border"></div>
+        </div>
+      </aside>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-black-30 border-top">
+      <p class="h6 my-none py-lg px-xxl">Footer</p>
+    </footer>
+  </body>
+</html>
