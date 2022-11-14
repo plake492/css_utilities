@@ -1,0 +1,12 @@
+.special-links:hover {
+  transition: all 200ms ease-in-out;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+.special-links:active {
+  transition: all 200ms ease-in-out;
+  color: black;
+  background-color: rgb(102, 102, 238);
+  cursor: pointer;
+}
