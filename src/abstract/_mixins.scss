@@ -111,6 +111,7 @@
         #{$property}: $val;
       }
     }
+
     @each $bp, $px in $breakpoints {
       @include respond-to(#{$px}) {
         .#{$class}-#{$bp}-#{$key} {

@@ -30,7 +30,7 @@ export default function FlexBox({
       ])}`}
       id={className}
     >
-      <p>.{className}</p>
+      <p>{`.${className}`}</p>
       <div
         style={{ height: boxHeight }}
         className={`py-xs border border-rounded bg-violet d-flex ${className} ${conditionalClasses(

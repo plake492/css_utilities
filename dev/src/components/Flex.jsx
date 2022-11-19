@@ -10,7 +10,6 @@ export default function Flex() {
       id="flex"
     >
       <p className="h1">Flex</p>
-
       <div className="py-xl">
         <p className="h5">Justify Content (Row)</p>
         {justifyContent.map((val, i) => (
