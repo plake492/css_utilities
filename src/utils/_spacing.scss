@@ -24,7 +24,6 @@
     }
   }
 }
-
 // X and Y directions
 @each $typeName, $type in $types {
   @each $dirKey, $directions in $combinationDirections {
@@ -41,7 +40,6 @@
     }
   }
 }
-
 // All directions
 @each $typeName, $type in $types {
   @each $direction in $allDirections {
@@ -56,7 +54,6 @@
     }
   }
 }
-
 /*****************************************************/
 /* Create Spacing Classes for md size overrides */
 /*****************************************************/
@@ -78,7 +75,6 @@
         }
       }
     }
-
     // X and Y directions
     @each $typeName, $type in $types {
       @each $dirKey, $directions in $combinationDirections {
@@ -95,7 +91,6 @@
         }
       }
     }
-
     // All directions
     @each $typeName, $type in $types {
       @each $direction in $allDirections {
