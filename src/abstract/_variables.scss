@@ -1,22 +1,26 @@
 @use 'sass:map';
 
+$base-font-size: 1rem;
+$base-spacing: 1rem;
+
 // Responsive Sizes
-$screen-sm-min: 400px;
-$screen-md-min: 600px;
-$screen-lg-min: 768px;
-$screen-xl-min: 1240px;
+$screen-sm-min: 36rem; //576px
+$screen-md-min: 48rem; //768px
+$screen-lg-min: 62rem; //992px
+$screen-xl-min: 75rem; //1200px
+$screen-xxl-min: 87.5rem; //1400px
 
 $breakpoints: (
   sm: $screen-sm-min,
   md: $screen-md-min,
   lg: $screen-lg-min,
-  xl: $screen-xl-min
+  xl: $screen-xl-min,
+  xxl: $screen-xxl-min
 );
 
 // **************************************************
 // ******************** Spacing *********************
 // **************************************************
-$base-spacing: 1.6rem;
 
 $space-none: 0rem;
 $space-xs: $base-spacing * 0.25;
@@ -92,28 +96,31 @@ $header-breakpoint-increase: 0.05;
 $header-increase: 0;
 
 $font-xs-sizes: (
-  md: 1.4rem,
-  lg: 1.6rem
+  md: calc($base-font-size - 0.125rem),
+  lg: calc($base-font-size)
 );
 
 $font-sm-sizes: (
-  md: 1.6rem,
-  lg: 1.8rem
+  sm: calc($base-font-size - 0.125rem),
+  md: calc($base-font-size),
+  xl: calc($base-font-size + 0.125rem)
 );
 
 $font-base-sizes: (
-  md: 1.8rem,
-  lg: 2rem
+  sm: calc($base-font-size),
+  md: calc($base-font-size + 0.125rem),
+  xl: calc($base-font-size + 0.25rem)
 );
 
 $font-lg-sizes: (
-  md: 2rem,
-  lg: 2.2rem
+  sm: calc($base-font-size + 0.125rem),
+  md: calc($base-font-size + 0.25rem),
+  xl: calc($base-font-size + 0.375rem)
 );
 
 $headers: ('6', '5', '4', '3', '2', '1');
 
-$font-size-standard: 2rem;
+$font-size-standard: calc($base-font-size + 0.25rem);
 
 // /**************************************************/
 // /* Line Height Ratios */
@@ -352,7 +359,7 @@ $flex: (
 );
 
 // **************************************************
-// ***************** Columns ********************
+// ***************** Columns ************************
 // **************************************************
 $number-of-columns: 12;
 

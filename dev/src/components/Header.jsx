@@ -3,7 +3,7 @@ import React from 'react'
 export default function Header() {
   return (
     <header className="bg-red-30 py-md box-shadow overflow-x-hidden border-bottom">
-      <div className="d-flex justify-content-between align-items-center mx-xxxl">
+      <div className="d-flex justify-content-between align-items-center mx-md mx-lg-lg mx-xl-xl mx-xxl-xxl">
         <h1 className="h5 my-none">CSS UTILITIES</h1>
         <nav>
           <ul className="no-list-style mb-none d-flex gap-md">

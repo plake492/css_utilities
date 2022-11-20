@@ -55,9 +55,9 @@
 
   $break-points-in-map: map.keys($map);
   // this requires the map to container
-  // keys equal to the either (sm, md, lg, or ,xl)
+  // keys equal to the either (sm, md, lg ,xl or, xxl)
 
-  @each $key /* = sm, md, lg, xl */ in $break-points-in-map {
+  @each $key /* = sm, md, lg, xl, xxl */ in $break-points-in-map {
     $bp: map.get($breakpoints, $key); // Get bp by key
     $val: map.get($map, $key);
 

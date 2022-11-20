@@ -6,8 +6,10 @@ import Header from './components/Header'
 import NavSection from './components/NavSection'
 import RightBar from './components/RightBar'
 import Footer from './components/Footer'
-import { useResizeObserver } from './hooks/useResizeObserver'
 import Columns from './components/Columns'
+import { useResizeObserver } from './hooks/useResizeObserver'
+import { useMatchMedia } from './hooks/useMatchMedia'
+import { breakpoints } from './utils'
 
 export default function App() {
   const headerRef = useRef()
@@ -15,7 +17,9 @@ export default function App() {
 
   const { height: headerHeight } = useResizeObserver(headerRef)
   const { height: footerHeight } = useResizeObserver(footerRef)
-  console.log(headerHeight)
+
+  const isLargeOrAbove = useMatchMedia(breakpoints.lg)
+
   return (
     <div className="bg-black-10 h-max-vh-100 overflow-x-hidden">
       <div ref={headerRef}>
@@ -25,13 +29,13 @@ export default function App() {
         className="d-flex h-vh-100"
         style={{ '--vh-offest': `${headerHeight + footerHeight}px` }}
       >
-        <NavSection />
+        {isLargeOrAbove ? <NavSection /> : null}
         <section className="h-vh-100 w-100 overflow-scroll">
           <Typography />
           <Flex />
           <Columns />
         </section>
-        <RightBar />
+        {isLargeOrAbove ? <RightBar /> : null}
       </main>
       <div ref={footerRef}>
         <Footer />

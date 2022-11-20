@@ -1,12 +1,16 @@
 import React from 'react'
 import { conditionalClasses } from '../utils'
+import SectionContainer from './SectionContainer'
 
 export default function Columns() {
   return (
-    <div className="container px-md px-lg-xl px-xl-xxl">
+    <SectionContainer title="Columns" titleType="h3">
       <div className="row py-xxl">
         {[...Array(1)].map((_, i) => (
-          <div className="col-12 p-md bg-accent-10 border-rounded border border-dark">
+          <div
+            key={i}
+            className="col-12 p-md bg-accent-10 border-rounded border border-dark"
+          >
             <p className="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               consequuntur fuga animi, illum assumenda accusantium natus
@@ -18,7 +22,10 @@ export default function Columns() {
       </div>
       <div className="row py-xxl g-lg">
         {[...Array(6)].map((_, i) => (
-          <div className="col-6 p-md bg-accent-10 border-rounded border border-dark">
+          <div
+            key={i}
+            className="col-6 p-md bg-accent-10 border-rounded border border-dark"
+          >
             <p className="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               consequuntur fuga animi, illum assumenda accusantium natus
@@ -31,6 +38,7 @@ export default function Columns() {
       <div className="row py-xxl g-xl">
         {[...Array(9)].map((_, i) => (
           <div
+            key={i}
             className={`col-4 ${conditionalClasses([
               i % 2 === 0,
               'col-xl-9',
@@ -48,7 +56,10 @@ export default function Columns() {
       </div>
       <div className="row py-xxl">
         {[...Array(4)].map((_, i) => (
-          <div className="col-3 p-md bg-accent-10 border-rounded border border-dark">
+          <div
+            key={i}
+            className="col-3 p-md bg-accent-10 border-rounded border border-dark"
+          >
             <p className="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               consequuntur fuga animi, illum assumenda accusantium natus
@@ -60,7 +71,10 @@ export default function Columns() {
       </div>
       <div className="row py-xxl g-row-md g-col-xl">
         {[...Array(18)].map((_, i) => (
-          <div className="col-2 p-md bg-accent-10 border-rounded border border-dark">
+          <div
+            key={i}
+            className="col-4 col-md-2 p-md bg-accent-10 border-rounded border border-dark"
+          >
             <p className="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
               consequuntur fuga animi, illum assumenda accusantium natus
@@ -69,6 +83,6 @@ export default function Columns() {
           </div>
         ))}
       </div>
-    </div>
+    </SectionContainer>
   )
 }

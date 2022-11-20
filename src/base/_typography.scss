@@ -4,8 +4,7 @@
 // Holder map for setting header font sizes
 $header-font-modifiers: ();
 
-// TODO Find more appropriate place for this.
-// Generate the
+// Generate t
 @for $i from 1 through length($header-font-responsive-sizes) {
   $key: nth($header-font-responsive-sizes, $i);
   $map: (
@@ -27,7 +26,7 @@ $header-font-modifiers: ();
   @include make-responsive-var(
     --header-font-modifier,
     $header-font-modifiers,
-    0.5
+    0.48
   );
 
   --line-height-ratio: #{$line-height-ratio};
@@ -47,10 +46,9 @@ $header-font-modifiers: ();
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-html {
-  font-size: 62.5%; // Set 1rem to 10px
-}
+// html {
+//   font-size:px;
+// }
 
 body {
   font-family: var(--font-family);

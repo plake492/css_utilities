@@ -4,6 +4,7 @@ import { conditionalClasses } from '../utils'
 function FlexItem({ index, isFullWidth }) {
   return (
     <div
+      style={{ height: index === 1 ? '100px' : '' }}
       className={`${conditionalClasses([
         isFullWidth,
         'w-100',
@@ -20,25 +21,28 @@ export default function FlexBox({
   boxHeight,
   parentWidth = 'w-100',
   itemWidth = 'w-25',
-  isCol
+  isCol,
+  expandFirstItem
 }) {
   return (
     <div
       className={`my-md ${conditionalClasses([
         isCol,
-        'w-100 w-md-50 w-lg-33'
+        'col-12 col-md-6 col-lg-4'
       ])}`}
       id={className}
     >
       <p>{`.${className}`}</p>
       <div
-        style={{ height: boxHeight }}
-        className={`py-xs border border-rounded bg-violet d-flex ${className} ${conditionalClasses(
+        // style={{
+        //   height: `${boxHeight}px`
+        // }}
+        className={`border border-rounded bg-violet d-flex ${className} ${conditionalClasses(
           [isCol, 'flex-col']
         )}`}
       >
         {[...Array(3)].map((_, index) => (
-          <FlexItem key="index" index={index + 1} isFullWidth={isCol} />
+          <FlexItem key={index} index={index + 1} isFullWidth={isCol} />
         ))}
       </div>
     </div>

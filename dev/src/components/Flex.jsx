@@ -1,39 +1,49 @@
 import React from 'react'
 import FlexBox from './FlexBox'
+import SectionContainer from './SectionContainer'
 
 export default function Flex() {
   const justifyContent = ['start', 'center', 'end', 'between', 'around', 'even']
+  const alignItmes = ['start', 'center', 'end', 'baseline', 'sretch']
 
   return (
-    <section
-      className="px-md px-lg-xl px-xl-xxl border-bottom bg-black-30"
-      id="flex"
-    >
-      <p className="h1">Flex</p>
+    <SectionContainer bgColor="bg-black-30" title="Flex">
       <div className="py-xl">
         <p className="h5">Justify Content (Row)</p>
         {justifyContent.map((val, i) => (
           <FlexBox
             key={val + i}
             className={`justify-content-${val}`}
-            boxHeight="50px"
+            boxHeight={50}
           />
         ))}
       </div>
 
       <div className="py-xl">
         <p className="h5">Justify Content (Col)</p>
-        <div className="d-flex flex-wrap gap-md">
+        <div className="row g-lg-xl g-md">
           {justifyContent.map((val, i) => (
             <FlexBox
               key={val + i}
               className={`justify-content-${val}`}
-              boxHeight="200px"
+              boxHeight={200}
               isCol
             />
           ))}
         </div>
       </div>
-    </section>
+
+      <div className="py-xl">
+        <p className="h5">Align items</p>
+        {alignItmes.map((val, i) => (
+          <FlexBox
+            key={val + i}
+            className={`align-items-${val}`}
+            boxHeight={100}
+            expandFirstItem
+          />
+        ))}
+      </div>
+    </SectionContainer>
   )
 }

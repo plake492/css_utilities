@@ -1,13 +1,10 @@
 import React from 'react'
+import SectionContainer from './SectionContainer'
 
 export default function Typography() {
   return (
-    <section
-      className="px-md px-lg-xl px-xl-xxl border-bottom bg-black-10"
-      id="typography"
-    >
-      <p className="h1">Typography</p>
-      <div className="mb-md pb-md">
+    <SectionContainer bgColor="bg-black-10" title="Typography">
+      <div className="mb-md pb-md pt-xxl">
         <p className="h1">Header 1</p>
         <p className="h2">Header 2</p>
         <p className="h3">Header 3</p>
@@ -77,22 +74,15 @@ export default function Typography() {
           to be the embarrassment of the galaxy, to have had the power to
           deflect an asteroid, and then not, and end up going extinct. When an
           industry matures, it means it's not advancing, and of course the jobs
-          go overseas. That's the obligation of the multi-national corporation:
-          to put the factory where it can make the widget as cheap as possible.
-          Don't get angry when a corporation does that; we've all bought into
-          this concept. We live in a capitalistic society. I always try to get
-          people a different outlook. When you do that, people take ownership of
-          the information. They don't ever have to reference me because, I'd
-          like to believe as an educator, I'm empowering them to have those
-          thoughts themselves.
+          go overseas.
         </p>
       </div>
       <div className="mb-md pb-md">
         <div>
           <p className="h4">Lists</p>
         </div>
-        <div className="d-flex gap-xl">
-          <div className="w-33">
+        <div className="row g-xl">
+          <div className="col-6 col-md-4">
             <p className="text-lg font-weight-600">Unordered List</p>
             <ul>
               <li>
@@ -132,7 +122,7 @@ export default function Typography() {
               </li>
             </ul>
           </div>
-          <div className="w-33">
+          <div className="col-6 col-md-4">
             <p className="text-lg font-weight-600">
               ul with <i>.no-list-style</i> on `ul`
             </p>
@@ -154,7 +144,7 @@ export default function Typography() {
               </li>
             </ul>
           </div>
-          <div className="w-33">
+          <div className="col-6 col-md-4">
             <p className="text-lg font-weight-600">Ordered List</p>
             <ol>
               <li>List</li>
@@ -226,6 +216,6 @@ export default function Typography() {
           ownership of the information.
         </p>
       </div>
-    </section>
+    </SectionContainer>
   )
 }

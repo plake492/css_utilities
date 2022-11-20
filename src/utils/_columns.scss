@@ -24,9 +24,16 @@ $col-chunk: calc(100 / $number-of-columns);
       $col-width-as-percentage - (var(--col-gutter-column) * $gap-offset)
     );
   }
+}
 
-  // Column width responsive
-  @each $bp, $px in $breakpoints {
+// Column width responsive
+@each $bp, $px in $breakpoints {
+  @for $i from 1 through $number-of-columns {
+    $col-width: $i * $col-chunk;
+    // Multiplier to use with gutter size
+    $gap-offset: calc((100 - $col-width) / 100);
+    // convert amount to percentage
+    $col-width-as-percentage: calc($col-width * 1%);
     @include respond-to(#{$px}) {
       .col-#{$bp}-#{$i} {
         width: calc(
