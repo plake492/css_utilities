@@ -4,11 +4,11 @@ import { conditionalClasses } from '../utils'
 export default function Columns() {
   return (
     <>
-      <div className="row py-xxl">
-        {[...Array(1)].map((_, i) => (
+      <div className="row g-md py-xxl">
+        {[...Array(4)].map((_, i) => (
           <div
             key={i}
-            className="col-12 p-md bg-accent-10 border-rounded border border-dark"
+            className="col-6 col-md-3 p-md bg-accent-10 border-rounded border border-dark"
           >
             <p className="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
@@ -19,7 +19,7 @@ export default function Columns() {
           </div>
         ))}
       </div>
-      <div className="row py-xxl g-lg">
+      {/*  <div className="row py-xxl g-lg">
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
@@ -81,7 +81,7 @@ export default function Columns() {
             </p>
           </div>
         ))}
-      </div>
+      </div> */}
     </>
   )
 }

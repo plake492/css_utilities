@@ -1,14 +1,29 @@
-@each $dir in $borders {
+// /**************************************************/
+// /* Borders */
+// /**************************************************/
+@each $dir in $border-sides {
   @if ($dir == all) {
     .border {
-      border: $border;
+      --border-color: #{$border-color};
+      --border-width: #{$border-width};
+      --border-style: #{$border-style};
+
+      border-width: var(--border-width);
+      border-color: var(--border-color);
+      border-style: var(--border-style);
     }
     .border-none {
       border: none;
     }
   } @else {
     .border-#{$dir} {
-      border-#{$dir}: $border;
+      --border-color: #{$border-color};
+      --border-width: #{$border-width};
+      --border-style: #{$border-style};
+
+      border-#{$dir}-width: var(--border-width);
+      border-#{$dir}-color: var(--border-color);
+      border-#{$dir}-style: var(--border-style);
     }
     .border-#{$dir}-none {
       border-#{$dir}: none;
@@ -16,27 +31,32 @@
   }
 }
 
-@each $bp, $screen in $breakpoints {
-  @include respond-to($screen) {
-    .box-shadow-#{$bp} {
-      box-shadow: $box-shadow !important;
-    }
-
-    .box-shadow-#{$bp}-none {
-      box-shadow: none !important;
-    }
-
-    @each $dir in $borders {
+// Responsive
+@each $bp, $px in $breakpoints {
+  @include respond-to($px) {
+    @each $dir in $border-sides {
       @if ($dir == all) {
         .border-#{$bp} {
-          border: $border;
+          --border-color: #{$border-color};
+          --border-width: #{$border-width};
+          --border-style: #{$border-style};
+
+          border-width: var(--border-width);
+          border-color: var(--border-color);
+          border-style: var(--border-style);
         }
         .border-#{$bp}-none {
-          border: none;
+          border: none !important;
         }
       } @else {
         .border-#{$bp}-#{$dir} {
-          border-#{$dir}: $border;
+          --border-color: #{$border-color};
+          --border-width: #{$border-width};
+          --border-style: #{$border-style};
+
+          border-#{$dir}-width: var(--border-width) !important;
+          border-#{$dir}-color: var(--border-color) !important;
+          border-#{$dir}-style: var(--border-style) !important;
         }
         .border-#{$bp}-#{$dir}-none {
           border-#{$dir}: none;
@@ -46,18 +66,66 @@
   }
 }
 
+// /**************************************************/
+// /* Border Colors */
+// /**************************************************/
+@each $key, $val in $border-colors {
+  .border-#{'' + $key} {
+    --border-color: #{$val};
+  }
+}
+// Responsive
+@each $bp, $px in $breakpoints {
+  @include respond-to($px) {
+    @each $key, $val in $border-colors {
+      .border-#{$bp}-#{'' + $key} {
+        --border-color: #{$val} !important;
+      }
+    }
+  }
+}
+
+// /**************************************************/
+// /* Border Widths */
+// /**************************************************/
+@each $key, $val in $border-widths {
+  .border-#{$key} {
+    --border-width: #{$val};
+  }
+}
+// Responsive
+@each $bp, $px in $breakpoints {
+  @include respond-to($px) {
+    @each $key, $val in $border-widths {
+      .border-#{$bp}-#{$key} {
+        --border-width: #{$val} !important;
+      }
+    }
+  }
+}
+
+// /**************************************************/
+// /* Border Radius */
+// /**************************************************/
+@each $dir-key, $dir-val in $border-radius-sides {
+  @each $round-key, $round-val in $border-rounded-edges {
+    @if ($dir-key == all) {
+      .border-#{$round-key} {
+        border-radius: $round-val;
+      }
+    } @else {
+      .border-#{$dir-key}-#{$round-key} {
+        border-#{$dir-val}-radius: $round-val;
+      }
+    }
+  }
+}
+
+// Border Radius
 .border-rounded {
   border-radius: $border-radius;
 }
 
 .border-circle {
   border-radius: $border-radius-round;
-}
-
-.box-shadow {
-  box-shadow: $box-shadow;
-}
-
-.box-shadow-none {
-  box-shadow: none;
 }

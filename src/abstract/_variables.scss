@@ -1,14 +1,14 @@
 @use 'sass:map';
 
-$base-font-size: 1rem;
-$base-spacing: 1rem;
+// $base-font-size: 1rem;
+// $base-spacing: 1rem;
 
-// Responsive Sizes
-$screen-sm-min: 36rem; //576px
-$screen-md-min: 48rem; //768px
-$screen-lg-min: 62rem; //992px
-$screen-xl-min: 75rem; //1200px
-$screen-xxl-min: 87.5rem; //1400px
+// // Responsive Sizes
+// $screen-sm-min: 36rem; //576px
+// $screen-md-min: 48rem; //768px
+// $screen-lg-min: 62rem; //992px
+// $screen-xl-min: 75rem; //1200px
+// $screen-xxl-min: 87.5rem; //1400px
 
 $breakpoints: (
   sm: $screen-sm-min,
@@ -17,6 +17,8 @@ $breakpoints: (
   xl: $screen-xl-min,
   xxl: $screen-xxl-min
 );
+
+$one-px: 0.06rem;
 
 // **************************************************
 // ******************** Spacing *********************
@@ -226,15 +228,43 @@ $transition-list: (
 // ***************** Borders ************************
 // **************************************************
 
-$border-radius: 4px;
-$border-radius-pill: 40px;
+$border-radius: calc($one-px * 4);
+$border-radius-pill: calc($one-px * 40);
 $border-radius-round: 50%;
-$border-width: 1px;
-$border-color: $white;
 
-$border: $border-color $border-width solid;
+$border-width: $one-px;
+$border-color: #ffffff;
+$border-style: solid;
 
 $box-shadow: 2px 2px 7px 2px rgb(0 0 0 / 8%);
+
+$border-sides: (top, right, bottom, left, all);
+
+$border-colors: ();
+$border-colors: map.merge($border-colors, $target-colors);
+
+$border-widths: (
+  1: calc($one-px * 1),
+  2: calc($one-px * 2),
+  3: calc($one-px * 3),
+  4: calc($one-px * 4),
+  5: calc($one-px * 5),
+  0: calc($one-px * 0)
+);
+
+$border-radius-sides: (
+  tl: 'top-left',
+  tr: 'top-right',
+  bl: 'bottom-left',
+  br: 'bottom-right',
+  all: 'all'
+);
+
+$border-rounded-edges: (
+  rounded: $border-radius,
+  pill: $border-radius-pill,
+  circle: $border-radius-round
+);
 
 // **************************************************
 // ***************** Positioning ********************
@@ -362,12 +392,6 @@ $flex: (
 // ***************** Columns ************************
 // **************************************************
 $number-of-columns: 12;
-
-// **************************************************
-// ***************** Borders ************************
-// **************************************************
-
-$borders: (top, right, bottom, left, all);
 
 // **************************************************
 // ***************** Widths *************************

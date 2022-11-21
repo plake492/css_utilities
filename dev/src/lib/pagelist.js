@@ -5,13 +5,13 @@ import Flex from '../components/Flex'
 import Typography from '../components/Typography'
 
 export const pages = [
-  { title: 'Typography', Component: Typography, bgColors: 'bg-black-10' },
+  { title: 'Typography', Component: Typography, bgColor: 'bg-priamry' },
   {
     title: 'Background Colors',
     Component: BackgroundColors,
-    bgColors: 'bg-secondary'
+    bgColor: 'bg-secondary'
   },
-  { title: 'Flex', Component: Flex, bgColors: '' },
-  { title: 'Borders', Component: Borders, bgColors: 'bg-accent-20' },
-  { title: 'Columns', Component: Columns, bgColors: '' }
+  { title: 'Flex', Component: Flex, bgColor: 'bg-priamry' },
+  { title: 'Borders', Component: Borders, bgColor: 'bg-secondary' },
+  { title: 'Columns', Component: Columns, bgColor: 'bg-priamry' }
 ]
