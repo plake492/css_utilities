@@ -1,10 +1,9 @@
 import React from 'react'
 import { conditionalClasses } from '../utils'
-import SectionContainer from './SectionContainer'
 
 export default function Columns() {
   return (
-    <SectionContainer title="Columns" titleType="h3">
+    <>
       <div className="row py-xxl">
         {[...Array(1)].map((_, i) => (
           <div
@@ -83,6 +82,6 @@ export default function Columns() {
           </div>
         ))}
       </div>
-    </SectionContainer>
+    </>
   )
 }

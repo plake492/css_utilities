@@ -20,6 +20,18 @@
 :root {
   --bg-color: #{$bg-primary};
   --text-color: #{get-contrasted-text($bg-primary)};
+
+  @each $key, $value in $target-colors {
+    --bg-#{'' + $key}: #{$value};
+
+    // * Add tones as classes * //
+    @each $tone in $tones {
+      $bg-color-tone: get-color-scale-value($value, $tone);
+      $text-color-tone: get-contrasted-text($bg-color-tone);
+
+      --bg-#{'' + $key}-#{$tone}: #{$bg-color-tone};
+    }
+  }
 }
 
 @each $key, $value in $target-colors {
@@ -197,4 +209,3 @@
 //     // }
 //   }
 // }
-$test: #000;

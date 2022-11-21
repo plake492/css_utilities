@@ -3,7 +3,7 @@ import SectionContainer from './SectionContainer'
 
 export default function Typography() {
   return (
-    <SectionContainer bgColor="bg-black-10" title="Typography">
+    <>
       <div className="mb-md pb-md pt-xxl">
         <p className="h1">Header 1</p>
         <p className="h2">Header 2</p>
@@ -216,6 +216,6 @@ export default function Typography() {
           ownership of the information.
         </p>
       </div>
-    </SectionContainer>
+    </>
   )
 }

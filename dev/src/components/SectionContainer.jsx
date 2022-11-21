@@ -9,7 +9,7 @@ export default function SectionContainer({
   return (
     <section
       className={`px-md px-xl-lg px-xxl-xl border-bottom overflow-x-hidden py-lg ${bgColor}`}
-      id={title.toLowerCase()}
+      id={title.replace(/\s+/g, '-').toLowerCase()}
     >
       <p className={titleType}>{title}</p>
       {children}

@@ -1,4 +1,6 @@
 import React from 'react'
+import { hyphenat } from '../utils'
+import { pages } from '../lib/pagelist'
 
 export default function Header() {
   return (
@@ -7,16 +9,13 @@ export default function Header() {
         <h1 className="h5 my-none">CSS UTILITIES</h1>
         <nav>
           <ul className="no-list-style mb-none d-flex gap-md">
-            <li>
-              <a className="link link--nav" href="#typography">
-                Typography
-              </a>
-            </li>
-            <li>
-              <a className="link link--nav" href="#flex">
-                Flex
-              </a>
-            </li>
+            {pages.map(({ title }) => (
+              <li>
+                <a className="link link--nav" href={`#${hyphenat(title)}`}>
+                  {title}{' '}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

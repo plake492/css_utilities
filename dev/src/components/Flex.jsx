@@ -7,7 +7,7 @@ export default function Flex() {
   const alignItmes = ['start', 'center', 'end', 'baseline', 'sretch']
 
   return (
-    <SectionContainer bgColor="bg-black-30" title="Flex">
+    <>
       <div className="py-xl">
         <p className="h5">Justify Content (Row)</p>
         {justifyContent.map((val, i) => (
@@ -44,6 +44,6 @@ export default function Flex() {
           />
         ))}
       </div>
-    </SectionContainer>
+    </>
   )
 }

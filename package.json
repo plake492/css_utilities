@@ -8,8 +8,8 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "yarn clean && sass ./src/index.scss ./dist/index.css && sass ./src/reset.scss ./dist/reset.css",
-    "watch": "sass -w ./src/index.scss ./dev/src/styles/index.css && sass ./src/reset.scss ./dev/src/styles/reset.css"
+    "build": "yarn clean && sass ./src/index.scss:./dist/index.css --style compressed && sass ./src/reset.scss:./dist/reset.css --style compressed",
+    "watch": "sass -w ./src/index.scss:./dev/src/styles/index.css --style compressed && sass ./src/reset.scss:./dev/src/styles/reset.css"
   },
   "devDependencies": {
     "sass": "^1.56.1",

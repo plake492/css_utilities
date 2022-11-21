@@ -1,12 +1,13 @@
-import { useRef } from 'react'
-import React from 'react'
-import Typography from './components/Typography'
-import Flex from './components/Flex'
+import React, { useRef } from 'react'
+
 import Header from './components/Header'
 import NavSection from './components/NavSection'
 import RightBar from './components/RightBar'
 import Footer from './components/Footer'
-import Columns from './components/Columns'
+import SectionContainer from './components/SectionContainer'
+
+import { pages } from './lib/pagelist'
+
 import { useResizeObserver } from './hooks/useResizeObserver'
 import { useMatchMedia } from './hooks/useMatchMedia'
 import { breakpoints } from './utils'
@@ -30,10 +31,15 @@ export default function App() {
         style={{ '--vh-offest': `${headerHeight + footerHeight}px` }}
       >
         {isLargeOrAbove ? <NavSection /> : null}
-        <section className="h-vh-100 w-100 overflow-scroll">
-          <Typography />
-          <Flex />
-          <Columns />
+        <section
+          className="h-vh-100 w-100 overflow-scroll"
+          style={{ scrollBehavior: 'smooth' }}
+        >
+          {pages.map(({ title, Component, bgColor }) => (
+            <SectionContainer title={title} bgColor={bgColor}>
+              <Component />
+            </SectionContainer>
+          ))}
         </section>
         {isLargeOrAbove ? <RightBar /> : null}
       </main>

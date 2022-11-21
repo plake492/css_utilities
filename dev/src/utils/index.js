@@ -20,3 +20,33 @@ export const breakpoints = {
   xl: '(min-width: 1200px)',
   xxl: '(min-width: 1400px)'
 }
+
+export const getCssVar = cssVarTarget => {
+  return Array.from(document.styleSheets)
+    .filter(
+      sheet =>
+        sheet.href === null || sheet.href.startsWith(window.location.origin)
+    )
+    .reduce(
+      (acc, sheet) =>
+        (acc = [
+          ...acc,
+          ...Array.from(sheet.cssRules).reduce(
+            (def, rule) =>
+              (def =
+                rule.selectorText === ':root'
+                  ? [
+                      ...def,
+                      ...Array.from(rule.style).filter(name =>
+                        name.startsWith(cssVarTarget)
+                      )
+                    ]
+                  : def),
+            []
+          )
+        ]),
+      []
+    )
+}
+
+export const hyphenat = str => str.replace(/\s+/g, '-').toLowerCase()
