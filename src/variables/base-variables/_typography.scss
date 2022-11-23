@@ -1,0 +1,69 @@
+// **************************************************
+// ***************** TYPEOGRAPHY ********************
+// **************************************************
+
+// /**************************************************/
+// /* Fonts */
+// /**************************************************/
+$primary-font: Arial, sans-serif;
+$secondary-font: Verdana, sans-serif;
+
+$font-weights: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+// /**************************************************/
+// /* Responsive fonts */
+// /**************************************************/
+
+// Determian which breakpoints update the Header sizes
+$header-font-responsive-sizes: (sm, md, lg, xl);
+
+// ratio to update the header font / line-height sizes
+// will be applied to the first item in $header-font-responsive-sizes
+$header-font-modifier-base: 0.6;
+
+// Amount to increase by for every proceeding item in $header-font-responsive-sizes
+$header-breakpoint-increase: 0.05;
+
+// Placeholder for changing header sizes by breakpoints
+$header-increase: 0;
+
+$font-xs-sizes: (
+  md: rem(14),
+  lg: rem($base-font-size)
+);
+
+$font-sm-sizes: (
+  sm: rem(14),
+  md: rem($base-font-size),
+  xl: rem(18)
+);
+
+$font-base-sizes: (
+  sm: rem($base-font-size),
+  md: rem(18),
+  xl: rem(20)
+);
+
+$font-lg-sizes: (
+  sm: rem(18),
+  md: rem(20),
+  xl: rem(22)
+);
+
+$headers: ('6', '5', '4', '3', '2', '1');
+
+$font-size-standard: rem(20);
+
+// /**************************************************/
+// /* Line Height Ratios */
+// /**************************************************/
+$line-height-ratio: 1.6;
+
+// This values will affect the Header font-sizes
+$line-height-ratio-headers: 1.2;
+
+// Bases for header margin
+$base-text-margin-bottom: $space-md;
+$base-text-margin-top: $space-lg;
+
+$underline-bottom: 0px;

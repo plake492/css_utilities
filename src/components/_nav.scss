@@ -19,7 +19,7 @@
     width: 100%;
     transform: translate(0%, -100%);
     z-index: 1;
-    transition: transform 300ms ease-in-out;
+    @include transition(transform);
 
     &.active {
       transform: translate(0%, 0%);
@@ -36,12 +36,12 @@
   &::before {
     @include nav-bar-line();
     transform: translate(-50%, 200%);
-    transition: transform 300ms ease-in-out;
+    @include transition(transform);
   }
   &::after {
     @include nav-bar-line();
     transform: translate(-50%, -200%);
-    transition: transform 300ms ease-in-out;
+    @include transition(transform);
   }
 
   &.active {

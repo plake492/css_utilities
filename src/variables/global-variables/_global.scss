@@ -1,0 +1,34 @@
+$base-font-size: 16;
+$base-spacing: 1rem;
+
+// Responsive Sizes
+$screen-sm-min: 36rem; //576px
+$screen-md-min: 48rem; //768px
+$screen-lg-min: 62rem; //992px
+$screen-xl-min: 75rem; //1200px
+$screen-xxl-min: 87.5rem; //1400px
+
+/**************************************************/
+/* Global Spacers */
+/**************************************************/
+
+$space-none: 0rem;
+$space-xs: $base-spacing * 0.25;
+$space-sm: $base-spacing * 0.5;
+$space-md: $base-spacing;
+$space-lg: $base-spacing * 2;
+$space-xl: $base-spacing * 3;
+$space-xxl: $base-spacing * 4;
+$space-xxxl: $base-spacing * 8;
+
+$spacers: (
+  none: $space-none,
+  xs: $space-xs,
+  sm: $space-sm,
+  md: $space-md,
+  lg: $space-lg,
+  xl: $space-xl,
+  xxl: $space-xxl,
+  xxxl: $space-xxxl,
+  auto: auto
+);

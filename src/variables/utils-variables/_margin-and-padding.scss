@@ -1,0 +1,29 @@
+/// *************************************************
+// *************** Margin & Padding *****************
+// **************************************************
+
+$types: (
+  p: 'padding',
+  m: 'margin',
+  mn: 'margin'
+);
+
+$directions: (
+  t: 'top',
+  r: 'right',
+  b: 'bottom',
+  l: 'left'
+);
+
+$combinationDirections: (
+  x: (
+    'left',
+    'right'
+  ),
+  y: (
+    'top',
+    'bottom'
+  )
+);
+
+$allDirections: ('left', 'right', 'top', 'bottom');

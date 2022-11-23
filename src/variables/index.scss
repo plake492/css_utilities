@@ -1,1 +1,11 @@
-@import './global_variables';
+// Global
+@import './global-variables/';
+
+// Base
+@import './base-variables/';
+
+// Utils
+@import './utils-variables/';
+
+// Settings
+@import './settings-variables/';

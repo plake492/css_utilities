@@ -1,0 +1,43 @@
+@use 'sass:map';
+
+// **************************************************
+// ***************** Borders ************************
+// **************************************************
+
+$border-radius: rem(4);
+$border-radius-pill: rem(40);
+$border-radius-round: 50%;
+
+$border-width: rem(1);
+$border-color: #ffffff;
+$border-style: solid;
+
+$box-shadow: 2px 2px 7px 2px rgb(0 0 0 / 8%);
+
+$border-sides: (top, right, bottom, left, all);
+
+$border-colors: ();
+$border-colors: map.merge($border-colors, $target-colors);
+
+$border-widths: (
+  1: rem(1),
+  2: rem(2),
+  3: rem(3),
+  4: rem(4),
+  5: rem(5),
+  0: rem(6)
+);
+
+$border-radius-sides: (
+  tl: 'top-left',
+  tr: 'top-right',
+  bl: 'bottom-left',
+  br: 'bottom-right',
+  all: 'all'
+);
+
+$border-rounded-edges: (
+  rounded: $border-radius,
+  pill: $border-radius-pill,
+  circle: $border-radius-round
+);

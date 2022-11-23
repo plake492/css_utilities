@@ -34,3 +34,11 @@ Color brightness is determined by the following formula:
   $div-tone: calc($tone / 2);
   @return adjust-color($color, $lightness: $div-tone * 1%);
 }
+
+// /**************************************************/
+// /* Convert a number representing pixals into rem */
+// /**************************************************/
+@function rem($px) {
+  $rem: #{calc($px / $base-font-size)}rem;
+  @return $rem;
+}

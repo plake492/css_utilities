@@ -19,11 +19,11 @@ export default function Columns() {
           </div>
         ))}
       </div>
-      {/*  <div className="row py-xxl g-lg">
+      <div className="row py-xxl g-lg">
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
-            className="col-6 p-md bg-accent-10 border-rounded border border-dark"
+            className="col-12 col-md-6 p-md bg-accent-10 border-rounded border border-dark"
           >
             <p className="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
@@ -34,7 +34,7 @@ export default function Columns() {
           </div>
         ))}
       </div>
-      <div className="row py-xxl g-xl">
+      {/* <div className="row py-xxl g-xl">
         {[...Array(9)].map((_, i) => (
           <div
             key={i}

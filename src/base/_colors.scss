@@ -9,7 +9,7 @@
 @mixin bg-classes() {
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: color 200ms ease-in-out, background 200ms ease-in-out;
+  @include transition((color, background), 200);
 }
 
 // ************************************************* //

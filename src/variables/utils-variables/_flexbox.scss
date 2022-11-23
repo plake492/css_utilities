@@ -1,0 +1,94 @@
+// **************************************************
+// ******************** Flexbox *********************
+// **************************************************
+
+$flex-basis: (
+  25: 25%,
+  33: 33%,
+  50: 50%,
+  66: 66%,
+  75: 75%,
+  100: 100%
+);
+
+$placements: (
+  center: center,
+  start: start,
+  end: end,
+  flex-start: flex-start,
+  flex-end: flex-end,
+  between: space-between,
+  around: space-around,
+  even: space-evenly,
+  stretch: stretch
+);
+
+$align-items: (
+  center: center,
+  start: start,
+  end: end,
+  flex-start: flex-start,
+  flex-end: flex-end,
+  baseline: baseline,
+  stretch: stretch
+);
+
+$flex-direction: (
+  row: row,
+  row-reverse: row-reverse,
+  col: column,
+  col-reverse: column-reverse
+);
+
+$flex-wrap: (
+  wrap: wrap,
+  no-wrap: nowrap,
+  wrap-reverse: wrap-reverse
+);
+
+$order: (
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5
+);
+
+// The first key equals the CSS prop to be targeted
+// The nested key will set the base class name
+// EX: .flex-row {flex-direction: row}
+$flex: (
+  justify-content: (
+    justify-content: $placements
+  ),
+  align-content: (
+    align-content: $placements
+  ),
+  align-items: (
+    align-items: $align-items
+  ),
+  align-self: (
+    align-self: $align-items
+  ),
+  flex-direction: (
+    flex: $flex-direction
+  ),
+  flex-wrap: (
+    flex: $flex-wrap
+  ),
+  order: (
+    order: $order
+  ),
+  gap: (
+    gap: $spacers
+  ),
+  column-gap: (
+    gap-col: $spacers
+  ),
+  row-gap: (
+    gap-row: $spacers
+  ),
+  flex-basis: (
+    flex-basis: $flex-basis
+  )
+);

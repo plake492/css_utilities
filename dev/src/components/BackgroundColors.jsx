@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { getCssVar } from '../utils'
 
 export default function BackgroundColors() {
@@ -9,15 +9,18 @@ export default function BackgroundColors() {
       {colors.map((v, index) => {
         const bgClass = v.split('--')[1]
 
-        return v !== '--bg-color' ? (
-          <div
-            className={`${bgClass} border px-md py-sm col-6 col-md-4`}
-            key={v + index}
-          >
-            {bgClass}
-          </div>
-        ) : null
+        return v !== '--bg-color' ? <ColorBlock bgClass={bgClass} /> : null
       })}
+    </div>
+  )
+}
+
+const ColorBlock = ({ bgClass }) => {
+  const [showClass, setShowClass] = useState(false)
+
+  return (
+    <div className={`${bgClass} border px-md py-sm col-6 col-md-4`}>
+      {bgClass}
     </div>
   )
 }
