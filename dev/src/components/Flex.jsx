@@ -8,7 +8,7 @@ export default function Flex() {
 
   return (
     <>
-      <div className="py-xl">
+      <div id="justify" className="py-xl">
         <p className="h5">Justify Content (Row)</p>
         {justifyContent.map((val, i) => (
           <FlexBox
@@ -19,7 +19,7 @@ export default function Flex() {
         ))}
       </div>
 
-      <div className="py-xl">
+      <div id="justify-(col)" className="py-xl">
         <p className="h5">Justify Content (Col)</p>
         <div className="row g-lg-xl g-md">
           {justifyContent.map((val, i) => (
@@ -33,7 +33,7 @@ export default function Flex() {
         </div>
       </div>
 
-      <div className="py-xl">
+      <div id="align-items" className="py-xl">
         <p className="h5">Align items</p>
         {alignItmes.map((val, i) => (
           <FlexBox

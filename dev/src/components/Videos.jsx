@@ -1,4 +1,5 @@
 import React, { useRef, useLayoutEffect, useState } from 'react'
+
 // import vid1 from '../assets/hide/vid1.mov'
 // import vid2 from '../assets/hide/vid2.mov'
 // import vid3 from '../assets/hide/vid3.mov'
@@ -12,19 +13,19 @@ import Sunset from '../assets/videos/Sunset.mp4'
 import { conditionalClasses } from '../utils'
 
 export default function Videos() {
-  //   const vidsXXX = [
-  //     { src: vid1, ratio: 'aspect-ratio-16-9' },
-  //     { src: vid4, ratio: 'aspect-ratio-16-9' },
-  //     { src: vid2, ratio: 'aspect-ratio-1-1', offset: '-75' },
-  //     { src: vid3, ratio: 'aspect-ratio-1-1', offset: '-315' }
-  //   ]
-
   const vids = [
     { src: Fog, ratio: 'aspect-ratio-16-9' },
     { src: Jellyfish, ratio: 'aspect-ratio-16-9' },
     { src: Ocean, ratio: 'aspect-ratio-1-1' },
     { src: Sunset, ratio: 'aspect-ratio-1-1' }
   ]
+
+  // const vidsAlt = [
+  //   { src: vid1, ratio: 'aspect-ratio-16-9' },
+  //   { src: vid4, ratio: 'aspect-ratio-16-9' },
+  //   { src: vid2, ratio: 'aspect-ratio-1-1' },
+  //   { src: vid3, ratio: 'aspect-ratio-1-1' }
+  // ]
 
   return (
     <div className="row g-md">

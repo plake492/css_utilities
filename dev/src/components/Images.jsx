@@ -25,7 +25,7 @@ import i9 from '../assets/images/9.jpg'
 import i10 from '../assets/images/10.jpg'
 
 export default function Images() {
-  // const imagesSpice = [
+  // const imagesAlt = [
   //   { src: v1, ratio: 'aspect-ratio-3-4' },
   //   { src: v2, ratio: 'aspect-ratio-3-4' },
   //   { src: v3, ratio: 'aspect-ratio-1-1' },
@@ -48,7 +48,8 @@ export default function Images() {
     {
       src: i1,
       ratio: 'aspect-ratio-3-4',
-      objectPosition: 'object-position-tr'
+      objectPosition: 'object-position-tr',
+      link: '3-/-4'
     },
     {
       src: i2,
@@ -58,7 +59,8 @@ export default function Images() {
     {
       src: i3,
       ratio: 'aspect-ratio-1-1',
-      objectPosition: 'object-position-tr'
+      objectPosition: 'object-position-tr',
+      link: '1-/-1'
     },
     {
       src: i4,
@@ -68,7 +70,8 @@ export default function Images() {
     {
       src: i5,
       ratio: 'aspect-ratio-4-3',
-      objectPosition: 'object-position-tr'
+      objectPosition: 'object-position-tr',
+      link: '4-/-3'
     },
     {
       src: i6,
@@ -78,7 +81,8 @@ export default function Images() {
     {
       src: i9,
       ratio: 'aspect-ratio-3-2',
-      objectPosition: 'object-position-center'
+      objectPosition: 'object-position-center',
+      link: '3-/-2'
     },
     {
       src: i10,
@@ -88,7 +92,8 @@ export default function Images() {
     {
       src: i7,
       ratio: 'aspect-ratio-16-9',
-      objectPosition: 'object-position-tr'
+      objectPosition: 'object-position-tr',
+      link: '16-/-9'
     },
     {
       src: i8,
@@ -100,7 +105,7 @@ export default function Images() {
   return (
     <div className="row g-sm g-md-xl g-lg-xxl mb-xl">
       {images.map((img, index) => (
-        <div className="col-6" key={index}>
+        <div id={img.link} className="col-6" key={index}>
           <p className="text-sm text-center">{img.ratio}</p>
           <div
             className={`img-wrapper ${img.ratio} border-pill overflow-hidden border border-blue border-2`}

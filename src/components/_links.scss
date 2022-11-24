@@ -25,7 +25,7 @@ a,
   &--nav {
     --link-color: var(--text-color);
 
-    &:not(.link__active) {
+    &:not(.link--active) {
       --line-width: 0%;
 
       // Allow this to be toggled on or off (default is on)

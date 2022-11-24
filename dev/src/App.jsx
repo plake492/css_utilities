@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 import Header from './components/Header'
 import NavSection from './components/NavSection'
@@ -15,6 +15,9 @@ import { breakpoints } from './utils'
 export default function App() {
   const headerRef = useRef()
   const footerRef = useRef()
+  const mainRef = useRef()
+
+  const [currentSection, setCurrentSection] = useState({})
 
   const { height: headerHeight } = useResizeObserver(headerRef)
   const { height: footerHeight } = useResizeObserver(footerRef)
@@ -24,24 +27,29 @@ export default function App() {
   return (
     <div className="bg-black-10 h-max-vh-100 overflow-x-hidden">
       <div ref={headerRef}>
-        <Header />
+        <Header currentSection={currentSection} />
       </div>
       <main
         className="d-flex h-vh-100"
         style={{ '--vh-offest': `${headerHeight + footerHeight}px` }}
       >
-        {isLargeOrAbove ? <NavSection /> : null}
+        {isLargeOrAbove ? <NavSection currentSection={currentSection} /> : null}
         <section
+          ref={mainRef}
           className="h-vh-100 w-100 overflow-scroll"
           style={{ scrollBehavior: 'smooth' }}
         >
-          {pages.map(({ title, Component, bgColor }) => (
-            <SectionContainer title={title} bgColor={bgColor}>
+          {pages.map(({ Component, ...rest }) => (
+            <SectionContainer
+              ref={mainRef}
+              setCurrentSection={setCurrentSection}
+              {...rest}
+            >
               <Component />
             </SectionContainer>
           ))}
         </section>
-        {isLargeOrAbove ? <RightBar /> : null}
+        {isLargeOrAbove ? <RightBar currentSection={currentSection} /> : null}
       </main>
       <div ref={footerRef}>
         <Footer />

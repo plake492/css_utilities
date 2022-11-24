@@ -106,7 +106,7 @@ export default function Borders() {
       <div className="row g-md">
         <div
           style={{ height: '600px' }}
-          className="col-6 d-flex flex-col bg-grey-40 mt-xl border-tl-pill border-br-pill border-tr-circle border-bl-circle border-violet border-accent border border-4 overflow-hidden"
+          className="col-12 col-lg-6 d-flex flex-col bg-grey-40 mt-xl border-tl-pill border-br-pill border-tr-circle border-bl-circle border-violet border-accent border border-4 overflow-hidden"
         >
           <div className="img-1-1 flex-1 border-bottom border-red border-3">
             <img
@@ -123,7 +123,7 @@ export default function Borders() {
         </div>
         <div
           style={{ height: '600px' }}
-          className="col-6 d-flex flex-col bg-grey-40 mt-xl border-tr-pill border-bl-pill border-tl-circle border-br-circle border-accent border-accent border border-4 overflow-hidden"
+          className="col-12 col-lg-6 d-flex flex-col bg-grey-40 mt-xl border-tr-pill border-bl-pill border-tl-circle border-br-circle border-accent border-accent border border-4 overflow-hidden"
         >
           <div className="img-1-1 flex-1 border-bottom border-red border-3">
             <img

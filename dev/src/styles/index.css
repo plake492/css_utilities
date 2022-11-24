@@ -15636,12 +15636,12 @@ a--nav,
 .link--nav {
   --link-color: var(--text-color);
 }
-a--nav:not(.link__active),
-.link--nav:not(.link__active) {
+a--nav:not(.link--active),
+.link--nav:not(.link--active) {
   --line-width: 0%;
 }
-a--nav:not(.link__active):hover,
-.link--nav:not(.link__active):hover {
+a--nav:not(.link--active):hover,
+.link--nav:not(.link--active):hover {
   --line-width: 100%;
 }
 a--nav:focus,
