@@ -4,7 +4,6 @@ import { conditionalClasses } from '../utils'
 function FlexItem({ index, isFullWidth }) {
   return (
     <div
-      style={{ height: index === 1 ? '100px' : '' }}
       className={`${conditionalClasses([
         isFullWidth,
         'w-100',
@@ -34,9 +33,7 @@ export default function FlexBox({
     >
       <p>{`.${className}`}</p>
       <div
-        // style={{
-        //   height: `${boxHeight}px`
-        // }}
+        style={{ height: isCol ? '250px' : '100px' }}
         className={`border border-rounded bg-violet d-flex ${className} ${conditionalClasses(
           [isCol, 'flex-col']
         )}`}

@@ -108,13 +108,15 @@ export default function Borders() {
           style={{ height: '600px' }}
           className="col-6 d-flex flex-col bg-grey-40 mt-xl border-tl-pill border-br-pill border-tr-circle border-bl-circle border-violet border-accent border border-4 overflow-hidden"
         >
-          <img
-            style={{ objectFit: 'cover', objectPosition: '19%' }}
-            width="100%"
-            height="100%"
-            className="flex-1 border-bottom border-red border-3"
-            src="https://images.unsplash.com/photo-1668910283626-f79cca6429c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
-          />
+          <div className="img-1-1 flex-1 border-bottom border-red border-3">
+            <img
+              style={{ objectFit: 'cover', objectPosition: '19%' }}
+              width="100%"
+              height="100%"
+              className="img"
+              src="https://images.unsplash.com/photo-1668910283626-f79cca6429c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+            />
+          </div>
           <div className="flex-center flex-1">
             <p>Silly Card</p>
           </div>
@@ -123,13 +125,14 @@ export default function Borders() {
           style={{ height: '600px' }}
           className="col-6 d-flex flex-col bg-grey-40 mt-xl border-tr-pill border-bl-pill border-tl-circle border-br-circle border-accent border-accent border border-4 overflow-hidden"
         >
-          <img
-            style={{ objectFit: 'cover', objectPosition: '19%' }}
-            width="100%"
-            height="100%"
-            className="flex-1 border-bottom border-red border-3"
-            src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
-          />
+          <div className="img-1-1 flex-1 border-bottom border-red border-3">
+            <img
+              width="100%"
+              height="100%"
+              className="img"
+              src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"
+            />
+          </div>
           <div className="flex-center flex-1">
             <p>Silly Card</p>
           </div>

@@ -77,7 +77,7 @@ export default function Typography() {
           go overseas.
         </p>
       </div>
-      <div className="mb-md pb-md">
+      <div className="mb-md pb-md p-xl bg-violet-20 border-pill shadow-5 shadow-violet">
         <div>
           <p className="h4">Lists</p>
         </div>

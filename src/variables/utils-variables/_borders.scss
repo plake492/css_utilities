@@ -4,9 +4,9 @@
 // ***************** Borders ************************
 // **************************************************
 
-$border-radius: rem(4);
+$border-radius: rem(8);
 $border-radius-pill: rem(40);
-$border-radius-round: 50%;
+$border-radius-circle: 50%;
 
 $border-width: rem(1);
 $border-color: #ffffff;
@@ -39,5 +39,5 @@ $border-radius-sides: (
 $border-rounded-edges: (
   rounded: $border-radius,
   pill: $border-radius-pill,
-  circle: $border-radius-round
+  circle: $border-radius-circle
 );

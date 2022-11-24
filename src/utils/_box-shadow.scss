@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 .box-shadow {
   box-shadow: $box-shadow;
 }
@@ -15,5 +17,55 @@
     .box-shadow-#{$bp}-none {
       box-shadow: none !important;
     }
+  }
+}
+
+$previous-shadow: false;
+
+@each $key, $val in $shadows {
+  // Extract RGB colors for color variable
+  $shadow-value: red($shadow-color) green($shadow-color) blue($shadow-color);
+
+  // Set color variable
+  :root {
+    --shadow-color: #{$shadow-value};
+  }
+
+  // Get the spread value
+  $spread: map.get($shadows, $key, 'spread');
+  // Get the opacity value
+  $opacity: map.get($shadows, $key, 'opacity');
+
+  // Construct the shadow value
+  // !The '/' is reguired for this to work. A comma does not work
+  $shadow: $spread rgba(var(--shadow-color) / $opacity);
+  $shadow-inset: inset #{$shadow};
+
+  // Place holder for accumulative box shadow
+  $box-shadow: ();
+  $box-shadow-inset: $shadow-inset;
+
+  // The first shadow will be a single box shadow
+  // Every one after will recieve the previous shadow and it's own
+  @if ($previous-shadow and $previous-shadow != none) {
+    $box-shadow: #{$shadow}, #{$previous-shadow};
+  } @else {
+    $box-shadow: $shadow;
+  }
+  // Over-ride this value for the next loop
+  $previous-shadow: $shadow;
+
+  .shadow-#{$key} {
+    box-shadow: $box-shadow;
+  }
+  .shadow-inset-#{$key} {
+    box-shadow: $box-shadow-inset;
+  }
+}
+
+@each $key, $var in $target-colors {
+  .shadow-#{'' + $key} {
+    $shadow-value: red($var) green($var) blue($var);
+    --shadow-color: #{$shadow-value};
   }
 }

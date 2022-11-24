@@ -155,3 +155,8 @@
 
   transition: $transition;
 }
+
+@mixin border-rounded($radius: $border-radius) {
+  border-radius: $radius;
+  overflow: hidden;
+}
