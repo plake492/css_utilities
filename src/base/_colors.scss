@@ -37,8 +37,8 @@
 @each $key, $value in $target-colors {
   $text-color: get-contrasted-text($value);
 
+  // Update Root colors, setting colors in child elements
   .bg-#{'' + $key} {
-    /* Update Root colors, setting colors in child elements */
     --bg-color: #{$value};
     --text-color: #{$text-color};
 
@@ -50,8 +50,8 @@
     $bg-color-tone: get-color-scale-value($value, $tone);
     $text-color-tone: get-contrasted-text($bg-color-tone);
 
+    // Update Root colors, setting colors in child elements
     .bg-#{'' + $key}-#{$tone} {
-      /* Update Root colors, setting colors in child elements */
       --bg-color: #{$bg-color-tone};
       --text-color: #{$text-color-tone};
 

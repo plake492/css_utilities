@@ -2,6 +2,14 @@ import React from 'react'
 import SectionContainer from './SectionContainer'
 
 export default function Typography() {
+  const verticalAlign = [
+    'baseline',
+    'top',
+    'middle',
+    'bottom',
+    'text-bottom',
+    'text-top'
+  ]
   return (
     <>
       <div className="mb-md pb-md pt-xxl">
@@ -215,6 +223,17 @@ export default function Typography() {
           try to get people a different outlook. When you do that, people take
           ownership of the information.
         </p>
+      </div>
+      <div className="mb-md pb-md">
+        <p className="h4">Vertical Align</p>
+        {verticalAlign.map((align, index) => (
+          <div key={align + index} className="my-xl position-relative">
+            <p className="h4 mb-none border-bottom border-top">
+              {align} <small className={`align-${align}`}>Aligned Text</small>
+            </p>
+            <div className="position-absolute top-50 w-100 absolute-center-y border border-red z-n1 opacity-50"></div>
+          </div>
+        ))}
       </div>
     </>
   )

@@ -9,14 +9,14 @@
 }
 
 .container {
-  @extend .mx-auto;
+  margin: 0 auto;
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
   max-width: var(--container-width);
 }
 
 .container-large {
-  @extend .mx-auto;
+  margin: 0 auto;
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
   max-width: var(--container-width-large);
@@ -26,3 +26,27 @@
   margin-left: calc(var(--container-padding) * -1);
   margin-right: calc(var(--container-padding) * -1);
 }
+
+// @each $key, $val in $container-max-widths {
+//   .container-#{$key} {
+//     margin: 0 auto;
+//     padding-left: var(--container-padding);
+//     padding-right: var(--container-padding);
+//     width: 100%;
+//   }
+
+//   @each $bp, $px in $breakpoints {
+//     .container-#{$key} {
+//     }
+//   }
+// }
+
+// @each $bp, $px in $breakpoints {
+//   @include respond-to(#{$px}) {
+//     @each $keyWidth, $val in $container-max-widths {
+//       .container-#{$keyWidth} {
+//         max-width: calc($px - (var(--container-padding) * 2));
+//       }
+//     }
+//   }
+// }

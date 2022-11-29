@@ -26,78 +26,78 @@ import i10 from '../assets/images/10.jpg'
 
 export default function Images() {
   // const imagesAlt = [
-  //   { src: v1, ratio: 'aspect-ratio-3-4' },
-  //   { src: v2, ratio: 'aspect-ratio-3-4' },
-  //   { src: v3, ratio: 'aspect-ratio-1-1' },
-  //   { src: v4, ratio: 'aspect-ratio-1-1' },
-  //   { src: v5, ratio: 'aspect-ratio-4-3' },
-  //   { src: v6, ratio: 'aspect-ratio-4-3' },
-  //   { src: v7, ratio: 'aspect-ratio-3-2' },
-  //   { src: v8, ratio: 'aspect-ratio-3-2' },
+  //   { src: v1, ratio: 'ratio-3-4x },
+  //   { src: v2, ratio: 'ratio-3-4x },
+  //   { src: v3, ratio: 'ratio-1-1x },
+  //   { src: v4, ratio: 'ratio-1-1x },
+  //   { src: v5, ratio: 'ratio-4-3x },
+  //   { src: v6, ratio: 'ratio-4-3x },
+  //   { src: v7, ratio: 'ratio-3-2x },
+  //   { src: v8, ratio: 'ratio-3-2x },
   //   {
   //     src: v9,
-  //     ratio: 'aspect-ratio-16-9',
+  //     ratio: 'ratio-16x9',
   //     objectPosition: 'object-position-bl'
   //   },
-  //   { src: v10, ratio: 'aspect-ratio-16-9' },
-  //   { src: v11, ratio: 'aspect-ratio-3-4' },
-  //   { src: v12, ratio: 'aspect-ratio-3-4' }
+  //   { src: v10, ratio: 'ratio-16-9x },
+  //   { src: v11, ratio: 'ratio-3-4x },
+  //   { src: v12, ratio: 'ratio-3-x' }
   // ]
 
   const images = [
     {
       src: i1,
-      ratio: 'aspect-ratio-3-4',
+      ratio: 'ratio-3x4',
       objectPosition: 'object-position-tr',
       link: '3-/-4'
     },
     {
       src: i2,
-      ratio: 'aspect-ratio-3-4',
+      ratio: 'ratio-3x4',
       objectPosition: 'object-position-tr'
     },
     {
       src: i3,
-      ratio: 'aspect-ratio-1-1',
+      ratio: 'ratio-1x1',
       objectPosition: 'object-position-tr',
       link: '1-/-1'
     },
     {
       src: i4,
-      ratio: 'aspect-ratio-1-1',
+      ratio: 'ratio-1x1',
       objectPosition: 'object-position-tr'
     },
     {
       src: i5,
-      ratio: 'aspect-ratio-4-3',
+      ratio: 'ratio-4x3',
       objectPosition: 'object-position-tr',
       link: '4-/-3'
     },
     {
       src: i6,
-      ratio: 'aspect-ratio-4-3',
+      ratio: 'ratio-4x3',
       objectPosition: 'object-position-tr'
     },
     {
       src: i9,
-      ratio: 'aspect-ratio-3-2',
+      ratio: 'ratio-3x2',
       objectPosition: 'object-position-center',
       link: '3-/-2'
     },
     {
       src: i10,
-      ratio: 'aspect-ratio-3-2',
+      ratio: 'ratio-3x2',
       objectPosition: 'object-position-br'
     },
     {
       src: i7,
-      ratio: 'aspect-ratio-16-9',
+      ratio: 'ratio-16x9',
       objectPosition: 'object-position-tr',
       link: '16-/-9'
     },
     {
       src: i8,
-      ratio: 'aspect-ratio-16-9',
+      ratio: 'ratio-16x9',
       objectPosition: 'object-position-tr'
     }
   ]

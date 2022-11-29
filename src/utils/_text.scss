@@ -9,3 +9,16 @@
   --text-color: #{$black};
   color: var(--text-color);
 }
+
+@each $key, $var in $target-colors {
+  .text-#{'' + $key} {
+    --text-color: #{$var};
+    color: var(--text-color);
+  }
+}
+
+@include class-with-responsive-val-only(
+  $vertical-alignment,
+  align,
+  vertical-align
+);

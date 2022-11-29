@@ -1,5 +1,6 @@
 import BackgroundColors from '../components/BackgroundColors'
 import Borders from '../components/Borders'
+import Containers from '../components/Containers'
 import Columns from '../components/Columns'
 import Flex from '../components/Flex'
 import Typography from '../components/Typography'
@@ -10,6 +11,7 @@ import Cards from '../components/Cards'
 import Positions from '../components/Positions'
 
 export const pages = [
+  { title: 'Containers', Component: Containers, bgColor: 'bg-secondary' },
   { title: 'Typography', Component: Typography, bgColor: 'bg-priamry' },
   {
     title: 'Background Colors',

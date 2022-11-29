@@ -10,9 +10,7 @@
 @include class-with-responsive-key-and-val(
   $width--height-percentages,
   w-max,
-  max-width,
-  // true,
-  // --gap-offset
+  max-width
 );
 
 // MIN WIDTH
@@ -20,17 +18,14 @@
   $width--height-percentages,
   w-min,
   min-width,
-  // true,
-  // --gap-offset
+  // true
 );
 
 // SET WIDTH
 @include class-with-responsive-key-and-val(
   $width--height-percentages,
   w,
-  width,
-  // true,
-  // --gap-offset
+  width
 );
 
 // /***************************
@@ -41,27 +36,21 @@
 @include class-with-responsive-key-and-val(
   $width--height-percentages,
   h-max,
-  max-height,
-  // true,
-  // --gap-offset
+  max-height
 );
 
 // MIN HEIGHT
 @include class-with-responsive-key-and-val(
   $width--height-percentages,
   h-min,
-  min-height,
-  // true,
-  // --gap-offset
+  min-height
 );
 
 // SET HEIGHT
 @include class-with-responsive-key-and-val(
   $width--height-percentages,
   h,
-  height,
-  // true,
-  // --gap-offset
+  height
 );
 
 // HEIGHT by VH

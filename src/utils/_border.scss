@@ -88,21 +88,12 @@
 // /**************************************************/
 // /* Border Widths */
 // /**************************************************/
-@each $key, $val in $border-widths {
-  .border-#{$key} {
-    --border-width: #{$val};
-  }
-}
-// Responsive
-@each $bp, $px in $breakpoints {
-  @include respond-to($px) {
-    @each $key, $val in $border-widths {
-      .border-#{$bp}-#{$key} {
-        --border-width: #{$val} !important;
-      }
-    }
-  }
-}
+
+@include class-with-responsive-key-and-val(
+  $border-widths,
+  border,
+  --border-width
+);
 
 // /**************************************************/
 // /* Border Radius */

@@ -1,5 +1,65 @@
-@include class-with-responsive-val-only($overflow, overflow, overflow);
+@each $val in $overflow {
+  .overflow-#{$val} {
+    overflow: $val;
+    @if ($val == hidden) {
+      isolation: isolate;
+    }
+  }
+}
 
-@include class-with-responsive-val-only($overflow, overflow-x, overflow-x);
+@each $bp, $px in $overflow {
+  @include respond-to(#{$px}) {
+    @each $val in $overflow {
+      .overflow-#{$bp}-#{$val} {
+        overflow: $val !important;
+        @if ($val == hidden) {
+          isolation: isolate;
+        }
+      }
+    }
+  }
+}
 
-@include class-with-responsive-val-only($overflow, overflow-y, overflow-y);
+@each $val in $overflow {
+  .overflow-x-#{$val} {
+    overflow-x: $val;
+    @if ($val == hidden) {
+      isolation: isolate;
+    }
+  }
+}
+
+@each $bp, $px in $overflow {
+  @include respond-to(#{$px}) {
+    @each $val in $overflow {
+      .overflow-x-#{$bp}-#{$val} {
+        overflow-x: $val !important;
+        @if ($val == hidden) {
+          isolation: isolate;
+        }
+      }
+    }
+  }
+}
+
+@each $val in $overflow {
+  .overflow-y-#{$val} {
+    overflow-y: $val;
+    @if ($val == hidden) {
+      isolation: isolate;
+    }
+  }
+}
+
+@each $bp, $px in $overflow {
+  @include respond-to(#{$px}) {
+    @each $val in $overflow {
+      .overflow-y-#{$bp}-#{$val} {
+        overflow-y: $val !important;
+        @if ($val == hidden) {
+          isolation: isolate;
+        }
+      }
+    }
+  }
+}

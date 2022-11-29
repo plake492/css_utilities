@@ -11,3 +11,14 @@
 .c-pointer {
   cursor: pointer;
 }
+
+.dropdown {
+  @include transition(transform);
+
+  &--closed {
+    transform: translateY(-100%);
+  }
+  &--opened {
+    transform: translateY(0);
+  }
+}

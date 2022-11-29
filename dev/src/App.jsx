@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <div className="bg-black-10 h-max-vh-100 overflow-x-hidden">
-      <div ref={headerRef}>
+      <div className="position-relative z-10" ref={headerRef}>
         <Header currentSection={currentSection} />
       </div>
       <main

@@ -9,7 +9,7 @@ const SectionContainer = forwardRef(
       bgColor,
       children,
       subSections,
-      titleType = 'h1',
+      titleType = 'h3',
       setCurrentSection
     },
     ref

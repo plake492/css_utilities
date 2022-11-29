@@ -2,7 +2,15 @@
 // ******************** container *******************
 // **************************************************
 
-$container-width: 1320px;
-$container-width-large: 1520px;
+$container-width: rem(1320);
+$container-width-large: rem(1520);
 $container-padding-small: $space-md;
 $container-padding-large: $space-xl;
+
+$container-max-widths: (
+  sm: rem(540),
+  md: rem(720),
+  lg: rem(960),
+  xl: rem(1140),
+  xxl: rem(1320)
+);

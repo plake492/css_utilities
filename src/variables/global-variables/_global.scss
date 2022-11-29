@@ -2,11 +2,11 @@ $base-font-size: 16;
 $base-spacing: 1rem;
 
 // Responsive Sizes
-$screen-sm-min: 36rem; //576px
-$screen-md-min: 48rem; //768px
-$screen-lg-min: 62rem; //992px
-$screen-xl-min: 75rem; //1200px
-$screen-xxl-min: 87.5rem; //1400px
+$screen-sm-min: rem(576);
+$screen-md-min: rem(768);
+$screen-lg-min: rem(992);
+$screen-xl-min: rem(1200);
+$screen-xxl-min: rem(1400);
 
 /**************************************************/
 /* Global Spacers */

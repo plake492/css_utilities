@@ -14,17 +14,17 @@ import { conditionalClasses } from '../utils'
 
 export default function Videos() {
   const vids = [
-    { src: Fog, ratio: 'aspect-ratio-16-9' },
-    { src: Jellyfish, ratio: 'aspect-ratio-16-9' },
-    { src: Ocean, ratio: 'aspect-ratio-1-1' },
-    { src: Sunset, ratio: 'aspect-ratio-1-1' }
+    { src: Fog, ratio: 'ratio-16x9' },
+    { src: Jellyfish, ratio: 'ratio-16x9' },
+    { src: Ocean, ratio: 'ratio-1x1' },
+    { src: Sunset, ratio: 'ratio-1x1' }
   ]
 
   // const vidsAlt = [
-  //   { src: vid1, ratio: 'aspect-ratio-16-9' },
-  //   { src: vid4, ratio: 'aspect-ratio-16-9' },
-  //   { src: vid2, ratio: 'aspect-ratio-1-1' },
-  //   { src: vid3, ratio: 'aspect-ratio-1-1' }
+  //   { src: vid1, ratio: 'ratio-16x9' },
+  //   { src: vid4, ratio: 'ratio-16x9' },
+  //   { src: vid2, ratio: 'ratio-1x1' },
+  //   { src: vid3, ratio: 'ratio-1x1' }
   // ]
 
   return (

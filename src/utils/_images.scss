@@ -1,7 +1,17 @@
 @each $key, $val in $aspect-ratios {
-  .aspect-ratio-#{$key} {
+  .ratio-#{$key} {
     --aspect-ratio: #{$val};
     aspect-ratio: var(--aspect-ratio);
+  }
+}
+@each $bp, $px in $breakpoints {
+  @include respond-to(#{$px}) {
+    @each $key, $val in $aspect-ratios {
+      .ratio-#{$bp}-#{$key} {
+        --aspect-ratio: #{$val};
+        aspect-ratio: var(--aspect-ratio);
+      }
+    }
   }
 }
 
@@ -9,6 +19,16 @@
   .object-position-#{$key} {
     --object-position: #{$val};
     object-position: var(--object-position);
+  }
+}
+@each $bp, $px in $breakpoints {
+  @include respond-to(#{$px}) {
+    @each $key, $val in $object-positions {
+      .object-position-#{$bp}-#{$key} {
+        --object-position: #{$val};
+        object-position: var(--object-position);
+      }
+    }
   }
 }
 
@@ -21,12 +41,6 @@
     height: 100%;
     object-fit: cover;
     object-position: var(--object-position, 50% 50%);
-    @include transition((filter, transform));
-
-    // &:hover {
-    //   filter: brightness(1.25);
-    //   transform: scale(1.01);
-    // }
   }
 
   &--rounded {

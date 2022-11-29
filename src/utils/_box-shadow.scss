@@ -1,4 +1,11 @@
 @use 'sass:map';
+// Extract RGB colors for color variable
+$shadow-value: red($shadow-color) green($shadow-color) blue($shadow-color);
+
+// Set color variable
+:root {
+  --shadow-color: #{$shadow-value};
+}
 
 .box-shadow {
   box-shadow: $box-shadow;
@@ -23,14 +30,6 @@
 $previous-shadow: false;
 
 @each $key, $val in $shadows {
-  // Extract RGB colors for color variable
-  $shadow-value: red($shadow-color) green($shadow-color) blue($shadow-color);
-
-  // Set color variable
-  :root {
-    --shadow-color: #{$shadow-value};
-  }
-
   // Get the spread value
   $spread: map.get($shadows, $key, 'spread');
   // Get the opacity value
@@ -63,7 +62,6 @@ $previous-shadow: false;
   }
 }
 
-//
 @each $key, $var in $target-colors {
   .shadow-#{'' + $key} {
     $shadow-value: red($var) green($var) blue($var);
