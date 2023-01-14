@@ -8,7 +8,7 @@ export default function Flex() {
 
   return (
     <>
-      <p>All parent wrappers must have `.d-flex`</p>
+      <p>All parent wrappers must have `.d-flex` </p>
       <div id="justify" className="py-xl">
         <p className="h5">Justify Content (Row)</p>
         {justifyContent.map((val, i) => (

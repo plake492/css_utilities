@@ -11,14 +11,16 @@ export default function Typography() {
     'text-top'
   ]
   return (
-    <>
-      <div className="mb-md pb-md pt-xxl">
-        <p className="h1">Header 1</p>
-        <p className="h2">Header 2</p>
-        <p className="h3">Header 3</p>
-        <p className="h4">Header 4</p>
-        <p className="h5">Header 5</p>
-        <p className="h6">Header 6</p>
+    <section className="container-xxl">
+      <div className="container-sm">
+        <div className="mb-md pb-md pt-xxl">
+          <p className="h1">Header 1</p>
+          <p className="h2">Header 2</p>
+          <p className="h3">Header 3</p>
+          <p className="h4">Header 4</p>
+          <p className="h5">Header 5</p>
+          <p className="h6">Header 6</p>
+        </div>
       </div>
       <div className="mb-md pb-md">
         <p className="h3">text-lg</p>
@@ -85,7 +87,7 @@ export default function Typography() {
           go overseas.
         </p>
       </div>
-      <div className="mb-md pb-md p-xl bg-violet-20 border-pill shadow-5 shadow-violet">
+      <div className="mb-md pb-md p-xl bg-violet-20 border-pill shadow-5 shadow-violet escape-container">
         <div>
           <p className="h4">Lists</p>
         </div>
@@ -235,6 +237,6 @@ export default function Typography() {
           </div>
         ))}
       </div>
-    </>
+    </section>
   )
 }

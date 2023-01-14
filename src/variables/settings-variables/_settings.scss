@@ -23,3 +23,8 @@ $btn-none-border-text-is-caps: true;
 
 // Set border radius of btn's as pill or not
 $btn-is-pill: false;
+
+// Prevents nested containers from applying container padding,
+// If it's unlikely that containers will become nested, set this to false,
+// in order to remove a large amout of unnessicary css
+$unset-nested-containers: true;

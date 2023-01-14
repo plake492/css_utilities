@@ -11,7 +11,12 @@ import Cards from '../components/Cards'
 import Positions from '../components/Positions'
 
 export const pages = [
-  { title: 'Containers', Component: Containers, bgColor: 'bg-secondary' },
+  {
+    title: 'Containers',
+    Component: Containers,
+    bgColor: 'bg-secondary',
+    container: null
+  },
   { title: 'Typography', Component: Typography, bgColor: 'bg-priamry' },
   {
     title: 'Background Colors',
@@ -37,6 +42,7 @@ export const pages = [
     title: 'Images',
     Component: Images,
     bgColor: 'bg-secondary',
+    container: 'container-md',
     subSections: [
       { title: '3 / 4' },
       { title: '1 / 1' },

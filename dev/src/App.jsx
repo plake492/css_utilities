@@ -19,8 +19,8 @@ export default function App() {
 
   const [currentSection, setCurrentSection] = useState({})
 
-  const { height: headerHeight } = useResizeObserver(headerRef)
-  const { height: footerHeight } = useResizeObserver(footerRef)
+  // const { height: headerHeight } = useResizeObserver(headerRef)
+  // const { height: footerHeight } = useResizeObserver(footerRef)
 
   const isLargeOrAbove = useMatchMedia(breakpoints.lg)
 
@@ -30,13 +30,13 @@ export default function App() {
         <Header currentSection={currentSection} />
       </div>
       <main
-        className="d-flex h-vh-100"
-        style={{ '--vh-offest': `${headerHeight + footerHeight}px` }}
+        className="h-vh-100"
+        // style={{ '--vh-offest': `${headerHeight + footerHeight}px` }}
       >
-        {isLargeOrAbove ? <NavSection currentSection={currentSection} /> : null}
+        {/* {isLargeOrAbove ? <NavSection currentSection={currentSection} /> : null} */}
         <section
           ref={mainRef}
-          className="h-vh-100 w-100 overflow-scroll"
+          // className="h-vh-100 w-100 overflow-scroll"
           style={{ scrollBehavior: 'smooth' }}
         >
           {pages.map(({ Component, ...rest }) => (
@@ -49,7 +49,7 @@ export default function App() {
             </SectionContainer>
           ))}
         </section>
-        {isLargeOrAbove ? <RightBar currentSection={currentSection} /> : null}
+        {/* {isLargeOrAbove ? <RightBar currentSection={currentSection} /> : null} */}
       </main>
       <div ref={footerRef}>
         <Footer />

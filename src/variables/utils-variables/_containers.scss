@@ -8,9 +8,54 @@ $container-padding-small: $space-md;
 $container-padding-large: $space-xl;
 
 $container-max-widths: (
-  sm: rem(540),
-  md: rem(720),
-  lg: rem(960),
-  xl: rem(1140),
-  xxl: rem(1320)
+  container: (
+    value: rem(540),
+    include: (
+      sm,
+      md,
+      lg,
+      xl,
+      xxl
+    )
+  ),
+  sm: (
+    value: rem(540),
+    include: (
+      sm,
+      md,
+      lg,
+      xl,
+      xxl
+    )
+  ),
+  md: (
+    value: rem(720),
+    include: (
+      md,
+      lg,
+      xl,
+      xxl
+    )
+  ),
+  lg: (
+    value: rem(960),
+    include: (
+      lg,
+      xl,
+      xxl
+    )
+  ),
+  xl: (
+    value: rem(1140),
+    include: (
+      xl,
+      xxl
+    )
+  ),
+  xxl: (
+    value: rem(1320),
+    include: (
+      xxl
+    )
+  )
 );

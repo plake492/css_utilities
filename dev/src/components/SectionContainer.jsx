@@ -1,6 +1,7 @@
 import React, { forwardRef, useRef, useState, useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { conditionalClasses } from '../utils'
 
 const SectionContainer = forwardRef(
   (
@@ -10,7 +11,9 @@ const SectionContainer = forwardRef(
       children,
       subSections,
       titleType = 'h3',
-      setCurrentSection
+      setCurrentSection,
+      removePadding = false,
+      container = 'container'
     },
     ref
   ) => {
@@ -37,11 +40,20 @@ const SectionContainer = forwardRef(
     return (
       <section
         ref={sectionRef}
-        className={`px-md px-xl-lg px-xxl-xl border-bottom overflow-x-hidden py-lg ${bgColor}`}
+        className={`border-bottom overflow-x-hidden py-md ${bgColor}`}
         id={title.replace(/\s+/g, '-').toLowerCase()}
       >
-        <p className={titleType}>{title}</p>
-        {children}
+        {!!container ? (
+          <div className={container}>
+            <p className={titleType}>{title}</p>
+            {children}
+          </div>
+        ) : (
+          <>
+            <p className={titleType}>{title}</p>
+            {children}
+          </>
+        )}
       </section>
     )
   }
