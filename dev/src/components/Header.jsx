@@ -10,7 +10,7 @@ export default function Header({ currentSection }) {
   const [showDropdown, setShowdropdown] = useState(false)
 
   return (
-    <header className="position-fixed w-100 bg-red-30 box-shadow border-bottom position-relative d-flex justify-content-between align-items-center py-md px-md px-lg-lg px-xl-xl px-xxl-xxl">
+    <header className="position-fixed w-100 z-1 bg-red-30 box-shadow border-bottom position-relative d-flex justify-content-between align-items-center py-md px-md px-lg-lg px-xl-xl px-xxl-xxl">
       <h1 className="h5 my-none">CSS UTILITIES</h1>
       <div>
         <div

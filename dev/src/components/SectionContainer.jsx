@@ -1,6 +1,4 @@
-import React, { forwardRef, useRef, useState, useEffect } from 'react'
-// import gsap from 'gsap'
-// import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React, { forwardRef, useRef } from 'react'
 import { conditionalClasses } from '../utils'
 
 const SectionContainer = forwardRef(
@@ -18,24 +16,6 @@ const SectionContainer = forwardRef(
     ref
   ) => {
     const sectionRef = useRef()
-
-    // useEffect(() => {
-    //   if (sectionRef.current) {
-    //     gsap.registerPlugin(ScrollTrigger)
-
-    //     const tl = gsap.timeline({
-    //       scrollTrigger: {
-    //         trigger: sectionRef.current,
-    //         start: 'top-=2px top',
-    //         end: 'bottom-=2px top',
-    //         scrub: true,
-    //         scroller: ref.current,
-    //         onEnter: () => setCurrentSection({ title, subSections }),
-    //         onEnterBack: () => setCurrentSection({ title, subSections })
-    //       }
-    //     })
-    //   }
-    // }, [])
 
     return (
       <section

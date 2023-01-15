@@ -34,7 +34,7 @@ export default function Columns() {
           </div>
         ))}
       </div>
-      {/* <div className="row py-xxl g-xl">
+      <div className="row py-xxl g-xl">
         {[...Array(9)].map((_, i) => (
           <div
             key={i}
@@ -81,7 +81,7 @@ export default function Columns() {
             </p>
           </div>
         ))}
-      </div> */}
+      </div>
     </>
   )
 }
