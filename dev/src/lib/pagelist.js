@@ -35,14 +35,13 @@ export const pages = [
   },
   { title: 'Borders', Component: Borders, bgColor: 'bg-secondary' },
   { title: 'Columns', Component: Columns, bgColor: 'bg-priamry' },
-  { title: 'Box Shadows', Component: BoxShadows, bgColor: 'bg-grey-70' },
+  { title: 'Box Shadows', Component: BoxShadows, bgColor: 'bg-secondary' },
   { title: 'Positions', Component: Positions, bgColor: 'bg-priamry' },
-  { title: 'Cards', Component: Cards, bgColor: 'bg-grey' },
+  { title: 'Cards', Component: Cards, bgColor: 'bg-secondary' },
   {
     title: 'Images',
     Component: Images,
-    bgColor: 'bg-secondary',
-    container: 'container-md',
+    bgColor: 'bg-priamry',
     subSections: [
       { title: '3 / 4' },
       { title: '1 / 1' },
@@ -51,5 +50,5 @@ export const pages = [
       { title: '16 / 9' }
     ]
   },
-  { title: 'Videos', Component: Videos, bgColor: 'bg-priamry' }
+  { title: 'Videos', Component: Videos, bgColor: 'bg-secondary' }
 ]

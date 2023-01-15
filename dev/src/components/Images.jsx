@@ -105,7 +105,7 @@ export default function Images() {
   return (
     <div className="row g-sm g-md-xl g-lg-xxl mb-xl">
       {images.map((img, index) => (
-        <div id={img.link} className="col-6" key={index}>
+        <div id={img.link} className="col-12 col-md-6" key={index}>
           <p className="text-sm text-center">{img.ratio}</p>
           <div
             className={`img-wrapper ${img.ratio} border-pill overflow-hidden border border-blue border-2`}

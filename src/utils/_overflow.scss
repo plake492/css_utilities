@@ -7,7 +7,7 @@
   }
 }
 
-@each $bp, $px in $overflow {
+@each $bp, $px in $breakpoints {
   @include respond-to(#{$px}) {
     @each $val in $overflow {
       .overflow-#{$bp}-#{$val} {
@@ -29,7 +29,7 @@
   }
 }
 
-@each $bp, $px in $overflow {
+@each $bp, $px in $breakpoints {
   @include respond-to(#{$px}) {
     @each $val in $overflow {
       .overflow-x-#{$bp}-#{$val} {
@@ -51,7 +51,7 @@
   }
 }
 
-@each $bp, $px in $overflow {
+@each $bp, $px in $breakpoints {
   @include respond-to(#{$px}) {
     @each $val in $overflow {
       .overflow-y-#{$bp}-#{$val} {
