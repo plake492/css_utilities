@@ -1,11 +1,10 @@
+import fs from 'fs'
 import autoprefixer from 'autoprefixer'
 import postcss from 'postcss'
 import postcssNested from 'postcss-nested'
 import postcssCombineMediaQuery from 'postcss-combine-media-query'
 import postcssCombineDuplicatedSelectors from 'postcss-combine-duplicated-selectors'
 import postcssSortMediaQueries from 'postcss-sort-media-queries'
-
-import fs from 'fs'
 
 fs.readFile('./dist/index.css', (err, css) => {
   postcss([
