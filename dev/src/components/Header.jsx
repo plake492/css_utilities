@@ -10,7 +10,7 @@ export default function Header({ currentSection }) {
   const [showDropdown, setShowdropdown] = useState(false)
 
   return (
-    <header className="bg-red-30 py-md box-shadow border-bottom position-relative d-flex justify-content-between align-items-center px-md px-lg-lg px-xl-xl px-xxl-xxl">
+    <header className="position-fixed w-100 bg-red-30 box-shadow border-bottom position-relative d-flex justify-content-between align-items-center py-md px-md px-lg-lg px-xl-xl px-xxl-xxl">
       <h1 className="h5 my-none">CSS UTILITIES</h1>
       <div>
         <div
@@ -25,8 +25,8 @@ export default function Header({ currentSection }) {
       <nav
         className={`dropdown dropdown--${conditionalClasses([
           showDropdown,
-          'opened',
-          'closed'
+          'opened opacity-100',
+          'closed  opacity-0'
         ])} position-absolute top-100 w-min-100 right-0 bg-black-40 z-n1 border-bottom shadow-4`}
       >
         <DropdownMenu
@@ -40,8 +40,8 @@ export default function Header({ currentSection }) {
 
 function DropdownMenu({ currentSection, setShowdropdown }) {
   return (
-    <ul className="no-list-style mb-none d-flex flex-col text-end">
-      {pages.map(({ title }, index) => (
+    <ul className="no-list-style mb-none d-flex flex-col text-start">
+      {pages.map(({ title, subSections }, index) => (
         <li
           key={title + index}
           className={`${conditionalClasses([
@@ -56,6 +56,19 @@ function DropdownMenu({ currentSection, setShowdropdown }) {
           >
             {title}
           </a>
+          {subSections
+            ? subSections.map(({ title }) => (
+                <span key={title}>
+                  <span className="mx-lg"> | </span>
+                  <a
+                    className={`link link--nav link--no-underline`}
+                    href={`#${hyphenat(title)}`}
+                  >
+                    {title}
+                  </a>
+                </span>
+              ))
+            : null}
         </li>
       ))}
     </ul>

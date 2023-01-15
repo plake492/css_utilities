@@ -19,7 +19,7 @@ export default function FlexBox({
   className,
   boxHeight,
   parentWidth = 'w-100',
-  itemWidth = 'w-25',
+
   isCol,
   expandFirstItem
 }) {
