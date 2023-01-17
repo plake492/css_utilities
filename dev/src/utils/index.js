@@ -50,3 +50,5 @@ export const getCssVar = cssVarTarget => {
 }
 
 export const hyphenat = str => str.replace(/\s+/g, '-').toLowerCase()
+
+export const isEven = num => num % 2 === 0

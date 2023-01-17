@@ -19,9 +19,8 @@ export default function FlexBox({
   className,
   boxHeight,
   parentWidth = 'w-100',
-
   isCol,
-  expandFirstItem
+  noFullWith = false
 }) {
   return (
     <div
@@ -33,13 +32,17 @@ export default function FlexBox({
     >
       <p>{`.${className}`}</p>
       <div
-        style={{ height: isCol ? '250px' : '100px' }}
+        style={{ height: isCol ? '200px' : '100px' }}
         className={`border border-rounded bg-violet d-flex ${className} ${conditionalClasses(
           [isCol, 'flex-col']
         )}`}
       >
         {[...Array(3)].map((_, index) => (
-          <FlexItem key={index} index={index + 1} isFullWidth={isCol} />
+          <FlexItem
+            key={index}
+            index={index + 1}
+            isFullWidth={isCol && !noFullWith}
+          />
         ))}
       </div>
     </div>

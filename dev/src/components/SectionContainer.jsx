@@ -25,12 +25,14 @@ const SectionContainer = forwardRef(
       >
         {!!container ? (
           <div className={container}>
-            <p className={titleType}>{title}</p>
+            {title ? <p className={titleType}>{title}</p> : null}
             {children}
           </div>
         ) : (
           <>
-            <p className={titleType}>{title}</p>
+            <div className={'container'}>
+              {title ? <p className={titleType}>{title}</p> : null}
+            </div>
             {children}
           </>
         )}

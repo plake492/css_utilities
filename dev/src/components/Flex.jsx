@@ -41,7 +41,19 @@ export default function Flex() {
             key={val + i}
             className={`align-items-${val}`}
             boxHeight={100}
-            expandFirstItem
+          />
+        ))}
+      </div>
+
+      <div id="align-items-(col)" className="py-xl">
+        <p className="h5">Align items (Col)</p>
+        {alignItmes.map((val, i) => (
+          <FlexBox
+            key={val + i}
+            className={`align-items-${val}`}
+            boxHeight={100}
+            isCol
+            noFullWith
           />
         ))}
       </div>

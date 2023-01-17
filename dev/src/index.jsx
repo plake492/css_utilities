@@ -2,7 +2,10 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App'
 
-import './styles/index.css'
+// import './styles/index.css'
+// import '../node_modules/@plake492/t_css_utils/src/index.scss'
+import '../node_modules/@plake492/t_css_utils/dist/reset.css'
+import '../node_modules/@plake492/t_css_utils/dist/index.css'
 import './styles/app.css'
 
 const rootElement = document.getElementById('root')

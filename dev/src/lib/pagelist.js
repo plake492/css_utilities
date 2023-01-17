@@ -9,39 +9,41 @@ import Videos from '../components/Videos'
 import BoxShadows from '../components/BoxShadows'
 import Cards from '../components/Cards'
 import Positions from '../components/Positions'
+import Introduction from '../components/Introduction'
+import { isEven } from '../utils'
 
 export const pages = [
   {
+    title: 'Introduction',
+    Component: Introduction
+  },
+  { title: 'Typography', Component: Typography },
+  {
     title: 'Containers',
     Component: Containers,
-    bgColor: 'bg-secondary',
     container: null
   },
-  { title: 'Typography', Component: Typography, bgColor: 'bg-priamry' },
   {
     title: 'Background Colors',
-    Component: BackgroundColors,
-    bgColor: 'bg-secondary'
+    Component: BackgroundColors
   },
+  { title: 'Columns', Component: Columns },
   {
     title: 'Flex',
     Component: Flex,
-    bgColor: 'bg-priamry',
     subSections: [
       { title: 'Justify' },
       { title: 'Justify (Col)' },
       { title: 'Align Items' }
     ]
   },
-  { title: 'Borders', Component: Borders, bgColor: 'bg-secondary' },
-  { title: 'Columns', Component: Columns, bgColor: 'bg-priamry' },
-  { title: 'Box Shadows', Component: BoxShadows, bgColor: 'bg-secondary' },
-  { title: 'Positions', Component: Positions, bgColor: 'bg-priamry' },
-  { title: 'Cards', Component: Cards, bgColor: 'bg-secondary' },
+  { title: 'Positions', Component: Positions },
+  { title: 'Borders', Component: Borders },
+  { title: 'Box Shadows', Component: BoxShadows },
+  // { title: 'Cards', Component: Cards },
   {
     title: 'Images',
     Component: Images,
-    bgColor: 'bg-priamry',
     subSections: [
       { title: '3 / 4' },
       { title: '1 / 1' },
@@ -49,6 +51,9 @@ export const pages = [
       { title: '3 / 2' },
       { title: '16 / 9' }
     ]
-  },
-  { title: 'Videos', Component: Videos, bgColor: 'bg-secondary' }
-]
+  }
+  // { title: 'Videos', Component: Videos }
+].map((o, i) => ({
+  ...o,
+  bgColor: isEven(i) ? 'bg-secondary' : ''
+}))

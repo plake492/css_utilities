@@ -15,56 +15,66 @@ export default function Images() {
   const images = [
     {
       src: i1,
+      alt: 'alt text',
       ratio: 'ratio-3x4',
       objectPosition: 'object-position-tr',
       link: '3-/-4'
     },
     {
       src: i2,
+      alt: 'alt text',
       ratio: 'ratio-3x4',
       objectPosition: 'object-position-tr'
     },
     {
       src: i3,
+      alt: 'alt text',
       ratio: 'ratio-1x1',
       objectPosition: 'object-position-tr',
       link: '1-/-1'
     },
     {
       src: i4,
+      alt: 'alt text',
       ratio: 'ratio-1x1',
       objectPosition: 'object-position-tr'
     },
     {
       src: i5,
+      alt: 'alt text',
       ratio: 'ratio-4x3',
       objectPosition: 'object-position-tr',
       link: '4-/-3'
     },
     {
       src: i6,
+      alt: 'alt text',
       ratio: 'ratio-4x3',
       objectPosition: 'object-position-tr'
     },
     {
       src: i9,
+      alt: 'alt text',
       ratio: 'ratio-3x2',
       objectPosition: 'object-position-center',
       link: '3-/-2'
     },
     {
       src: i10,
+      alt: 'alt text',
       ratio: 'ratio-3x2',
       objectPosition: 'object-position-br'
     },
     {
       src: i7,
+      alt: 'alt text',
       ratio: 'ratio-16x9',
       objectPosition: 'object-position-tr',
       link: '16-/-9'
     },
     {
       src: i8,
+      alt: 'alt text',
       ratio: 'ratio-16x9',
       objectPosition: 'object-position-tr'
     }
@@ -78,7 +88,11 @@ export default function Images() {
           <div
             className={`img-wrapper ${img.ratio} border-pill overflow-hidden border border-blue border-2`}
           >
-            <img className={`${img.objectPosition} img `} src={img.src}></img>
+            <img
+              className={`${img.objectPosition} img `}
+              alt={img.alt}
+              src={img.src}
+            ></img>
           </div>
         </div>
       ))}

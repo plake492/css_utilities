@@ -1,4 +1,5 @@
 import React from 'react'
+import CodeSnippet from './CodeSnippet'
 import SectionContainer from './SectionContainer'
 
 export default function Typography() {
@@ -10,15 +11,39 @@ export default function Typography() {
     'text-bottom',
     'text-top'
   ]
+  const headerSnips = [
+    { tag: 'h1', content: 'Header 1' },
+    { tag: 'h2', content: 'Header 2' },
+    { tag: 'h3', content: 'Header 3' },
+    { tag: 'h4', content: 'Header 4' },
+    { tag: 'h5', content: 'Header 5' },
+    { tag: 'h6', content: 'Header 6' }
+  ]
+  const headerClassSnips = [
+    { tag: 'p', classList: 'h1', content: 'Header 1' },
+    { tag: 'p', classList: 'h2', content: 'Header 2' },
+    { tag: 'p', classList: 'h3', content: 'Header 3' },
+    { tag: 'p', classList: 'h4', content: 'Header 4' },
+    { tag: 'p', classList: 'h5', content: 'Header 5' },
+    { tag: 'p', classList: 'h6', content: 'Header 6' }
+  ]
+
   return (
     <section className="container-xxl">
       <div className="mb-md pb-md pt-xxl">
-        <p className="h1">Header 1</p>
-        <p className="h2">Header 2</p>
-        <p className="h3">Header 3</p>
-        <p className="h4">Header 4</p>
-        <p className="h5">Header 5</p>
-        <p className="h6">Header 6</p>
+        <CodeSnippet code={headerSnips} desc="Header Tags">
+          <p className="h1">Header 1</p>
+          <p className="h2">Header 2</p>
+          <p className="h3">Header 3</p>
+          <p className="h4">Header 4</p>
+          <p className="h5">Header 5</p>
+          <p className="h6">Header 6</p>
+        </CodeSnippet>
+        <p className="p-2">
+          Header classes are also available. This is especailly useful for
+          getting quick stlyes without worrying about seo issues
+        </p>
+        <CodeSnippet code={headerClassSnips} desc="With classes" />
       </div>
       <div className="mb-md pb-md">
         <p className="h3">text-lg</p>
@@ -38,6 +63,16 @@ export default function Typography() {
           a place I can take someone's curiosity and land where they end up
           enlightened when we're done.
         </p>
+        <CodeSnippet
+          code={[
+            {
+              tag: 'p',
+              classList: 'text-lg',
+              content:
+                "There's a lot to do in space. I want to learn more about..."
+            }
+          ]}
+        />
         <p className="h4">text-md</p>
         <p className="text-md">
           I claim that space is part of our culture. You've heard complaints
@@ -54,6 +89,24 @@ export default function Typography() {
           generation might pass before a discovery would influence your life,
           culture or the conduct of nations.
         </p>
+        <CodeSnippet
+          desc={
+            'This is the defualt <p> style, and is also usable with a class'
+          }
+          code={[
+            {
+              tag: 'p',
+              classList: 'text-md',
+              content:
+                "I claim that space is part of our culture. You've heard..."
+            },
+            {
+              tag: 'p',
+              content:
+                "I claim that space is part of our culture. You've heard..."
+            }
+          ]}
+        />
         <p className="h5">text-sm</p>
         <p className="text-sm">
           We account for one-sixth of the forces of gravity we see in the
@@ -71,6 +124,16 @@ export default function Typography() {
           when you're surrounded by carnivores, one of the best strategies is to
           fade into the background and disappear.
         </p>
+        <CodeSnippet
+          code={[
+            {
+              tag: 'p',
+              classList: 'text-sm',
+              content:
+                'We account for one-sixth of the forces of gravity we see in...'
+            }
+          ]}
+        />
         <p className="h6">text-xs</p>
         <p className="text-xs">
           Let me tell you something about full moons: kids don't care about full
@@ -84,6 +147,15 @@ export default function Typography() {
           industry matures, it means it's not advancing, and of course the jobs
           go overseas.
         </p>
+        <CodeSnippet
+          code={[
+            {
+              tag: 'p',
+              classList: 'text-xs',
+              content: 'Let me tell you something about full moons...'
+            }
+          ]}
+        />
       </div>
       <div className="mb-md pb-md p-xl bg-violet-20 border-pill shadow-5 shadow-violet escape-container">
         <div>
@@ -226,14 +298,30 @@ export default function Typography() {
       </div>
       <div className="mb-md pb-md">
         <p className="h4">Vertical Align</p>
-        {verticalAlign.map((align, index) => (
-          <div key={align + index} className="my-xl position-relative">
-            <p className="h4 mb-none border-bottom border-top">
-              {align} <small className={`align-${align}`}>Aligned Text</small>
-            </p>
-            <div className="position-absolute top-50 w-100 absolute-center-y border border-red z-n1 opacity-50"></div>
-          </div>
-        ))}
+        <CodeSnippet
+          code={verticalAlign.map(align => ({
+            tag: 'p',
+            content: align,
+            classList: 'h4 mb-none',
+            children: [
+              {
+                tag: 'span',
+                classList: `align-${align} text-xs`,
+                content: 'Aligned Text'
+              }
+            ]
+          }))}
+        >
+          {verticalAlign.map((align, index) => (
+            <div key={align + index} className="my-xl position-relative">
+              <p className="h4 mb-none border-bottom border-top">
+                {align}{' '}
+                <span className={`align-${align} text-xs`}>Aligned Text</span>
+              </p>
+              <div className="position-absolute top-50 w-100 absolute-center-y border border-red opacity-50"></div>
+            </div>
+          ))}
+        </CodeSnippet>
       </div>
     </section>
   )
