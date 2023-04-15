@@ -1,5 +1,5 @@
-import React from 'react'
-import CodeSnippet from './CodeSnippet'
+import React from 'react';
+import CodeSnippet from './CodeSnippet';
 
 export default function Containers() {
   const containers = [
@@ -9,8 +9,8 @@ export default function Containers() {
     'container-lg',
     'container-xl',
     'container-xxl',
-    'container-fluid'
-  ]
+    'container-fluid',
+  ];
   return (
     <div>
       {containers.map((container, index) => (
@@ -26,9 +26,9 @@ export default function Containers() {
       <div className="container">
         <div className="escape-container-padding">
           <CodeSnippet
-            code={containers.map(container => ({
+            code={containers.map((container) => ({
               classList: container,
-              children: [{ tag: 'p', content: container }]
+              children: [{ tag: 'p', content: container }],
             }))}
           />
         </div>
@@ -43,7 +43,7 @@ export default function Containers() {
           <p>Escape</p>
         </div>
         <div
-          className={`bg-blue escape-container-padding p-md border-bl-rounded border-br-rounded`}
+          className={`bg-blue escape-container-padding py-md px-sm border-bl-rounded border-br-rounded`}
         >
           <p>Escaping the parent container padding</p>
         </div>
@@ -58,23 +58,24 @@ export default function Containers() {
                   { tag: 'p', content: 'Container' },
                   {
                     classList: 'escape-container bg-blue-10',
-                    children: [{ tag: 'p', content: 'Escape' }]
+                    children: [{ tag: 'p', content: 'Escape' }],
                   },
                   {
-                    classList: 'escape-container-padding bg-blue-10',
+                    classList:
+                      'escape-container-padding bg-blue-10 py-md px-sm',
                     children: [
                       {
                         tag: 'p',
-                        content: 'Escaping the parent container padding<'
-                      }
-                    ]
-                  }
-                ]
-              }
+                        content: 'Escaping the parent container padding',
+                      },
+                    ],
+                  },
+                ],
+              },
             ]}
           />
         </div>
       </div>
     </div>
-  )
+  );
 }

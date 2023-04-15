@@ -31,7 +31,7 @@ Color brightness is determined by the following formula:
 }
 
 @function get-color-scale-value($color, $tone) {
-  $div-tone: calc($tone / 2);
+  $div-tone: calc($tone / 3);
   @return adjust-color($color, $lightness: $div-tone * 1%);
 }
 

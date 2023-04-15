@@ -13,6 +13,7 @@ $red: #ff0000;
 $orange: #ffa500;
 $yellow: #ffff00;
 $green: #008000;
+$cyan: #00ffff;
 $blue: #0000ff;
 $indigo: #4b0082;
 $violet: #473198;
@@ -51,7 +52,7 @@ $bg-colors: (
   secondary: $bg-secondary,
   accent: $bg-accent,
   tertiary: $bg-tertiary,
-  dark: $bg-dark
+  dark: $bg-dark,
 );
 
 $target-colors: (
@@ -62,10 +63,11 @@ $target-colors: (
   yellow: $yellow,
   green: $green,
   blue: $blue,
+  cyan: $cyan,
   indigo: $indigo,
   violet: $violet,
   purple: $purple,
-  grey: $grey
+  grey: $grey,
 );
 
 // Combine BG color map with the target color map

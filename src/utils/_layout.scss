@@ -1,0 +1,58 @@
+$prefix: row-scroll;
+$number-per-row: (1, 2, 3, 4);
+
+.#{$prefix} {
+  // Use the column var from the row gutter classes to set these gaps
+  --#{$prefix}-flex-gap: #{var(--col-gutter-column, $space-md)};
+  --#{$prefix}-width-sizer: 1; // How many cards fit in the container
+  --#{$prefix}-padding-spacer: calc((var(--container-padding) * 2) / 2);
+  --#{$prefix}-spacer: calc(
+    100vw - var(--container-width) + var(--#{$prefix}-padding-spacer)
+  );
+  --#{$prefix}-spacer-negative: calc(var(--#{$prefix}-spacer) * -1);
+  --#{$prefix}-width-base: calc(100% / var(--#{$prefix}-width-sizer));
+  --#{$prefix}-width-offset: calc((100 -var(--#{$prefix}-width-base)) / 100);
+  --#{$prefix}-width: calc(
+    var(--#{$prefix}-width-base) - var(--#{$prefix}-flex-gap) *
+      var(--#{$prefix}-width-offset) /
+      (var(--#{$prefix}-width-sizer) / (var(--#{$prefix}-width-sizer) - 1))
+  );
+
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--#{$prefix}-flex-gap);
+  margin-left: var(--#{$prefix}-spacer-negative);
+  margin-right: var(--#{$prefix}-spacer-negative);
+  padding-left: var(--#{$prefix}-spacer);
+  padding-right: var(--#{$prefix}-spacer);
+  padding-bottom: $space-md;
+  padding-top: $space-md;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+
+  &-reverse {
+    flex-direction: row-reverse;
+  }
+
+  & > * {
+    scroll-snap-align: center;
+    min-width: var(--#{$prefix}-width);
+    max-width: var(--#{$prefix}-width);
+    transition: max-width 300ms ease-in-out, min-width 300ms ease-in-out;
+  }
+
+  @each $num in $number-per-row {
+    &.r-#{$num} {
+      --#{$prefix}-width-sizer: #{$num};
+    }
+  }
+  @each $bp, $px in $breakpoints {
+    @include respond-to(#{$px}) {
+      @each $num in $number-per-row {
+        &.r-#{$bp}-#{$num} {
+          --#{$prefix}-width-sizer: #{$num} !important;
+        }
+      }
+    }
+  }
+}

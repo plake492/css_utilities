@@ -1,15 +1,13 @@
-import React, { isValidElement, cloneElement } from 'react'
-import { conditionalClasses } from '../utils'
+import React, { isValidElement, cloneElement } from 'react';
+import { conditionalClasses } from '../utils';
 
 function HTMLTags({
   tag = div,
   indent = false,
   classList = null,
   styles = null,
-  children
+  children,
 }) {
-  console.log(children)
-
   return (
     <div className={conditionalClasses([indent, 'pl-lg'])}>
       <span>&#60;</span>
@@ -34,7 +32,7 @@ function HTMLTags({
       <span style={{ color: '#1e87c6' }}>{tag}</span>
       <span>&#62;</span>
     </div>
-  )
+  );
 }
 
 function HTMLLine({ snip, indent = false }) {
@@ -45,14 +43,14 @@ function HTMLLine({ snip, indent = false }) {
       styles={snip?.styles}
       indent={indent}
     >
-      {snip?.content ? snip?.content : null}
+      {snip?.content ? snip.content : null}
       {snip?.children && Array.isArray(snip.children)
-        ? snip.children.map(snipTwo => (
+        ? snip.children.map((snipTwo) => (
             <HTMLLine snip={snipTwo} indent={true} />
           ))
         : null}
     </HTMLTags>
-  )
+  );
 }
 
 export default function CodeSnippet({
@@ -60,7 +58,7 @@ export default function CodeSnippet({
   topBg = 'bg-grey',
   desc,
   code,
-  lang = 'html'
+  lang = 'html',
 }) {
   return (
     <div className="bg-black border border-white border-rounded mb-md overflow-hidden">
@@ -69,11 +67,11 @@ export default function CodeSnippet({
       ) : null}
       <div className="p-md">
         <code data-lang={lang}>
-          {code.map(snip => (
+          {code.map((snip) => (
             <HTMLLine snip={snip} />
           ))}
         </code>
       </div>
     </div>
-  )
+  );
 }

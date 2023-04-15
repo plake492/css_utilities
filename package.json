@@ -9,12 +9,13 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "yarn clean && sass ./src/index.scss:./dist/index.css --style compressed && sass ./src/reset.scss:./dist/reset.css --style compressed && yarn process-css-prod",
-    "watch": "sass -w ./src/index.scss:./dev/src/styles/index.css && sass -w ./src/reset.scss:./dev/src/styles/reset.css",
+    "watch": "sass -w",
     "process-css-prod": "node postcssConfig.js",
-    "dev": "yarn watch"
+    "dev": "concurrently \"yarn watch\" \"cd ./dev && yarn dev\""
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
+    "concurrently": "^8.0.1",
     "postcss": "^8.4.21",
     "postcss-combine-duplicated-selectors": "^10.0.3",
     "postcss-combine-media-query": "^1.0.1",
