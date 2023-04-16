@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "yarn clean && sass ./src/index.scss:./dist/index.css --style compressed && sass ./src/reset.scss:./dist/reset.css --style compressed && yarn process-css-prod",
+    "build": "yarn clean && sass ./src/index.scss:./dist/index.css --style compressed && yarn process-css-prod",
     "watch": "sass -w",
     "process-css-prod": "node postcssConfig.js",
     "dev": "concurrently \"yarn watch\" \"cd ./dev && yarn dev\""
@@ -23,5 +23,11 @@
     "postcss-sort-media-queries": "^4.3.0",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "arrowParens": "always"
   }
 }

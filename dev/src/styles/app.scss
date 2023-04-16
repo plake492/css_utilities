@@ -1,7 +1,14 @@
-// Abstract
-@import '../../../src/index.scss';
+@import '../../../src/functions/';
+@import '../../../src/variables/';
 
-code > * {
-  font-size: 16px;
-  line-height: 28px;
-}
+$base-font-size: 18;
+$font-increase-on-xl: false;
+
+$border-radius: 2px;
+
+@import '../../../src/maps/';
+@import '../../../src/mixins/';
+@import '../../../src/reset/';
+@import '../../../src/base/';
+@import '../../../src/utils/';
+@import '../../../src/components/';

@@ -8,12 +8,16 @@ $header-font-modifiers: ();
 @for $i from 1 through length($header-font-responsive-sizes) {
   $key: nth($header-font-responsive-sizes, $i);
   $map: (
-    $key: $header-font-modifier-base + $header-increase
+    $key: $header-font-modifier-base + $header-increase,
   );
   $header-font-modifiers: map-merge($header-font-modifiers, $map);
   // Increase the ratio for the next iteration
   $header-increase: $header-breakpoint-increase * $i;
 }
+
+// Bases for header margin
+$base-text-margin-bottom: $space-md;
+$base-text-margin-top: $space-lg;
 
 :root {
   // Create responsive text vars
@@ -45,6 +49,10 @@ $header-font-modifiers: ();
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: #{$base-font-size}px;
 }
 
 body {

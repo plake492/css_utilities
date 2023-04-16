@@ -12,10 +12,10 @@ fs.readFile('./dist/index.css', (err, css) => {
     postcssNested,
     postcssCombineMediaQuery,
     postcssCombineDuplicatedSelectors,
-    postcssSortMediaQueries({ sort: 'mobile-first' })
+    postcssSortMediaQueries({ sort: 'mobile-first' }),
   ])
     .process(css, { from: './dist/index.css', to: './dist/index.css' })
-    .then(result => {
+    .then((result) => {
       fs.writeFile('./dist/index.css', result.css, () => true)
       if (result.map) {
         fs.writeFile('./dist/index.css.map', result.map.toString(), () => true)

@@ -9,7 +9,7 @@ export default function Typography() {
     'middle',
     'bottom',
     'text-bottom',
-    'text-top'
+    'text-top',
   ]
   const headerSnips = [
     { tag: 'h1', content: 'Header 1' },
@@ -17,7 +17,7 @@ export default function Typography() {
     { tag: 'h3', content: 'Header 3' },
     { tag: 'h4', content: 'Header 4' },
     { tag: 'h5', content: 'Header 5' },
-    { tag: 'h6', content: 'Header 6' }
+    { tag: 'h6', content: 'Header 6' },
   ]
   const headerClassSnips = [
     { tag: 'p', classList: 'h1', content: 'Header 1' },
@@ -25,7 +25,7 @@ export default function Typography() {
     { tag: 'p', classList: 'h3', content: 'Header 3' },
     { tag: 'p', classList: 'h4', content: 'Header 4' },
     { tag: 'p', classList: 'h5', content: 'Header 5' },
-    { tag: 'p', classList: 'h6', content: 'Header 6' }
+    { tag: 'p', classList: 'h6', content: 'Header 6' },
   ]
 
   return (
@@ -39,10 +39,7 @@ export default function Typography() {
           <p className="h5">Header 5</p>
           <p className="h6">Header 6</p>
         </CodeSnippet>
-        <p className="p-2">
-          Header classes are also available. This is especailly useful for
-          getting quick stlyes without worrying about seo issues
-        </p>
+        <p className="p-2">Header classes are also available.</p>
         <CodeSnippet code={headerClassSnips} desc="With classes" />
       </div>
       <div className="mb-md pb-md">
@@ -69,8 +66,8 @@ export default function Typography() {
               tag: 'p',
               classList: 'text-lg',
               content:
-                "There's a lot to do in space. I want to learn more about..."
-            }
+                "There's a lot to do in space. I want to learn more about...",
+            },
           ]}
         />
         <p className="h4">text-md</p>
@@ -98,13 +95,13 @@ export default function Typography() {
               tag: 'p',
               classList: 'text-md',
               content:
-                "I claim that space is part of our culture. You've heard..."
+                "I claim that space is part of our culture. You've heard...",
             },
             {
               tag: 'p',
               content:
-                "I claim that space is part of our culture. You've heard..."
-            }
+                "I claim that space is part of our culture. You've heard...",
+            },
           ]}
         />
         <p className="h5">text-sm</p>
@@ -130,8 +127,8 @@ export default function Typography() {
               tag: 'p',
               classList: 'text-sm',
               content:
-                'We account for one-sixth of the forces of gravity we see in...'
-            }
+                'We account for one-sixth of the forces of gravity we see in...',
+            },
           ]}
         />
         <p className="h6">text-xs</p>
@@ -152,8 +149,8 @@ export default function Typography() {
             {
               tag: 'p',
               classList: 'text-xs',
-              content: 'Let me tell you something about full moons...'
-            }
+              content: 'Let me tell you something about full moons...',
+            },
           ]}
         />
       </div>
@@ -299,7 +296,7 @@ export default function Typography() {
       <div className="mb-md pb-md">
         <p className="h4">Vertical Align</p>
         <CodeSnippet
-          code={verticalAlign.map(align => ({
+          code={verticalAlign.map((align) => ({
             tag: 'p',
             content: align,
             classList: 'h4 mb-none',
@@ -307,9 +304,9 @@ export default function Typography() {
               {
                 tag: 'span',
                 classList: `align-${align} text-xs`,
-                content: 'Aligned Text'
-              }
-            ]
+                content: 'Aligned Text',
+              },
+            ],
           }))}
         >
           {verticalAlign.map((align, index) => (

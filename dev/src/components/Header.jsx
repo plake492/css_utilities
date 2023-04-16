@@ -8,14 +8,14 @@ export default function Header({ currentSection, reference }) {
   return (
     <header
       ref={reference}
-      className="position-fixed w-100 z-1 bg-red-30 box-shadow border-bottom position-relative d-flex justify-content-between align-items-center py-md px-md px-lg-lg px-xl-xl px-xxl-xxl"
+      className="position-fixed w-100 z-1 bg-accent box-shadow border-bottom position-relative d-flex justify-content-between align-items-center py-md px-md px-lg-lg px-xl-xl px-xxl-xxl"
     >
       <h1 className="h5 my-none">CSS UTILITIES</h1>
       <div>
         <div
           className="border-top border-bottom flex-center border-2 c-pointer btn--clear border-black"
           style={{ height: '25px', width: '25px' }}
-          onClick={() => setShowdropdown(prev => !prev)}
+          onClick={() => setShowdropdown((prev) => !prev)}
         >
           <div className="border-top border-2 w-100 border-black"></div>
         </div>
@@ -25,7 +25,7 @@ export default function Header({ currentSection, reference }) {
         className={`dropdown dropdown--${conditionalClasses([
           showDropdown,
           'opened opacity-100',
-          'closed  opacity-0'
+          'closed  opacity-0',
         ])} position-absolute top-100 w-min-100 right-0 bg-black-40 z-n1 border-bottom shadow-4`}
       >
         <DropdownMenu
@@ -45,7 +45,7 @@ function DropdownMenu({ currentSection, setShowdropdown }) {
           key={title + index}
           className={`${conditionalClasses([
             isEven(index),
-            `bg-grey-60`
+            `bg-grey-60`,
           ])} px-md py-sm`}
         >
           <a
