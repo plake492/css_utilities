@@ -1,0 +1,143 @@
+// Global
+$base-font-size: 16;
+$base-spacing: 1rem;
+
+// Responsive Sizes
+$screen-sm-min: rem(576);
+$screen-md-min: rem(768);
+$screen-lg-min: rem(992);
+$screen-xl-min: rem(1200);
+$screen-xxl-min: rem(1400);
+
+// **************************************************
+// ******************** Colors **********************
+// **************************************************
+
+$transparent: #00000000;
+$transparent-partial: #0000005e;
+
+$black: #121212;
+$white: #f5f5f5;
+$red: #ff0000;
+$orange: #ffa500;
+$yellow: #ffff00;
+$green: #008000;
+$cyan: #00ffff;
+$blue: #0000ff;
+$indigo: #4b0082;
+$violet: #473198;
+$purple: #800080;
+$grey: #292a2b;
+
+// **************************************************
+// **************** Colors Themeing *****************
+// **************************************************
+
+$vanilla: #e1d89fff;
+$old-rose: #cd8b76ff;
+$sky-magenta: #c45baaff;
+$plum: #7d387dff;
+$dark-slate-gray: #27474eff;
+
+$royal-blue-traditional: #0a2463ff;
+$imperial-red: #fb3640ff;
+$davys-gray: #605f5eff;
+$cerulean: #247ba0ff;
+$platinum: #e2e2e2ff;
+
+// /* Bg color vars */
+$bg-primary: $vanilla;
+$bg-secondary: $old-rose;
+$bg-accent: $sky-magenta;
+$bg-tertiary: $plum;
+$bg-dark: $dark-slate-gray;
+
+// /* Text colors */
+$text-light: rgb(238, 238, 238);
+$text-dark: rgb(0, 0, 0);
+$link-color: $bg-accent;
+$shadow-color: $black;
+
+// **************************************************
+// ***************** TYPEOGRAPHY ********************
+// **************************************************
+
+// /**************************************************/
+// /* Fonts */
+// /**************************************************/
+$primary-font: Arial, sans-serif;
+$secondary-font: Verdana, sans-serif;
+
+// /**************************************************/
+// /* Responsive fonts */
+// /**************************************************/
+
+// ratio to update the header font / line-height sizes
+// will be applied to the first item in $header-font-responsive-sizes
+$header-font-modifier-base: 0.3;
+
+// Amount to increase by for every proceeding item in $header-font-responsive-sizes
+$header-breakpoint-increase: 0.05;
+
+// Placeholder for changing header sizes by breakpoints
+$header-increase: 0;
+
+$font-size-standard: rem(20);
+
+// /**************************************************/
+// /* Line Height Ratios */
+// /**************************************************/
+$line-height-ratio: 1.6;
+
+// This values will affect the Header font-sizes
+$line-height-ratio-headers: 1.2;
+
+$underline-bottom: 0px;
+
+// **************************************************
+// ***************** Borders ************************
+// **************************************************
+
+$border-radius: rem(8);
+$border-radius-pill: rem(40);
+$border-radius-circle: 50%;
+
+$border-width: rem(1);
+$border-color: #ffffff;
+$border-style: solid;
+
+$box-shadow: 2px 2px 7px 2px rgb(0 0 0 / 8%);
+
+$shadow-1: rem(2) rem(4) rem(4);
+$shadow-2: rem(2) rem(4) rem(4);
+$shadow-3: rem(4) rem(6) rem(6);
+$shadow-4: rem(6) rem(8) rem(8);
+$shadow-5: rem(8) rem(10) rem(10);
+
+// **************************************************
+// ***************** Columns ************************
+// **************************************************
+
+$number-of-columns: 12;
+
+// **************************************************
+// ******************** container *******************
+// **************************************************
+
+$container-base-size: 1320px;
+$container-width-decrease: 180px;
+
+// **************************************************
+// ***************** Misc ***************************
+// **************************************************
+
+// $list-item-icon: '\276F'; // Chevron Arrow
+// $list-item-icon: '\262F'; // Yin Yang
+// $list-item-icon: '\25E6'; // Black border bullet
+$list-item-icon: '\26AC'; // Black border bullet (bigger)
+// $list-item-icon: '\25CF'; // Black dot
+// $list-item-icon: '\273A'; // Astrisk Special
+// $list-item-icon: '\002A'; // Astrisk
+// $list-item-icon: '\25AA'; // Bullet (square)
+// $list-item-icon: '\2022'; // Bullet (circle)
+

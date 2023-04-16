@@ -1,13 +1,13 @@
 @mixin generate-color-var($key, $value) {
-  --bg-#{$key}: #{$value};
+  --#{$key}: #{$value};
 
   @each $tone in $tones {
-    --bg-#{$key}-#{$tone}: #{get-color-scale-value($value, $tone)};
+    --#{$key}-#{$tone}: #{get-color-scale-value($value, $tone)};
   }
 }
 
 @mixin bg-classes() {
-  background-color: var(--bg-color);
+  background-color: var(--color);
   color: var(--text-color);
   @include transition((color, background), 200);
 }
@@ -18,18 +18,18 @@
 // ************ Generate Root color vars ************ //
 /* Set default root colors*/
 :root {
-  --bg-color: #{$bg-primary};
+  --color: #{$bg-primary};
   --text-color: #{get-contrasted-text($bg-primary)};
 
   @each $key, $value in $target-colors {
-    --bg-#{'' + $key}: #{$value};
+    --#{'' + $key}: #{$value};
 
     // * Add tones as classes * //
     @each $tone in $tones {
       $bg-color-tone: get-color-scale-value($value, $tone);
       $text-color-tone: get-contrasted-text($bg-color-tone);
 
-      --bg-#{'' + $key}-#{$tone}: #{$bg-color-tone};
+      --#{'' + $key}-#{$tone}: #{$bg-color-tone};
     }
   }
 }
@@ -39,11 +39,15 @@
 
   // Update Root colors, setting colors in child elements
   .bg-#{'' + $key} {
-    --bg-color: #{$value};
+    --color: #{$value};
     --text-color: #{$text-color};
-
     @include bg-classes();
-  }
+  } 
+  
+  .color-#{'' + $key} {
+    --text-color: #{$value};
+    color: var(--text-color);
+  } 
 
   // * Add tones as classes * //
   @each $tone in $tones {
@@ -52,12 +56,20 @@
 
     // Update Root colors, setting colors in child elements
     .bg-#{'' + $key}-#{$tone} {
-      --bg-color: #{$bg-color-tone};
+      --color: #{$bg-color-tone};
       --text-color: #{$text-color-tone};
-
       @include bg-classes();
     }
+    @if $color-classes-with-tones {
+      // Include color tone's 
+      .color-#{'' + $key}-#{$tone} {
+        --text-color: #{$bg-color-tone};
+        color: var(--text-color);
+      } 
+    }
   }
+
+  
 }
 // // ************************************************************************ //
 // // ***************** Generator complemenrty Color Schemes ***************** //
@@ -73,7 +85,7 @@
 
 //   .comp-#{$class} {
 //     /* Update Root colors, setting colors in child elements */
-//     --bg-color: #{$hsl};
+//     --color: #{$hsl};
 //     --text-color: #{$text-color};
 //     @include bg-classes();
 //   }
@@ -113,7 +125,7 @@
 
 //   .mono-#{$class} {
 //     /* Update Root colors, setting colors in child elements */
-//     --bg-color: #{$hsl};
+//     --color: #{$hsl};
 //     --text-color: #{$text-color};
 //     @include bg-classes();
 //   }
@@ -160,7 +172,7 @@
 
 //   .analg-#{$class} {
 //     /* Update Root colors, setting colors in child elements */
-//     --bg-color: #{$value};
+//     --color: #{$value};
 //     --text-color: #{$text-color};
 //     @include bg-classes();
 //   }
@@ -172,7 +184,7 @@
 
 //     .analg-#{$class}-#{$tone} {
 //       /* Update Root colors, setting colors in child elements */
-//       --bg-color: #{$bg-color-tone};
+//       --color: #{$bg-color-tone};
 //       --text-color: #{$text-color-tone};
 //       @include bg-classes();
 //     }
