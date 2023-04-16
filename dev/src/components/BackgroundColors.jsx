@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import { getCssVar } from '../utils';
+import React, { useState } from 'react'
+import { getCssVar } from '../utils'
 
 export default function BackgroundColors() {
-  const colors = getCssVar('--bg');
+  const colors = getCssVar('--bg')
 
   return (
     <div className="row g-sm">
       {colors.map((v) => {
-        const bgClass = v.split('--')[1];
+        const bgClass = v.split('--')[1]
 
         return v !== '--bg-color' ? (
           <ColorBlock key={v} bgClass={bgClass} />
-        ) : null;
+        ) : null
       })}
     </div>
-  );
+  )
 }
 
 const ColorBlock = ({ bgClass }) => {
-  const [showClass, setShowClass] = useState(false);
+  const [showClass, setShowClass] = useState(false)
 
   return (
     <div
@@ -26,5 +26,5 @@ const ColorBlock = ({ bgClass }) => {
     >
       {bgClass}
     </div>
-  );
-};
+  )
+}

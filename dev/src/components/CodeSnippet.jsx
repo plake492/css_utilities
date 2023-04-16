@@ -1,5 +1,5 @@
-import React, { isValidElement, cloneElement } from 'react';
-import { conditionalClasses } from '../utils';
+import React, { isValidElement, cloneElement } from 'react'
+import { conditionalClasses } from '../utils'
 
 function HTMLTags({
   tag = div,
@@ -32,7 +32,7 @@ function HTMLTags({
       <span style={{ color: '#1e87c6' }}>{tag}</span>
       <span>&#62;</span>
     </div>
-  );
+  )
 }
 
 function HTMLLine({ snip, indent = false }) {
@@ -50,7 +50,7 @@ function HTMLLine({ snip, indent = false }) {
           ))
         : null}
     </HTMLTags>
-  );
+  )
 }
 
 export default function CodeSnippet({
@@ -73,5 +73,5 @@ export default function CodeSnippet({
         </code>
       </div>
     </div>
-  );
+  )
 }

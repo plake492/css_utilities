@@ -6,15 +6,17 @@ export default function Borders() {
     'border-top',
     'border-right',
     'border-bottom',
-    'border-left'
+    'border-left',
   ]
 
   const borderColors = [
-    'border-primary',
+    'border-red',
+    'border-orange',
     'border-yellow',
-    'border-accent',
-    'border-teriary',
-    'border-red'
+    'border-green',
+    'border-blue',
+    'border-violet',
+    'border-purple',
   ]
 
   const borderWidths = [
@@ -22,7 +24,7 @@ export default function Borders() {
     'border-2',
     'border-3',
     'border-4',
-    'border-5'
+    'border-5',
   ]
 
   const borderRadius = ['border-rounded', 'border-pill', 'border-circle']
@@ -33,7 +35,7 @@ export default function Borders() {
     'bg-grey border border-bl-circle border-blue border-5 border-tr-pill',
     'border-br-circle',
     'border-bl-circle border-br-circle',
-    'border-tl-circle border-tr-circle'
+    'border-tl-circle border-tr-circle',
   ]
 
   return (

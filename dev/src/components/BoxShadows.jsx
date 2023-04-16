@@ -8,7 +8,7 @@ export default function BoxShadows() {
     'shadow-2',
     'shadow-3',
     'shadow-4',
-    'shadow-5'
+    'shadow-5',
   ]
   const shadowsInset = [
     'shadow-inset-0',
@@ -16,16 +16,16 @@ export default function BoxShadows() {
     'shadow-inset-2',
     'shadow-inset-3',
     'shadow-inset-4',
-    'shadow-inset-5'
+    'shadow-inset-5',
   ]
   const shadowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet']
 
   return (
     <>
       <CodeSnippet
-        code={shadows.map(shadow => ({
+        code={shadows.map((shadow) => ({
           classList: shadow,
-          styles: 'height:150px; width:150px'
+          styles: 'height:150px; width:150px',
         }))}
         topBg={'bg-grey-40'}
       >
@@ -40,9 +40,9 @@ export default function BoxShadows() {
         </section>
       </CodeSnippet>
       <CodeSnippet
-        code={shadowColors.map(shadow => ({
+        code={shadowColors.map((shadow) => ({
           classList: `shadow-5 shadow-${shadow} bg-${shadow}-50`,
-          styles: 'height:150px; width:150px'
+          styles: 'height:150px; width:150px',
         }))}
       >
         <section className="d-flex flex-wrap gap-xl">
@@ -57,9 +57,9 @@ export default function BoxShadows() {
       </CodeSnippet>
 
       <CodeSnippet
-        code={shadowsInset.map(shadow => ({
+        code={shadowsInset.map((shadow) => ({
           classList: shadow,
-          styles: 'height:150px; width:150px'
+          styles: 'height:150px; width:150px',
         }))}
       >
         <section className="d-flex flex-wrap gap-md">

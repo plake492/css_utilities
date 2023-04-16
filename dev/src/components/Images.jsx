@@ -18,66 +18,66 @@ export default function Images() {
       alt: 'alt text',
       ratio: 'ratio-3x4',
       objectPosition: 'object-position-tr',
-      link: '3-/-4'
+      link: '3-/-4',
     },
     {
       src: i2,
       alt: 'alt text',
       ratio: 'ratio-3x4',
-      objectPosition: 'object-position-tr'
+      objectPosition: 'object-position-tr',
     },
     {
       src: i3,
       alt: 'alt text',
       ratio: 'ratio-1x1',
       objectPosition: 'object-position-tr',
-      link: '1-/-1'
+      link: '1-/-1',
     },
     {
       src: i4,
       alt: 'alt text',
       ratio: 'ratio-1x1',
-      objectPosition: 'object-position-tr'
+      objectPosition: 'object-position-tr',
     },
     {
       src: i5,
       alt: 'alt text',
       ratio: 'ratio-4x3',
       objectPosition: 'object-position-tr',
-      link: '4-/-3'
+      link: '4-/-3',
     },
     {
       src: i6,
       alt: 'alt text',
       ratio: 'ratio-4x3',
-      objectPosition: 'object-position-tr'
+      objectPosition: 'object-position-tr',
     },
     {
       src: i9,
       alt: 'alt text',
       ratio: 'ratio-3x2',
       objectPosition: 'object-position-center',
-      link: '3-/-2'
+      link: '3-/-2',
     },
     {
       src: i10,
       alt: 'alt text',
       ratio: 'ratio-3x2',
-      objectPosition: 'object-position-br'
+      objectPosition: 'object-position-br',
     },
     {
       src: i7,
       alt: 'alt text',
       ratio: 'ratio-16x9',
       objectPosition: 'object-position-tr',
-      link: '16-/-9'
+      link: '16-/-9',
     },
     {
       src: i8,
       alt: 'alt text',
       ratio: 'ratio-16x9',
-      objectPosition: 'object-position-tr'
-    }
+      objectPosition: 'object-position-tr',
+    },
   ]
 
   return (

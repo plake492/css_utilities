@@ -7,7 +7,7 @@ function FlexItem({ index, isFullWidth }) {
       className={`${conditionalClasses([
         isFullWidth,
         'w-100',
-        'w-25'
+        'w-25',
       ])} flex-center border border-rounded bg-blue-60`}
     >
       {index}
@@ -20,13 +20,13 @@ export default function FlexBox({
   boxHeight,
   parentWidth = 'w-100',
   isCol,
-  noFullWith = false
+  noFullWith = false,
 }) {
   return (
     <div
       className={`my-md ${conditionalClasses([
         isCol,
-        'col-12 col-md-6 col-lg-4'
+        'col-12 col-md-6 col-lg-4',
       ])}`}
       id={className}
     >

@@ -1,26 +1,26 @@
-import React from 'react';
-import { Card } from './Cards';
-import CodeSnippet from './CodeSnippet';
-import img1 from '../assets/images/1.jpg';
-import img2 from '../assets/images/2.jpg';
-import img3 from '../assets/images/3.jpg';
-import img4 from '../assets/images/4.jpg';
-import img5 from '../assets/images/5.jpg';
-import img6 from '../assets/images/6.jpg';
+import React from 'react'
+import { Card } from './Cards'
+import CodeSnippet from './CodeSnippet'
+import img1 from '../assets/images/1.jpg'
+import img2 from '../assets/images/2.jpg'
+import img3 from '../assets/images/3.jpg'
+import img4 from '../assets/images/4.jpg'
+import img5 from '../assets/images/5.jpg'
+import img6 from '../assets/images/6.jpg'
 
 const rightScrollCode = [
   {
     classList: 'row-scroll r-3 g-sm',
     children: [{ content: '...' }, { content: '...' }],
   },
-];
+]
 
 const leftScrollCode = [
   {
     classList: 'row-scroll row-scroll-reverse r-2 g-xl',
     children: [{ content: '...' }, { content: '...' }],
   },
-];
+]
 
 export default function RowScroll() {
   return (
@@ -118,5 +118,5 @@ export default function RowScroll() {
         </div>
       </div>
     </>
-  );
+  )
 }

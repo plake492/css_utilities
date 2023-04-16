@@ -12,7 +12,7 @@ export default function Videos() {
     { src: Fog, ratio: 'ratio-16x9' },
     { src: Jellyfish, ratio: 'ratio-16x9' },
     { src: Ocean, ratio: 'ratio-1x1' },
-    { src: Sunset, ratio: 'ratio-1x1' }
+    { src: Sunset, ratio: 'ratio-1x1' },
   ]
 
   return (
@@ -54,8 +54,8 @@ function Video({ vid, i }) {
       }
     },
     onClick: () => {
-      setHoldPlayState(prev => !prev)
-    }
+      setHoldPlayState((prev) => !prev)
+    },
   }
 
   return (
@@ -65,13 +65,13 @@ function Video({ vid, i }) {
       className={`${vid.ratio} ${conditionalClasses([
         holdPlayState,
         'border-violet',
-        'border-red'
+        'border-red',
       ])} border-pill overflow-hidden border border-3`}
     >
       <video
         style={{
           ...(vid?.offset ? { marginTop: vid.offset + 'px' } : {}),
-          objectFit: 'cover'
+          objectFit: 'cover',
         }}
         width="100%"
         height="100%"

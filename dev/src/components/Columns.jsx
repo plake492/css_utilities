@@ -18,27 +18,25 @@ export default function Columns() {
     {
       classList: 'row g-md',
       children: [...Array(4)].map(() => ({
-        classList: 'col-6 col-md-3 p-md bg-accent-10 border-rounded'
-      }))
-    }
+        classList: 'col-6 col-md-3 p-md bg-accent-10 border-rounded',
+      })),
+    },
   ]
   const snipTwo = [
     {
       classList: 'row g-md',
       children: [...Array(3)].map(() => ({
-        classList:
-          'col-6 col-md-4 p-md bg-accent-10  p-md bg-accent-10 border-rounded'
-      }))
-    }
+        classList: 'col-6 col-md-4 p-md bg-accent-10 border-rounded',
+      })),
+    },
   ]
   const snipThree = [
     {
       classList: 'row g-md',
       children: [...Array(2)].map(() => ({
-        classList:
-          'col-12 col-md-6 p-md bg-accent-10  p-md bg-accent-10 border-rounded'
-      }))
-    }
+        classList: 'col-12 col-md-6 p-md bg-accent-10 border-rounded',
+      })),
+    },
   ]
   const snipFour = [
     {
@@ -47,10 +45,10 @@ export default function Columns() {
         classList: `col-12 ${conditionalClasses([
           i === 0 || i === 3,
           'col-md-8',
-          'col-md-4'
-        ])} p-md bg-accent-10 p-md bg-accent-10 border-rounded`
-      }))
-    }
+          'col-md-4',
+        ])} p-md bg-accent-10 border-rounded`,
+      })),
+    },
   ]
   return (
     <>
@@ -90,7 +88,7 @@ export default function Columns() {
                 col={conditionalClasses([
                   i === 0 || i === 3,
                   'col-md-8',
-                  'col-md-4'
+                  'col-md-4',
                 ])}
               />
             ))}
@@ -113,9 +111,14 @@ export default function Columns() {
         ))}
       </div>
       <div className="row py-xxl g-row-xl g-col-md">
-        {[...Array(18)].map((_, i) => (
-          <Box key={i} col={'col-4 col-md-2'} />
-        ))}
+        {/* {[...Array(18)].map((_, i) => ( */}
+        <Box col={'col-5'} />
+        <Box col={'col-5'} />
+        <Box col={'col-2'} />
+        <Box col={'col-2'} />
+        <Box col={'col-5'} />
+        <Box col={'col-5'} />
+        {/* ))} */}
       </div>
     </>
   )

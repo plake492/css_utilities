@@ -16,7 +16,7 @@ export default function Positions() {
     'bottom-0 left-75 absolute-center-x',
     'right-0',
     'top-50 right-0 absolute-center-y',
-    'bottom-0 right-0'
+    'bottom-0 right-0',
   ]
 
   return (

@@ -64,7 +64,7 @@
     padding-right: var(--container-padding);
 
     // Check if this needs to account for nested containers
-    // THe defualt is true.
+    // The defualt is true.
     @if $unset-nested-containers {
       @each $keyInner, $_ in $container-max-widths {
         @if $keyInner == container {

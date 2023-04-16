@@ -18,13 +18,13 @@ export const breakpoints = {
   md: '(min-width: 768px)',
   lg: '(min-width: 992px)',
   xl: '(min-width: 1200px)',
-  xxl: '(min-width: 1400px)'
+  xxl: '(min-width: 1400px)',
 }
 
-export const getCssVar = cssVarTarget => {
+export const getCssVar = (cssVarTarget) => {
   return Array.from(document.styleSheets)
     .filter(
-      sheet =>
+      (sheet) =>
         sheet.href === null || sheet.href.startsWith(window.location.origin)
     )
     .reduce(
@@ -37,18 +37,18 @@ export const getCssVar = cssVarTarget => {
                 rule.selectorText === ':root'
                   ? [
                       ...def,
-                      ...Array.from(rule.style).filter(name =>
+                      ...Array.from(rule.style).filter((name) =>
                         name.startsWith(cssVarTarget)
-                      )
+                      ),
                     ]
                   : def),
             []
-          )
+          ),
         ]),
       []
     )
 }
 
-export const hyphenat = str => str.replace(/\s+/g, '-').toLowerCase()
+export const hyphenat = (str) => str.replace(/\s+/g, '-').toLowerCase()
 
-export const isEven = num => num % 2 === 0
+export const isEven = (num) => num % 2 === 0

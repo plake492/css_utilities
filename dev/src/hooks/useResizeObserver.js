@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from 'react'
 
-const checkAllowedStyles = test => {
+const checkAllowedStyles = (test) => {
   const allowedStyles = ['padding', 'margin', 'border']
   return allowedStyles.includes(test)
 }
@@ -19,7 +19,7 @@ const getSpacing = (el, style = 'padding') => {
     { left: styles[`${style}Left`] },
     { right: styles[`${style}Right`] },
     { top: styles[`${style}Top`] },
-    { bottom: styles[`${style}Bottom`] }
+    { bottom: styles[`${style}Bottom`] },
   ]
 
   return spacingList.reduce((acc, cur) => {
@@ -41,7 +41,7 @@ export const useResizeObserver = (ref, withSpacing, callback) => {
   const [height, setHeight] = useState(undefined)
 
   const handleResize = useCallback(
-    entries => {
+    (entries) => {
       if (!Array.isArray(entries)) return
 
       const { contentRect, target } = entries[0]
@@ -79,7 +79,7 @@ export const useResizeObserver = (ref, withSpacing, callback) => {
   useEffect(() => {
     if (!ref.current) return
 
-    let RO = new ResizeObserver(entries => handleResize(entries))
+    let RO = new ResizeObserver((entries) => handleResize(entries))
     RO.observe(ref.current)
 
     return () => {

@@ -1,17 +1,17 @@
-import BackgroundColors from '../components/BackgroundColors';
-import Borders from '../components/Borders';
-import Containers from '../components/Containers';
-import Columns from '../components/Columns';
-import Flex from '../components/Flex';
-import Typography from '../components/Typography';
-import Images from '../components/Images';
-import Videos from '../components/Videos';
-import BoxShadows from '../components/BoxShadows';
-import RowScroll from '../components/RowScroll';
-import Cards from '../components/Cards';
-import Positions from '../components/Positions';
-import Introduction from '../components/Introduction';
-import { isEven } from '../utils';
+import BackgroundColors from '../components/BackgroundColors'
+import Borders from '../components/Borders'
+import Containers from '../components/Containers'
+import Columns from '../components/Columns'
+import Flex from '../components/Flex'
+import Typography from '../components/Typography'
+import Images from '../components/Images'
+import Videos from '../components/Videos'
+import BoxShadows from '../components/BoxShadows'
+import RowScroll from '../components/RowScroll'
+import Cards from '../components/Cards'
+import Positions from '../components/Positions'
+import Introduction from '../components/Introduction'
+import { isEven } from '../utils'
 
 export const pages = [
   {
@@ -62,4 +62,4 @@ export const pages = [
 ].map((o, i) => ({
   ...o,
   bgColor: isEven(i) ? 'bg-secondary' : '',
-}));
+}))

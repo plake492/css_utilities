@@ -11,7 +11,7 @@ const SectionContainer = forwardRef(
       titleType = 'h3',
       bgColor = 'bg-priamry',
       removePadding = false,
-      container = 'container'
+      container = 'container',
     },
     ref
   ) => {

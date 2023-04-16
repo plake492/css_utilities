@@ -242,21 +242,31 @@ export default function Typography() {
       </div>
       <div className="mb-md pb-md">
         <p className="h4">Section with blockquote and indent</p>
-        <p className="indent">
-          I claim that space is part of our culture. You've heard complaints
-          that nobody knows the names of the astronauts, that nobody gets
-          excited about launches, that nobody cares anymore except people in the
-          industry. I don't believe that for a minute. What you need, above all
-          else, is a love for your subject, whatever it is. You've got to be so
-          deeply in love with your subject that when curve balls are thrown,
-          when hurdles are put in place, you've got the energy to overcome them.
-          Darwin's theory of evolution is a framework by which we understand the
-          diversity of life on Earth. But there is no equation sitting there in
-          Darwin's 'Origin of Species' that you apply and say,
-        </p>
-        <p className="bg-black">
-          Add <i>.indent</i>
-        </p>
+        <CodeSnippet
+          code={[
+            {
+              tag: 'p',
+              classList: 'indent',
+              content:
+                "I claim that space is part of our culture. You've heard...",
+            },
+          ]}
+          desc="Header Tags"
+        >
+          <p className="indent">
+            I claim that space is part of our culture. You've heard complaints
+            that nobody knows the names of the astronauts, that nobody gets
+            excited about launches, that nobody cares anymore except people in
+            the industry. I don't believe that for a minute. What you need,
+            above all else, is a love for your subject, whatever it is. You've
+            got to be so deeply in love with your subject that when curve balls
+            are thrown, when hurdles are put in place, you've got the energy to
+            overcome them. Darwin's theory of evolution is a framework by which
+            we understand the diversity of life on Earth. But there is no
+            equation sitting there in Darwin's 'Origin of Species' that you
+            apply and say,
+          </p>
+        </CodeSnippet>
         <p>
           What is this species going to look like in 100 years or 1,000 years?'
           Biology isn't there yet with that kind of predictive precision. You
