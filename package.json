@@ -6,13 +6,12 @@
   "author": "<plake492@gmail.com>",
   "license": "MIT",
   "type": "module",
-  "private": false,
   "scripts": {
     "clean": "rm -rf dist",
     "build": "yarn clean && sass ./src/index.scss:./dist/index.css --style compressed && yarn process-css-prod",
     "process-css-prod": "node postcssConfig.js",
     "dev": "cd ./dev && yarn dev",
-    "pub": "yarn build && yarn publish"
+    "pub": "yarn build && yarn publish --access public"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
