@@ -122,9 +122,21 @@
   @each $key, $val in $map {
     .#{$class}-#{$key} {
       @if $calc-value and $var-name {
-        #{$property}: calc($val - var($var-name, 0));
+        @if meta.type-of($property) == 'list' {
+          @each $key in $property {
+            #{$key}: calc($val - var($var-name, 0px));
+          }
+        } @else {
+          #{$property}: calc($val - var($var-name, 0px));
+        }
       } @else {
-        #{$property}: $val;
+        @if meta.type-of($property) == 'list' {
+          @each $key in $property {
+            #{$key}: $val;
+          }
+        } @else {
+          #{$property}: $val;
+        }
       }
     }
 
@@ -132,9 +144,21 @@
       @include respond-to(#{$px}) {
         .#{$class}-#{$bp}-#{$key} {
           @if $calc-value and $var-name {
-            #{$property}: calc($val - var($var-name, 0)) !important;
+            @if meta.type-of($property) == 'list' {
+              @each $key in $property {
+                #{$key}: calc($val - var($var-name, 0px)) !important;
+              }
+            } @else {
+              #{$property}: calc($val - var($var-name, 0px)) !important;
+            }
           } @else {
-            #{$property}: $val !important;
+            @if meta.type-of($property) == 'list' {
+              @each $key in $property {
+                #{$key}: $val !important;
+              }
+            } @else {
+              #{$property}: $val !important;
+            }
           }
         }
       }

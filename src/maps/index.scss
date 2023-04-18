@@ -402,7 +402,7 @@ $flex-basis: (
 $placements: (
   center: center,
   start: flex-start,
-  end: end,
+  end: flex-end,
   flex-start: flex-start,
   flex-end: flex-end,
   between: space-between,
@@ -413,8 +413,8 @@ $placements: (
 
 $align-items: (
   center: center,
-  start: start,
-  end: end,
+  start: flex-start,
+  end: flex-end,
   flex-start: flex-start,
   flex-end: flex-end,
   baseline: baseline,

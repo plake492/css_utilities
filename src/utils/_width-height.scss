@@ -43,7 +43,7 @@
 @include class-with-responsive-key-and-val(
   $width--height-percentages,
   h-min,
-  min-height
+  (min-height, height)
 );
 
 // SET HEIGHT
@@ -75,7 +75,7 @@
 @include class-with-responsive-key-and-val(
   $height-vh,
   h-min-vh,
-  min-height,
+  (min-height, height),
   true,
   --vh-offest
 );
