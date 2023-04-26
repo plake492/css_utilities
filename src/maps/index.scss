@@ -76,6 +76,7 @@ $bg-colors: (
   accent: $bg-accent,
   tertiary: $bg-tertiary,
   dark: $bg-dark,
+  light: $bg-light,
 );
 
 $target-colors: (
@@ -91,6 +92,7 @@ $target-colors: (
   violet: $violet,
   purple: $purple,
   grey: $grey,
+  error: $error,
 );
 
 // Combine BG color map with the target color map

@@ -20,6 +20,7 @@
 :root {
   --color: #{$bg-primary};
   --text-color: #{get-contrasted-text($bg-primary)};
+  --text-color-header: #{$text-header-light};
 
   @each $key, $value in $target-colors {
     --#{'' + $key}: #{$value};
@@ -42,12 +43,12 @@
     --color: #{$value};
     --text-color: #{$text-color};
     @include bg-classes();
-  } 
-  
+  }
+
   .color-#{'' + $key} {
     --text-color: #{$value};
     color: var(--text-color);
-  } 
+  }
 
   // * Add tones as classes * //
   @each $tone in $tones {
@@ -61,15 +62,13 @@
       @include bg-classes();
     }
     @if $color-classes-with-tones {
-      // Include color tone's 
+      // Include color tone's
       .color-#{'' + $key}-#{$tone} {
         --text-color: #{$bg-color-tone};
         color: var(--text-color);
-      } 
+      }
     }
   }
-
-  
 }
 // // ************************************************************************ //
 // // ***************** Generator complemenrty Color Schemes ***************** //

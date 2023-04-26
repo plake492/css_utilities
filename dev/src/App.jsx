@@ -15,9 +15,9 @@ export default function App() {
   console.log(headerHeight)
 
   return (
-    <div className="bg-primary h-max-vh-100 overflow-x-hidden">
+    <div className="bg-primary overflow-x-hidden">
       <Header reference={headerRef} currentSection={currentSection} />
-      <main className="h-vh-100" style={{ marginTop: `${headerHeight}px` }}>
+      <main style={{ marginTop: `${headerHeight}px` }}>
         {pages.map(({ Component, ...rest }) => (
           <SectionContainer setCurrentSection={setCurrentSection} {...rest}>
             <Component />

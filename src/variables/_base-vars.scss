@@ -28,33 +28,25 @@ $indigo: #4b0082;
 $violet: #473198;
 $purple: #800080;
 $grey: #292a2b;
+$error: #e52525;
 
 // **************************************************
 // **************** Colors Themeing *****************
 // **************************************************
 
-$vanilla: #e1d89fff;
-$old-rose: #cd8b76ff;
-$sky-magenta: #c45baaff;
-$plum: #7d387dff;
-$dark-slate-gray: #27474eff;
-
-$royal-blue-traditional: #0a2463ff;
-$imperial-red: #fb3640ff;
-$davys-gray: #605f5eff;
-$cerulean: #247ba0ff;
-$platinum: #e2e2e2ff;
-
+$bg-primary: #020f29;
+$bg-secondary: #1c2a47;
+$bg-accent: #8fffe6;
+$bg-tertiary: #981ee2;
+$bg-light: #f3f1f3;
+$bg-dark: #050d1f;
 // /* Bg color vars */
-$bg-primary: $vanilla;
-$bg-secondary: $old-rose;
-$bg-accent: $sky-magenta;
-$bg-tertiary: $plum;
-$bg-dark: $dark-slate-gray;
 
 // /* Text colors */
 $text-light: rgb(238, 238, 238);
 $text-dark: rgb(0, 0, 0);
+$text-header-light: rgb(204, 192, 192);
+$text-header-dark: rgb(27, 26, 26);
 $link-color: $bg-accent;
 $shadow-color: $black;
 
@@ -140,4 +132,3 @@ $list-item-icon: '\26AC'; // Black border bullet (bigger)
 // $list-item-icon: '\002A'; // Astrisk
 // $list-item-icon: '\25AA'; // Bullet (square)
 // $list-item-icon: '\2022'; // Bullet (circle)
-
