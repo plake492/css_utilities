@@ -15,8 +15,8 @@ export default function App() {
   console.log(headerHeight)
 
   return (
-    <div className="bg-primary overflow-x-hidden">
-      <Header reference={headerRef} currentSection={currentSection} />
+    <main className="bg-primary h-min-vh-100">
+      {/* <Header reference={headerRef} currentSection={currentSection} />
       <main style={{ marginTop: `${headerHeight}px` }}>
         {pages.map(({ Component, ...rest }) => (
           <SectionContainer setCurrentSection={setCurrentSection} {...rest}>
@@ -24,7 +24,13 @@ export default function App() {
           </SectionContainer>
         ))}
       </main>
-      <Footer />
-    </div>
+      <Footer /> */}
+      <section className="container-fluid">
+        <h1>CSS Standards</h1>
+
+        <h2>Typography</h2>
+        <h2>Spacing</h2>
+      </section>
+    </main>
   )
 }
