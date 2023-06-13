@@ -33,12 +33,12 @@ $grey: #292a2b;
 // **************** Colors Themeing *****************
 // **************************************************
 
-$vanilla: #e1d89fff;
-$old-rose: #cd8b76ff;
-$sky-magenta: #c45baaff;
-$plum: #7d387dff;
-$dark-slate-gray: #27474eff;
+// $vanilla: #e1d89fff;
+// $old-rose: #cd8b76ff;
+// $sky-magenta: #c45baaff;
+// $plum: #7d387dff;
 
+$dark-slate-gray: #27474eff;
 $royal-blue-traditional: #0a2463ff;
 $imperial-red: #fb3640ff;
 $davys-gray: #605f5eff;
@@ -46,10 +46,10 @@ $cerulean: #247ba0ff;
 $platinum: #e2e2e2ff;
 
 // /* Bg color vars */
-$bg-primary: $vanilla;
-$bg-secondary: $old-rose;
-$bg-accent: $sky-magenta;
-$bg-tertiary: $plum;
+$bg-primary: $royal-blue-traditional;
+$bg-secondary: $imperial-red;
+$bg-accent: $davys-gray;
+$bg-tertiary: $cerulean;
 $bg-dark: $dark-slate-gray;
 
 // /* Text colors */
