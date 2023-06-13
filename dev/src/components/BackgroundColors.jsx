@@ -9,7 +9,7 @@ export default function BackgroundColors() {
       {colors.map((v) => {
         const bgClass = v.split('--')[1]
 
-        return v !== '--bg-color' ? (
+        return v !== '--color' ? (
           <ColorBlock key={v} bgClass={bgClass} />
         ) : null
       })}

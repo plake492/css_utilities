@@ -1,0 +1,39 @@
+// **************************************************
+// ***************** SETTINGS ***********************
+// **************************************************
+// These settings allow the user to toggle on, off, or between settings
+
+// Headers container margin on top by default, set be $base-text-margin-top
+$headers-with-margin-top: false;
+
+// toggle on or off if headers should lose their margin top and bottom when flex aligned
+$headers-remove-margin-when-aligned: true;
+
+$font-increase-on-xl: true;
+
+// Nav links have underline on hover
+$nav-link-underline: true;
+
+// True = links inherit text color | false = links ingerit $link-color
+$links-have-text-color: false;
+
+// Set Tertiary buttons to have udnerline on hover
+$btn-tertiary-has-underline: true;
+
+// Set any button without a border to be capitalzed
+$btn-none-border-text-is-caps: true;
+
+// Set border radius of btn's as pill or not
+$btn-is-pill: false;
+
+// Prevents nested containers from applying container padding,
+// If it's unlikely that containers will become nested, set this to false,
+// in order to remove a large amout of unnessicary css
+$unset-nested-containers: true;
+
+// Add color tone classes
+$color-classes-with-tones: true;
+
+// Sets the default media query to use 'min-width' if true, 'max-width' if false
+// ! Setting this to false will break a lot of classes from behaving as expected
+$is-mobile-first: true;

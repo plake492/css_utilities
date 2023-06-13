@@ -76,6 +76,7 @@ $bg-colors: (
   accent: $bg-accent,
   tertiary: $bg-tertiary,
   dark: $bg-dark,
+  light: $bg-light,
 );
 
 $target-colors: (
@@ -91,6 +92,7 @@ $target-colors: (
   violet: $violet,
   purple: $purple,
   grey: $grey,
+  error: $error,
 );
 
 // Combine BG color map with the target color map
@@ -401,8 +403,8 @@ $flex-basis: (
 
 $placements: (
   center: center,
-  start: start,
-  end: end,
+  start: flex-start,
+  end: flex-end,
   flex-start: flex-start,
   flex-end: flex-end,
   between: space-between,
@@ -413,8 +415,8 @@ $placements: (
 
 $align-items: (
   center: center,
-  start: start,
-  end: end,
+  start: flex-start,
+  end: flex-end,
   flex-start: flex-start,
   flex-end: flex-end,
   baseline: baseline,

@@ -2,7 +2,9 @@
 @use 'sass:meta';
 
 @mixin respond-to($breakpoint) {
-  @media (min-width: $breakpoint) {
+  $dir: if($is-mobile-first, min-width, max-width);
+
+  @media (#{$dir}: $breakpoint) {
     @content;
   }
 }
@@ -37,10 +39,17 @@
   }
 }
 
-@mixin hover() {
+@mixin hover {
   @media (hover: hover) {
     @content;
   }
+}
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 //  * Generate a responsive css variable
@@ -113,9 +122,21 @@
   @each $key, $val in $map {
     .#{$class}-#{$key} {
       @if $calc-value and $var-name {
-        #{$property}: calc($val - var($var-name, 0));
+        @if meta.type-of($property) == 'list' {
+          @each $key in $property {
+            #{$key}: calc($val - var($var-name, 0px));
+          }
+        } @else {
+          #{$property}: calc($val - var($var-name, 0px));
+        }
       } @else {
-        #{$property}: $val;
+        @if meta.type-of($property) == 'list' {
+          @each $key in $property {
+            #{$key}: $val;
+          }
+        } @else {
+          #{$property}: $val;
+        }
       }
     }
 
@@ -123,9 +144,21 @@
       @include respond-to(#{$px}) {
         .#{$class}-#{$bp}-#{$key} {
           @if $calc-value and $var-name {
-            #{$property}: calc($val - var($var-name, 0)) !important;
+            @if meta.type-of($property) == 'list' {
+              @each $key in $property {
+                #{$key}: calc($val - var($var-name, 0px)) !important;
+              }
+            } @else {
+              #{$property}: calc($val - var($var-name, 0px)) !important;
+            }
           } @else {
-            #{$property}: $val !important;
+            @if meta.type-of($property) == 'list' {
+              @each $key in $property {
+                #{$key}: $val !important;
+              }
+            } @else {
+              #{$property}: $val !important;
+            }
           }
         }
       }
@@ -161,52 +194,52 @@
   overflow: hidden;
 }
 
-@mixin hui_tooltip($content: attr(data-tooltip), $direction: top) {
-  position: relative;
-  &:before,
-  &:after {
-    display: none;
-    z-index: 98;
-  }
-  &:hover {
-    &:after {
-      // for text bubble
-      content: $content;
-      display: block;
-      position: absolute;
-      height: 12px; // (makes total height including padding 22px)
-      padding: 6px;
-      font-size: 12px;
-      white-space: nowrap;
-      color: #fff;
-      @include text-shadow(1px 1px #000);
-      background-color: #222;
-    }
-    @if ($direction == 'top') {
-      &:before {
-        @include triangle(down, 6px, #222);
-        top: -6px;
-        margin-top: 0;
-        left: 47%;
-      }
-      &:after {
-        top: -28px;
-        left: 47%;
-        margin-left: -20px;
-      }
-    } @else if ($direction == 'bottom') {
-      &:before {
-        @include triangle(up, 6px, #222);
-        top: auto;
-        margin-top: 0;
-        bottom: -6px;
-        left: 47%;
-      }
-      &:after {
-        bottom: -28px;
-        left: 47%;
-        margin-left: -20px;
-      }
-    }
-  }
-}
+// @mixin hui_tooltip($content: attr(data-tooltip), $direction: top) {
+//   position: relative;
+//   &:before,
+//   &:after {
+//     display: none;
+//     z-index: 98;
+//   }
+//   &:hover {
+//     &:after {
+//       // for text bubble
+//       content: $content;
+//       display: block;
+//       position: absolute;
+//       height: 12px; // (makes total height including padding 22px)
+//       padding: 6px;
+//       font-size: 12px;
+//       white-space: nowrap;
+//       color: #fff;
+//       @include text-shadow(1px 1px #000);
+//       background-color: #222;
+//     }
+//     @if ($direction == 'top') {
+//       &:before {
+//         @include triangle(down, 6px, #222);
+//         top: -6px;
+//         margin-top: 0;
+//         left: 47%;
+//       }
+//       &:after {
+//         top: -28px;
+//         left: 47%;
+//         margin-left: -20px;
+//       }
+//     } @else if ($direction == 'bottom') {
+//       &:before {
+//         @include triangle(up, 6px, #222);
+//         top: auto;
+//         margin-top: 0;
+//         bottom: -6px;
+//         left: 47%;
+//       }
+//       &:after {
+//         bottom: -28px;
+//         left: 47%;
+//         margin-left: -20px;
+//       }
+//     }
+//   }
+// }

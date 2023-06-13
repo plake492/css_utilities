@@ -1,6 +1,6 @@
 {
-  "name": "css_utilities",
-  "version": "1.0.0",
+  "name": "@plake492/css_utilities",
+  "version": "1.0.2",
   "main": "index.js",
   "repository": "https://github.com/plake492/css_utilities.git",
   "author": "<plake492@gmail.com>",
@@ -9,9 +9,9 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "yarn clean && sass ./src/index.scss:./dist/index.css --style compressed && yarn process-css-prod",
-    "watch": "sass -w",
     "process-css-prod": "node postcssConfig.js",
-    "dev": "concurrently \"yarn watch\" \"cd ./dev && yarn dev\""
+    "dev": "cd ./dev && yarn dev",
+    "pub": "yarn build && yarn publish --access public"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
