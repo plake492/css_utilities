@@ -36,7 +36,7 @@ export default function Cards() {
 
 export function Card({ header = 'Header', img }) {
   return (
-    <div className="border-rounded bg-black-60 shadow-4">
+    <div className="border-rounded bg-black-60 shadow-4 shadow-blue">
       <div className="px-lg py-md">
         <p className="h5 mb-none">{header}</p>
       </div>

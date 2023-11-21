@@ -34,19 +34,19 @@ export default function RowScroll() {
 
       <div className="border-left border-right border-orange py-md">
         <div className="py-xl bg-violet-30 border-pill">
-          <div className="px-md">
+          {/* <div className="px-md">
             <CodeSnippet code={rightScrollCode}>
               <p>Right Scroll</p>
             </CodeSnippet>
-          </div>
-          <div className="row-scroll r-3 g-sm mb-xl border-top border-bottom border-red border-2">
-            <div className="img-wrapper ratio-1x1 border-rounded overflow-hidden">
+          </div> */}
+          <div className="row-scroll r-2 r-md-3 r-lg-4 g-sm mb-xl border-top border-bottom border-red border-2">
+            <div className="img-wrapper ratio-3x4 border-rounded overflow-hidden">
               <img src={img6} />
             </div>
             <div className="img-wrapper ratio-1x1 border-rounded overflow-hidden">
               <img src={img1} />
             </div>
-            <div className="img-wrapper ratio-1x1 border-rounded overflow-hidden">
+            <div className="img-wrapper ratio-16x9 border-rounded overflow-hidden">
               <img src={img3} />
             </div>
             <div className="img-wrapper ratio-1x1 border-rounded overflow-hidden">
@@ -73,7 +73,7 @@ export default function RowScroll() {
           </div>
         </div>
 
-        <div className="py-xl mt-xl bg-violet-30 border-pill">
+        {/* <div className="py-xl mt-xl bg-violet-30 border-pill">
           <div className="px-md">
             <CodeSnippet code={leftScrollCode}>
               <p>Left Scroll</p>
@@ -83,7 +83,7 @@ export default function RowScroll() {
               </p>
             </CodeSnippet>
           </div>
-          <div className="row-scroll row-scroll-reverse r-2 g-xxxl border-top border-bottom border-blue border-2">
+          <div className="row-scroll-TEST row-scroll-reverse r-2 g-xxxl border-top border-bottom border-blue border-2">
             <div className="img-wrapper ratio-1x1 border-rounded overflow-hidden">
               <img src={img6} />
             </div>
@@ -115,6 +115,23 @@ export default function RowScroll() {
               <img src={img2} />
             </div>
           </div>
+        </div> */}
+      </div>
+
+      <div className="my-xxl bg-purple-20">
+        <div className="row-scroll r-3 g-md">
+          <Card img={<img src={img1} />} />
+          <Card img={<img src={img3} />} />
+          <Card img={<img src={img6} />} />
+          <div className="bg-red">
+            <div className="img-wrapper ratio-1x1 border-rounded overflow-hidden">
+              <img src={img6} />
+            </div>
+            <p>Hello?</p>
+            <h1 className="p-xxl bg-blue">What am i doing??????</h1>
+          </div>
+          <Card img={<img src={img4} />} />
+          <Card img={<img src={img2} />} />
         </div>
       </div>
     </>

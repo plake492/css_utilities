@@ -8,7 +8,7 @@ export default function Header({ currentSection, reference }) {
   return (
     <header
       ref={reference}
-      className="position-fixed w-100 z-1 bg-accent box-shadow border-bottom position-relative d-flex justify-content-between align-items-center py-md px-md px-lg-lg px-xl-xl px-xxl-xxl"
+      className="position-fixed top-0 w-100 z-1 bg-accent box-shadow border-bottom d-flex justify-content-between align-items-center py-md px-md px-lg-lg px-xl-xl px-xxl-xxl"
     >
       <h1 className="h5 my-none">CSS UTILITIES</h1>
       <div>

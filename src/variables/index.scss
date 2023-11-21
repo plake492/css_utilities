@@ -28,6 +28,7 @@ $indigo: #4b0082;
 $violet: #473198;
 $purple: #800080;
 $grey: #292a2b;
+$error: #e52525;
 
 // **************************************************
 // **************** Colors Themeing *****************
@@ -38,23 +39,32 @@ $grey: #292a2b;
 // $sky-magenta: #c45baaff;
 // $plum: #7d387dff;
 
-$dark-slate-gray: #27474eff;
-$royal-blue-traditional: #0a2463ff;
-$imperial-red: #fb3640ff;
-$davys-gray: #605f5eff;
-$cerulean: #247ba0ff;
-$platinum: #e2e2e2ff;
+// $dark-slate-gray: #27474eff;
+// $royal-blue-traditional: #0a2463ff;
+// $imperial-red: #fb3640ff;
+// $davys-gray: #605f5eff;
+// $cerulean: #247ba0ff;
+// $platinum: #e2e2e2ff;
+
+// // /* Bg color vars */
+// $bg-primary: $royal-blue-traditional;
+// $bg-secondary: $imperial-red;
+// $bg-accent: $davys-gray;
+// $bg-tertiary: $cerulean;
+// $bg-dark: $dark-slate-gray;
 
 // /* Bg color vars */
-$bg-primary: $royal-blue-traditional;
-$bg-secondary: $imperial-red;
-$bg-accent: $davys-gray;
-$bg-tertiary: $cerulean;
-$bg-dark: $dark-slate-gray;
+$bg-primary: #d31085;
+$bg-secondary: #171515;
+$bg-accent: rgb(28, 225, 225);
+$bg-tertiary: #000;
+$bg-dark: #000;
 
 // /* Text colors */
-$text-light: rgb(238, 238, 238);
+$text-light: rgb(255, 255, 255);
 $text-dark: rgb(0, 0, 0);
+$text-header-light: rgb(204, 192, 192);
+$text-header-dark: rgb(27, 26, 26);
 $link-color: $bg-accent;
 $shadow-color: $black;
 
@@ -169,7 +179,14 @@ $btn-none-border-text-is-caps: true;
 // Set border radius of btn's as pill or not
 $btn-is-pill: false;
 
+// Add color tone classes
+$color-classes-with-tones: false;
+
 // Prevents nested containers from applying container padding,
 // If it's unlikely that containers will become nested, set this to false,
 // in order to remove a large amout of unnessicary css
 $unset-nested-containers: true;
+
+// Sets the default media query to use 'min-width' if true, 'max-width' if false
+// ! Setting this to false will break a lot of classes from behaving as expected
+$is-mobile-first: true;

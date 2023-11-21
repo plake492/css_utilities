@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
 import CodeSnippet from './CodeSnippet'
 
 export default function Containers() {

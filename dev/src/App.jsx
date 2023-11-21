@@ -16,21 +16,19 @@ export default function App() {
 
   return (
     <main className="bg-primary h-min-vh-100">
-      {/* <Header reference={headerRef} currentSection={currentSection} />
-      <main style={{ marginTop: `${headerHeight}px` }}>
-        {pages.map(({ Component, ...rest }) => (
-          <SectionContainer setCurrentSection={setCurrentSection} {...rest}>
+      <Header reference={headerRef} currentSection={currentSection} />
+      <main style={{ paddingTop: `${headerHeight}px` }}>
+        {pages.map(({ Component, ...rest }, i) => (
+          <SectionContainer
+            key={i}
+            setCurrentSection={setCurrentSection}
+            {...rest}
+          >
             <Component />
           </SectionContainer>
         ))}
       </main>
-      <Footer /> */}
-      <section className="container-fluid">
-        <h1>CSS Standards</h1>
-
-        <h2>Typography</h2>
-        <h2>Spacing</h2>
-      </section>
+      <Footer />
     </main>
   )
 }

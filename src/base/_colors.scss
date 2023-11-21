@@ -20,7 +20,8 @@
 :root {
   --color: #{$bg-primary};
   --text-color: #{get-contrasted-text($bg-primary)};
-  --text-color-header: #{$text-header-light};
+  --text-color-header: var(--text-color);
+  // --text-color-header: #{$text-header-light};
 
   @each $key, $value in $target-colors {
     --#{'' + $key}: #{$value};

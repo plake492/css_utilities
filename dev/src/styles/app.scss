@@ -1,7 +1,7 @@
 @import '../../../src/functions/';
 @import '../../../src/variables/';
 
-$base-font-size: 18;
+$base-font-size: 16;
 $font-increase-on-xl: false;
 // $color-classes-with-tones: false;
 // $is-mobile-first: false;
@@ -13,3 +13,7 @@ $border-radius: 2px;
 @import '../../../src/base/';
 @import '../../../src/utils/';
 @import '../../../src/components/';
+
+section {
+  overflow: hidden;
+}

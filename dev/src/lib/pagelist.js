@@ -11,6 +11,7 @@ import RowScroll from '../components/RowScroll'
 import Cards from '../components/Cards'
 import Positions from '../components/Positions'
 import Introduction from '../components/Introduction'
+import Loader from '../components/Loader'
 import { isEven } from '../utils'
 
 export const pages = [
@@ -19,6 +20,7 @@ export const pages = [
     Component: Introduction,
   },
   { title: 'Typography', Component: Typography },
+  { title: 'Loaders', Component: Loader },
   {
     title: 'Containers',
     Component: Containers,
@@ -46,7 +48,7 @@ export const pages = [
   { title: 'Positions', Component: Positions },
   { title: 'Borders', Component: Borders },
   { title: 'Box Shadows', Component: BoxShadows },
-  // { title: 'Cards', Component: Cards },
+  { title: 'Cards', Component: Cards },
   {
     title: 'Images',
     Component: Images,
@@ -58,7 +60,7 @@ export const pages = [
       { title: '16 / 9' },
     ],
   },
-  // { title: 'Videos', Component: Videos }
+  { title: 'Videos', Component: Videos },
 ].map((o, i) => ({
   ...o,
   bgColor: isEven(i) ? 'bg-secondary' : '',

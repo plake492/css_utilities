@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { getCssVar } from '../utils'
 
 export default function BackgroundColors() {
@@ -9,17 +8,13 @@ export default function BackgroundColors() {
       {colors.map((v) => {
         const bgClass = v.split('--')[1]
 
-        return v !== '--color' ? (
-          <ColorBlock key={v} bgClass={bgClass} />
-        ) : null
+        return v !== '--color' ? <ColorBlock key={v} bgClass={bgClass} /> : null
       })}
     </div>
   )
 }
 
 const ColorBlock = ({ bgClass }) => {
-  const [showClass, setShowClass] = useState(false)
-
   return (
     <div
       className={`${bgClass} border border-rounded px-md py-xs py-md-sm col-6 col-md-4`}
