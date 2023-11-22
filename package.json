@@ -1,6 +1,6 @@
 {
   "name": "@plake492/css_utilities",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "index.js",
   "repository": "https://github.com/plake492/css_utilities.git",
   "author": "<plake492@gmail.com>",
@@ -8,8 +8,8 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "yarn clean && sass ./src/index.scss:./dist/index.css --style compressed && yarn process-css-prod",
-    "process-css-prod": "node postcssConfig.js",
+    "build": "yarn clean && sass ./src/index.scss:./dist/index.css --style compressed && yarn preprocces-css-prod",
+    "preprocces-css-prod": "node postcssConfig.js",
     "dev": "cd ./dev && yarn dev",
     "pub": "yarn build && yarn publish --access public"
   },
