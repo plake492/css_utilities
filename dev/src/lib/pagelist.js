@@ -11,7 +11,6 @@ import RowScroll from '../components/RowScroll'
 import Cards from '../components/Cards'
 import Positions from '../components/Positions'
 import Introduction from '../components/Introduction'
-import Loader from '../components/Loader'
 import { isEven } from '../utils'
 
 export const pages = [
@@ -20,7 +19,6 @@ export const pages = [
     Component: Introduction,
   },
   { title: 'Typography', Component: Typography },
-  { title: 'Loaders', Component: Loader },
   {
     title: 'Containers',
     Component: Containers,

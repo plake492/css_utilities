@@ -1,5 +1,5 @@
 @import '../../../src/functions/';
-@import '../../../src/variables/';
+@import '../../../src/variables/base-vars/';
 
 $base-font-size: 16;
 $font-increase-on-xl: false;
@@ -12,8 +12,5 @@ $border-radius: 2px;
 @import '../../../src/reset/';
 @import '../../../src/base/';
 @import '../../../src/utils/';
+@import '../../../src/variables/component-vars/';
 @import '../../../src/components/';
-
-section {
-  overflow: hidden;
-}

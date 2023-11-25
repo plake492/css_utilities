@@ -13,7 +13,7 @@ export default function Header({ currentSection, reference }) {
       <h1 className="h5 my-none">CSS UTILITIES</h1>
       <div>
         <div
-          className="border-top border-bottom flex-center border-2 c-pointer btn--clear border-black"
+          className="border-top border-bottom flex-center border-2 c-pointer border-black"
           style={{ height: '25px', width: '25px' }}
           onClick={() => setShowdropdown((prev) => !prev)}
         >

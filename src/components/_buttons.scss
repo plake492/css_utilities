@@ -1,0 +1,296 @@
+// Button reset
+@if $btn-reset == true {
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    @extend .text;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}
+
+.btn {
+  --bg-color: #{$transparent};
+  --border-color: #{$transparent};
+  --btn-padding-y: #{$btn-padding-y};
+  --btn-padding-x: #{$btn-padding-x};
+
+  display: inline-block;
+  font-size: var(--text-paragraph-small);
+  font-weight: 600;
+  border-radius: $btn-border-radius;
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &[disabled],
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  &--primary {
+    --bg-color: #{$btn-primary-bg-color};
+    --text-color: #{$btn-primary-text-color};
+    --border-color: #{$btn-primary-bg-color};
+
+    &:hover {
+      --bg-color: #{darken($btn-primary-bg-color, $btn-hover-effect-amount)};
+      --border-color: #{darken($btn-primary-bg-color, $btn-hover-effect-amount)};
+    }
+  }
+
+  &--secondary {
+    --bg-color: #{$btn-secondary-bg-color};
+    --text-color: #{$btn-secondary-text-color};
+    --border-color: #{$btn-secondary-bg-color};
+
+    &:hover {
+      --bg-color: #{darken($btn-secondary-bg-color, $btn-hover-effect-amount)};
+      --border-color: #{darken(
+          $btn-secondary-bg-color,
+          $btn-hover-effect-amount
+        )};
+    }
+  }
+
+  &--border-only {
+    --text-color: #{$btn-primary-bg-color};
+    --border-color: #{$btn-primary-bg-color};
+
+    &:hover {
+      --bg-color: #{darken($btn-primary-bg-color, $btn-hover-effect-amount)};
+      --text-color: #{get-contrasted-text(
+          darken($btn-primary-bg-color, $btn-hover-effect-amount)
+        )};
+    }
+  }
+
+  &--arrow {
+    --arrow-width: #{$btn-arrow-width};
+
+    // If not combining other btn classes, then remove padding
+    &:not(.btn--primary):not(.btn--secondary):not(.btn--border-only):not(
+        .btn--no-bg
+      ):not(.btn--arrow-reverse) {
+      padding-left: 0;
+    }
+
+    padding-right: calc($space-md + var(--arrow-width) + var(--btn-padding-x));
+    position: relative;
+
+    &:hover {
+      --arrow-width: #{$btn-arrow-width-hover};
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      border-top: solid 2px var(--text-color);
+      border-right: solid 2px var(--text-color);
+      right: calc(var(--btn-padding-x) / 2);
+      transform: translate(-24px, -50%) rotate(45deg);
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: var(--arrow-width);
+      height: 2px;
+      top: calc(50% - 1px);
+      background-color: var(--text-color);
+      right: 2.5rem;
+      transition: width 0.3s ease-in-out;
+    }
+  }
+
+  &--arrow-reverse {
+    --left-pos: var(--btn-padding-x);
+    @extend .btn--arrow;
+
+    &:not(.btn--primary):not(.btn--secondary):not(.btn--border-only):not(
+        .btn--no-bg
+      ) {
+      --left-pos: 0px;
+    }
+
+    padding-left: calc(var(--arrow-width) + $space-md + var(--left-pos));
+    padding-right: var(--btn-padding-x);
+
+    &::before {
+      border-right: unset;
+      right: unset;
+      border-left: solid 2px var(--text-color);
+      left: var(--left-pos);
+      transform: translate(0px, -50%) rotate(315deg);
+    }
+
+    &::after {
+      right: unset;
+      left: var(--left-pos);
+      background-color: var(--text-color);
+      margin-right: $space-md;
+    }
+  }
+
+  &--block {
+    width: 100%;
+    display: block;
+  }
+
+  &--clear {
+    --bg-color: #{$transparent};
+    --btn-padding-y: unset;
+    --btn-padding-x: unset;
+
+    font-weight: unset;
+    border: none;
+    text-transform: unset;
+    min-width: unset;
+  }
+
+  &--large {
+    --btn-padding-y: #{calc($btn-padding-y * 1.5)};
+    --btn-padding-x: #{calc($btn-padding-x * 1.5)};
+  }
+}
+
+// .circle-btn {
+//   background: $midnight;
+//   width: 45px;
+//   height: 45px;
+//   border-radius: 50%;
+//   overflow: hidden;
+//   transition: $transition-standard;
+
+//   &.dark {
+//     background: $midnight;
+//   }
+
+//   &.light {
+//     background: $shine;
+//   }
+
+//   &:hover {
+//     transform: scale(1.1);
+
+//     @include phone-size() {
+//       transform: unset;
+//     }
+
+//     .circle-btn--right {
+//       transform: translate(450%, -50%);
+
+//       @include phone-size() {
+//         transform: translate(-50%, -50%);
+//       }
+//     }
+
+//     .circle-btn--left {
+//       transform: translate(-450%, -50%);
+
+//       @include phone-size() {
+//         transform: translate(50%, -50%);
+//       }
+//     }
+//   }
+
+//   &:active {
+//     transform: scale(0.97);
+//   }
+
+//   &--wrapper {
+//     position: relative;
+//     color: $white;
+
+//     &.dark {
+//       color: $white;
+//     }
+
+//     &.light {
+//       color: $violet;
+//     }
+//   }
+
+//   &--right {
+//     position: absolute;
+//     transform: translate(-50%, -50%);
+//     transition: $transition-standard;
+
+//     &.circle-btn--arrow-1 {
+//       left: 50%;
+//     }
+
+//     &.circle-btn--arrow-2 {
+//       left: -250%;
+
+//       @include phone-size() {
+//         display: none;
+//       }
+//     }
+//   }
+
+//   &--left {
+//     position: absolute;
+//     transform: translate(50%, -50%);
+//     transition: $transition-standard;
+
+//     &.circle-btn--arrow-1 {
+//       right: 50%;
+//     }
+
+//     &.circle-btn--arrow-2 {
+//       right: -250%;
+
+//       @include phone-size() {
+//         display: none;
+//       }
+//     }
+//   }
+
+//   &.circle-minus {
+//     position: relative;
+
+//     &::after {
+//       content: '\2212';
+//       width: 100%;
+//       height: inherit;
+
+//       @include absolute-center();
+//     }
+//   }
+
+//   &.circle-plus {
+//     position: relative;
+
+//     &::after {
+//       content: '\002B';
+//       width: 100%;
+//       height: inherit;
+
+//       @include absolute-center();
+//     }
+//   }
+
+//   svg {
+//     width: 20px;
+//     height: 14px;
+//   }
+// }

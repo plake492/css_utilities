@@ -1,74 +1,66 @@
-a,
-.link {
-  $line-width: 100%;
+a {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  color: var(--text-color);
+}
 
+.link {
   --line-height: 1px;
-  --line-width: #{$line-width};
+  --line-width: 100%;
   --link-font-weight: var(--base-font-weight, 400);
 
+  // Settings from src/variables/_settings.scss
   @if $links-have-text-color {
     --link-color: var(--text-color);
   } @else {
     --link-color: #{$link-color};
   }
 
+  --border-color: var(--link-color);
+  --opacity: 1;
+
+  position: relative;
   color: var(--link-color);
   text-decoration: none;
-  position: relative;
-  font-weight: var(--link-font-weight);
+  border-bottom: 2px solid var(--border-color);
   cursor: pointer;
 
-  // /*********************************************/
-  // /* For navigation links */
-  // /* Set color equal to text color */
-  // /*********************************************/
-  &--nav {
-    --link-color: var(--text-color);
-
-    &:not(.link--active) {
-      --line-width: 0%;
-
-      // Allow this to be toggled on or off (default is on)
-      @if $nav-link-underline {
-        &:hover {
-          --line-width: 100%;
-        }
-      }
-    }
-
-    &:focus {
-      outline: none;
-      --line-width: 100%;
-      --line-height: 2px;
-    }
+  &:active,
+  &:focus,
+  &:hover,
+  &:visited {
+    --text-color: var(--text-color);
   }
 
-  &--active {
-    --line-height: 2px;
-    --line-width: 100%;
+  &--hover {
+    border-bottom: none;
+    background-image: linear-gradient(
+      transparent calc(100% - 2px),
+      currentColor 2px
+    );
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    position: relative;
+    transition: background-size 0.3s ease-in-out;
+
+    &:hover {
+      background-position-x: left;
+      background-size: 100% 100%;
+    }
   }
 
   &--no-underline {
-    --line-height: 0px;
+    --border-color: #{$transparent};
   }
 
-  &--clear {
-    --link-color: var(--text-color);
-  }
-
-  &:not(.link--clear)::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: var(--link-color);
-    height: var(--line-height);
-    width: var(--line-width);
-    transition: width 200ms ease-in-out, transform 200ms ease-in-out;
-  }
-
-  :not(.link__active):hover {
-    --line-width: #{calc($line-width + 25%)};
+  &.disabled,
+  &[disabeld] {
+    pointer-events: none;
+    opacity: 0.5;
   }
 }

@@ -1,6 +1,4 @@
-import React from 'react'
 import CodeSnippet from './CodeSnippet'
-import SectionContainer from './SectionContainer'
 
 export default function Typography() {
   const verticalAlign = [
@@ -329,6 +327,60 @@ export default function Typography() {
             </div>
           ))}
         </CodeSnippet>
+      </div>
+      <div className="mb-md pb-md d-flex gap-md">
+        <a>Just an a tag</a>
+
+        <a className="link">Class link</a>
+
+        <a className="link link--hover">Link hover</a>
+
+        <a className="link link--no-underline">Link link--no-underline</a>
+
+        <a href="#WHAT" className="link" disabled>
+          Link link--no-underline
+        </a>
+      </div>
+      <div className="mb-md pb-md">
+        <div className="mb-md pb-md">
+          <button className="btn btn--primary">Primary</button>
+        </div>
+        <div className="mb-md pb-md">
+          <button className="btn btn--primary btn--block">Primary Block</button>
+        </div>
+
+        <div className="mb-md pb-md">
+          <button className="btn btn--secondary">Secondary</button>
+        </div>
+
+        <div className="mb-md pb-md">
+          <button className="btn btn--secondary btn--large">
+            Secondary large
+          </button>
+        </div>
+
+        <div className="mb-md pb-md">
+          <button className="btn btn--border-only">Border Only</button>
+        </div>
+
+        <div className="mb-md pb-md">
+          <button className="btn btn--arrow">arrow</button>
+        </div>
+
+        <div className="mb-md pb-md">
+          <button className="btn btn--arrow-reverse">arrow</button>
+        </div>
+        <div className="mb-md pb-md">
+          <button className="btn btn--arrow btn--primary">arrow</button>
+        </div>
+        <div className="mb-md pb-md">
+          <button className="btn btn--arrow-reverse btn--border-only">
+            arrow
+          </button>
+        </div>
+        <div className="mb-md pb-md">
+          <button className="btn btn--clear">Clear</button>
+        </div>
       </div>
     </section>
   )

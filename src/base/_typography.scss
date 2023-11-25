@@ -1,10 +1,12 @@
+@use 'sass:map';
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 // Holder map for setting header font sizes
 $header-font-modifiers: ();
 
-// Generate t
+// Generate the header-font-modifiers map for determining the font size of each header
 @for $i from 1 through length($header-font-responsive-sizes) {
   $key: nth($header-font-responsive-sizes, $i);
   $map: (
@@ -30,7 +32,7 @@ $base-text-margin-top: $space-lg;
   @include make-responsive-var(
     --header-font-modifier,
     $header-font-modifiers,
-    0.48
+    map.get($header-font-modifiers, 'sm')
   );
 
   --line-height-ratio: #{$line-height-ratio};
@@ -143,7 +145,7 @@ small,
     font-size: $font-size;
     line-height: $line-height;
     font-weight: var(--base-header-font-weight);
-    color: var(--text-color-header);
+    color: var(--color-header);
     margin-bottom: var(--base-text-margin-bottom);
 
     @if $headers-with-margin-top {

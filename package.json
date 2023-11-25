@@ -8,7 +8,9 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "yarn clean && sass ./src/index.scss:./dist/index.css --style compressed && yarn preprocces-css-prod",
+    "clean-exports": "rm -rf ./dev/exports",
+    "build": "yarn clean && sass ./src/utils-exports/_margin-and-padding.scss:./dist/index.css --style compressed && yarn preprocces-css-prod",
+    "gen-exports": "node generateExports.js",
     "preprocces-css-prod": "node postcssConfig.js",
     "dev": "cd ./dev && yarn dev",
     "pub": "yarn build && yarn publish --access public"

@@ -10,13 +10,13 @@ export default function Borders() {
   ]
 
   const borderColors = [
-    'border-red',
-    'border-orange',
-    'border-yellow',
-    'border-green',
-    'border-blue',
-    'border-violet',
-    'border-purple',
+    'border-5 border-red',
+    'border-5 border-orange',
+    'border-5 border-yellow',
+    'border-5 border-green',
+    'border-5 border-blue',
+    'border-5 border-violet',
+    'border-5 border-purple',
   ]
 
   const borderWidths = [

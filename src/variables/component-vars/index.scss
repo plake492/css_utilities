@@ -1,0 +1,17 @@
+// **************************************************
+// ***************** Buttons ************************
+// **************************************************
+$btn-border-radius: 50px;
+$btn-padding-y: $space-sm;
+$btn-padding-x: $space-lg;
+
+$btn-primary-bg-color: $bg-accent;
+$btn-primary-text-color: get-contrasted-text($bg-accent);
+
+$btn-secondary-bg-color: $bg-tertiary;
+$btn-secondary-text-color: get-contrasted-text($bg-tertiary);
+
+$btn-hover-effect-amount: 5%;
+
+$btn-arrow-width: $space-lg;
+$btn-arrow-width-hover: $space-xl;

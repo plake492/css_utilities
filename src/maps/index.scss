@@ -92,7 +92,6 @@ $target-colors: (
   violet: $violet,
   purple: $purple,
   grey: $grey,
-  // error: $error,
 );
 
 // Combine BG color map with the target color map
@@ -316,11 +315,15 @@ $position-placements: (top, bottom, left, right);
 $position-values: (
   0: 0,
   25: 25%,
+  33: 33%,
   50: 50%,
+  66: 66%,
   75: 75%,
   100: 100%,
   n25: -25%,
+  n33: -33%,
   n50: -50%,
+  n66: -66%,
   n75: -75%,
   n100: -100%,
 );

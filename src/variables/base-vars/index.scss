@@ -34,39 +34,21 @@ $error: #e52525;
 // **************** Colors Themeing *****************
 // **************************************************
 
-// $vanilla: #e1d89fff;
-// $old-rose: #cd8b76ff;
-// $sky-magenta: #c45baaff;
-// $plum: #7d387dff;
-
-// $dark-slate-gray: #27474eff;
-// $royal-blue-traditional: #0a2463ff;
-// $imperial-red: #fb3640ff;
-// $davys-gray: #605f5eff;
-// $cerulean: #247ba0ff;
-// $platinum: #e2e2e2ff;
-
-// // /* Bg color vars */
-// $bg-primary: $royal-blue-traditional;
-// $bg-secondary: $imperial-red;
-// $bg-accent: $davys-gray;
-// $bg-tertiary: $cerulean;
-// $bg-dark: $dark-slate-gray;
-
 // /* Bg color vars */
-$bg-primary: #d31085;
-$bg-secondary: #171515;
-$bg-accent: rgb(28, 225, 225);
-$bg-tertiary: #000;
-$bg-dark: #000;
+$bg-primary: #ffffff;
+$bg-secondary: #666666;
+$bg-accent: #999999;
+$bg-tertiary: #000000;
+$bg-dark: #000000;
 
 // /* Text colors */
-$text-light: rgb(255, 255, 255);
-$text-dark: rgb(0, 0, 0);
-$text-header-light: rgb(204, 192, 192);
-$text-header-dark: rgb(27, 26, 26);
-$link-color: $bg-accent;
-$shadow-color: $black;
+$text-light: #ffffff;
+$text-dark: #000000;
+$text-header-light: #ccc0c0;
+$text-header-dark: #1b1a1a;
+$link-color: #0000ff;
+
+$shadow-color: #000000;
 
 // **************************************************
 // ***************** TYPEOGRAPHY ********************
@@ -84,7 +66,7 @@ $secondary-font: Verdana, sans-serif;
 
 // ratio to update the header font / line-height sizes
 // will be applied to the first item in $header-font-responsive-sizes
-$header-font-modifier-base: 0.3;
+$header-font-modifier-base: 0.33;
 
 // Amount to increase by for every proceeding item in $header-font-responsive-sizes
 $header-breakpoint-increase: 0.05;
@@ -144,12 +126,12 @@ $container-width-decrease: 180px;
 // $list-item-icon: '\276F'; // Chevron Arrow
 // $list-item-icon: '\262F'; // Yin Yang
 // $list-item-icon: '\25E6'; // Black border bullet
-$list-item-icon: '\26AC'; // Black border bullet (bigger)
+// $list-item-icon: '\26AC'; // Black border bullet (bigger)
 // $list-item-icon: '\25CF'; // Black dot
 // $list-item-icon: '\273A'; // Astrisk Special
 // $list-item-icon: '\002A'; // Astrisk
 // $list-item-icon: '\25AA'; // Bullet (square)
-// $list-item-icon: '\2022'; // Bullet (circle)
+$list-item-icon: '\2022'; // Bullet (circle)
 
 // **************************************************
 // ***************** SETTINGS ***********************
@@ -167,7 +149,7 @@ $font-increase-on-xl: true;
 // Nav links have underline on hover
 $nav-link-underline: true;
 
-// True = links inherit text color | false = links ingerit $link-color
+// True = links inherit text color | false = links inherit $link-color
 $links-have-text-color: false;
 
 // Set Tertiary buttons to have udnerline on hover
@@ -175,9 +157,6 @@ $btn-tertiary-has-underline: true;
 
 // Set any button without a border to be capitalzed
 $btn-none-border-text-is-caps: true;
-
-// Set border radius of btn's as pill or not
-$btn-is-pill: false;
 
 // Add color tone classes
 $color-classes-with-tones: false;
@@ -190,3 +169,6 @@ $unset-nested-containers: true;
 // Sets the default media query to use 'min-width' if true, 'max-width' if false
 // ! Setting this to false will break a lot of classes from behaving as expected
 $is-mobile-first: true;
+
+// If true, all browse default button styles will be removed
+$btn-reset: true;
