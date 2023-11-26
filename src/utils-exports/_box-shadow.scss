@@ -2,11 +2,8 @@
 
 @import '../base-vars';
 @import '../base-maps';
-
 @import '../mixins/';
-@import '../reset/';
-/* @import '../base/' */
-
+/* @import '../reset/'; */
 // Extract RGB colors for color variable
 $shadow-value: red($shadow-color) green($shadow-color) blue($shadow-color);
 

@@ -8,10 +8,11 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf dist",
-    "clean-exports": "node removeUtilsExportsFiles.js",
-    "build": "yarn clean && sass ./src/utils-exports/_box-shadow.scss:./dist/index.css --style compressed && yarn preprocces-css-prod",
-    "gen-exports": "yarn clean-exports && node generateUtilsFiles.js",
-    "preprocces-css-prod": "node postcssConfig.js",
+    "clean-exports": "node lib/removeUtilsExportsFiles.js",
+    "build": "yarn clean && sass ./src/index.scss:./dist/index.css --style compressed && yarn preprocces-css-prod",
+    "build-exports": "node lib/generateUtilsFiles.js",
+    "gen:exports": "yarn clean-exports && yarn build-exports",
+    "preprocces-css-prod": "node lib/postcssConfig.js",
     "dev": "cd ./dev && yarn dev",
     "pub": "yarn build && yarn publish --access public"
   },

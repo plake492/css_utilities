@@ -1,10 +1,7 @@
 
 @import '../base-vars';
 @import '../base-maps';
-
 @import '../mixins/';
-@import '../reset/';
-/* @import '../base/' */;
-
+/* @import '../reset/'; */
 
 @include class-with-responsive-val-only($displays, d, display);

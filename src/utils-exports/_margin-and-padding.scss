@@ -1,11 +1,8 @@
 
 @import '../base-vars';
 @import '../base-maps';
-
 @import '../mixins/';
-@import '../reset/';
-/* @import '../base/' */;
-
+/* @import '../reset/'; */
 
 :root {
   @each $key, $val in $spacers {

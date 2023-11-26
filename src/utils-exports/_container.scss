@@ -1,13 +1,9 @@
+@use 'sass:map';
 
 @import '../base-vars';
 @import '../base-maps';
-
 @import '../mixins/';
-@import '../reset/';
-/* @import '../base/' */;
-
-
-@use 'sass:map';
+/* @import '../reset/'; */
 
 :root {
   // This will be automatically changed be the container class media query

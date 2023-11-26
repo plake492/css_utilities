@@ -1,11 +1,8 @@
 
 @import '../base-vars';
 @import '../base-maps';
-
 @import '../mixins/';
-@import '../reset/';
-/* @import '../base/' */;
-
+/* @import '../reset/'; */
 
 // Apply to elements that should only be visable to screen readers
 .sr-only {

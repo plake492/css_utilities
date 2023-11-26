@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["file:///Users/patricklake/Dev/personal/css_utilities/src/utils-exports/_shapes.scss"],"names":[],"mappings":"AAMA,kBACE","sourcesContent":["\n@import '../base-vars';\n@import '../base-maps';\n@import '../mixins/';\n/* @import '../reset/'; */\n\n.angle-left-right {\n  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);\n}\n"]}
