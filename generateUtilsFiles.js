@@ -11,6 +11,12 @@ const readFileAsync = promisify(readFile)
 const writeFileAsync = promisify(writeFile)
 
 const template = `
+@import '../base-vars';
+@import '../base-maps';
+
+@import '../mixins/';
+@import '../reset/';
+/* @import '../base/' */;
 `
 const newRootPath = path.join(__dirname, './src/utils-exports')
 

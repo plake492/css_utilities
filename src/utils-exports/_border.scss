@@ -1,0 +1,122 @@
+
+@import '../base-vars';
+@import '../base-maps';
+
+@import '../mixins/';
+@import '../reset/';
+/* @import '../base/' */;
+
+
+// /**************************************************/
+// /* Borders */
+// /**************************************************/
+@each $dir in $border-sides {
+  @if ($dir == all) {
+    .border {
+      --border-color: #{$border-color};
+      --border-width: #{$border-width};
+      --border-style: #{$border-style};
+
+      border-width: var(--border-width);
+      border-color: var(--border-color);
+      border-style: var(--border-style);
+    }
+    .border-none {
+      border: none;
+    }
+  } @else {
+    .border-#{$dir} {
+      --border-color: #{$border-color};
+      --border-width: #{$border-width};
+      --border-style: #{$border-style};
+
+      border-#{$dir}-width: var(--border-width);
+      border-#{$dir}-color: var(--border-color);
+      border-#{$dir}-style: var(--border-style);
+    }
+    .border-#{$dir}-none {
+      border-#{$dir}: none;
+    }
+  }
+}
+
+// Responsive
+@each $bp, $px in $breakpoints {
+  @include respond-to($px) {
+    @each $dir in $border-sides {
+      @if ($dir == all) {
+        .border-#{$bp} {
+          --border-color: #{$border-color};
+          --border-width: #{$border-width};
+          --border-style: #{$border-style};
+
+          border-width: var(--border-width);
+          border-color: var(--border-color);
+          border-style: var(--border-style);
+        }
+        .border-#{$bp}-none {
+          border: none !important;
+        }
+      } @else {
+        .border-#{$bp}-#{$dir} {
+          --border-color: #{$border-color};
+          --border-width: #{$border-width};
+          --border-style: #{$border-style};
+
+          border-#{$dir}-width: var(--border-width) !important;
+          border-#{$dir}-color: var(--border-color) !important;
+          border-#{$dir}-style: var(--border-style) !important;
+        }
+        .border-#{$bp}-#{$dir}-none {
+          border-#{$dir}: none;
+        }
+      }
+    }
+  }
+}
+
+// /**************************************************/
+// /* Border Colors */
+// /**************************************************/
+@each $key, $val in $border-colors {
+  .border-#{'' + $key} {
+    --border-color: #{$val};
+  }
+}
+// Responsive
+@each $bp, $px in $breakpoints {
+  @include respond-to($px) {
+    @each $key, $val in $border-colors {
+      .border-#{$bp}-#{'' + $key} {
+        --border-color: #{$val} !important;
+      }
+    }
+  }
+}
+
+// /**************************************************/
+// /* Border Widths */
+// /**************************************************/
+
+@include class-with-responsive-key-and-val(
+  $border-widths,
+  border,
+  --border-width
+);
+
+// /**************************************************/
+// /* Border Radius */
+// /**************************************************/
+@each $dir-key, $dir-val in $border-radius-sides {
+  @each $round-key, $round-val in $border-rounded-edges {
+    @if ($dir-key == all) {
+      .border-#{$round-key} {
+        border-radius: $round-val;
+      }
+    } @else {
+      .border-#{$dir-key}-#{$round-key} {
+        border-#{$dir-val}-radius: $round-val;
+      }
+    }
+  }
+}

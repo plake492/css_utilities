@@ -1,0 +1,14 @@
+
+@import '../base-vars';
+@import '../base-maps';
+
+@import '../mixins/';
+@import '../reset/';
+/* @import '../base/' */;
+
+
+@each $key, $value in $opacities {
+  .opacity-#{$key} {
+    opacity: $value;
+  }
+}

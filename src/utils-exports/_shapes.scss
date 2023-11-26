@@ -1,0 +1,12 @@
+
+@import '../base-vars';
+@import '../base-maps';
+
+@import '../mixins/';
+@import '../reset/';
+/* @import '../base/' */;
+
+
+.angle-left-right {
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}

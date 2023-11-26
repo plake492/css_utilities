@@ -1,0 +1,117 @@
+
+@import '../base-vars';
+@import '../base-maps';
+
+@import '../mixins/';
+@import '../reset/';
+/* @import '../base/' */;
+
+
+:root {
+  --gap-offset: 0px;
+}
+
+// /***************************
+// / * Width *
+// /***************************
+
+// MAX WIDTH
+@include class-with-responsive-key-and-val(
+  $width--height-percentages,
+  w-max,
+  max-width
+);
+
+// MIN WIDTH
+@include class-with-responsive-key-and-val(
+  $width--height-percentages,
+  w-min,
+  min-width,
+  // true
+);
+
+// SET WIDTH
+@include class-with-responsive-key-and-val(
+  $width--height-percentages,
+  w,
+  width
+);
+
+// /***************************
+// / * Height *
+// /***************************
+
+// MAX HEIGHT
+@include class-with-responsive-key-and-val(
+  $width--height-percentages,
+  h-max,
+  max-height
+);
+
+// MIN HEIGHT
+@include class-with-responsive-key-and-val(
+  $width--height-percentages,
+  h-min,
+  min-height
+);
+
+// SET HEIGHT
+@include class-with-responsive-key-and-val(
+  $width--height-percentages,
+  h,
+  height
+);
+
+// HEIGHT by VH
+@include class-with-responsive-key-and-val(
+  $height-vh,
+  h-vh,
+  height,
+  true,
+  --vh-offest
+);
+
+// WIDTH by vw
+@include class-with-responsive-key-and-val(
+  $width-vw,
+  w-vw,
+  width,
+  true,
+  --vw-offest
+);
+
+// MIN HEIGHT by VH
+@include class-with-responsive-key-and-val(
+  $height-vh,
+  h-min-vh,
+  min-height,
+  true,
+  --vh-offest
+);
+
+// MIN WIDTH by vw
+@include class-with-responsive-key-and-val(
+  $width-vw,
+  w-min-vw,
+  min-width,
+  true,
+  --vw-offest
+);
+
+// MAX HEIGHT by VH
+@include class-with-responsive-key-and-val(
+  $height-vh,
+  h-max-vh,
+  max-height,
+  true,
+  --vh-offest
+);
+
+// MAX WIDTH by vw
+@include class-with-responsive-key-and-val(
+  $width-vw,
+  w-max-vw,
+  max-width,
+  true,
+  --vw-offest
+);
