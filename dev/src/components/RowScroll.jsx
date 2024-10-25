@@ -22,6 +22,13 @@ const leftScrollCode = [
   },
 ]
 
+const stretchScrollCode = [
+  {
+    classList: 'row-scroll row-scroll--stretch r-3 g-md',
+    children: [{ content: '...' }, { content: '...' }],
+  },
+]
+
 export default function RowScroll() {
   return (
     <>
@@ -34,11 +41,11 @@ export default function RowScroll() {
 
       <div className="border-left border-right border-orange py-md">
         <div className="py-xl bg-violet-30 border-pill">
-          {/* <div className="px-md">
+          <div className="px-md">
             <CodeSnippet code={rightScrollCode}>
               <p>Right Scroll</p>
             </CodeSnippet>
-          </div> */}
+          </div>
           <div className="row-scroll r-2 r-md-3 r-lg-4 g-sm mb-xl border-top border-bottom border-red border-2">
             <div className="img-wrapper ratio-3x4 border-rounded overflow-hidden">
               <img src={img6} />
@@ -73,7 +80,7 @@ export default function RowScroll() {
           </div>
         </div>
 
-        {/* <div className="py-xl mt-xl bg-violet-30 border-pill">
+        <div className="py-xl mt-xl bg-violet-30 border-pill">
           <div className="px-md">
             <CodeSnippet code={leftScrollCode}>
               <p>Left Scroll</p>
@@ -115,11 +122,17 @@ export default function RowScroll() {
               <img src={img2} />
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
 
-      <div className="my-xxl bg-purple-20">
-        <div className="row-scroll r-3 g-md">
+      <div className="py-xl mt-xl bg-violet-30 border-pill">
+        <div className="px-md">
+          <CodeSnippet code={stretchScrollCode}>
+            <p>Stretch children</p>
+            <p>Stretch all children to adopt height of the tallest child</p>
+          </CodeSnippet>
+        </div>
+        <div className="row-scroll row-scroll--stretch r-3 g-md">
           <Card img={<img src={img1} />} />
           <Card img={<img src={img3} />} />
           <Card img={<img src={img6} />} />
