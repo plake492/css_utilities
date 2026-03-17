@@ -1,6 +1,6 @@
 import React, { useRef, useLayoutEffect, useState } from 'react'
 
-import Fog from '../assets/videos/fog.mp4'
+import Fog from '../assets/videos/Fog.mp4'
 import Jellyfish from '../assets/videos/Jellyfish.mp4'
 import Ocean from '../assets/videos/Ocean.mp4'
 import Sunset from '../assets/videos/Sunset.mp4'
